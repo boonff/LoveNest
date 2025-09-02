@@ -1,0 +1,14 @@
+.vs/
+
+logs/*
+mods/*.jar
+natives-windows-x86_64/
+resourcepacks/
+saves/
+tlm_custom_pack/
+
+1.21.1-NeoForge.jar
+1.21.1-NeoForge.json
+
+config/*.zip
+config/yes_steve_model/
