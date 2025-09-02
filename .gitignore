@@ -1,14 +1,26 @@
 .vs/
 
-logs/*
-mods/*.jar
+crash-reports/
+defaultconfigs/
+downloads/
+local/
+logs/
+mods/
 natives-windows-x86_64/
+patchouli_books/
 resourcepacks/
 saves/
+schematics/
 tlm_custom_pack/
 
-1.21.1-NeoForge.jar
-1.21.1-NeoForge.json
+*.jar
+
+LoveNest.json
+log4j2.xml
+options.txt
+usercache.json
+usernamecache.json
+hmclversion.cfg
 
 config/*.zip
 config/yes_steve_model/
