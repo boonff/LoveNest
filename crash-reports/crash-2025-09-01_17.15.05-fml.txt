@@ -1,0 +1,187 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 2025-09-01 17:15:05
+Description: Mod loading failures have occurred; consult the issue messages for more details
+
+net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Mod loading issue for: ftbquests --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/ftb-quests-neoforge-2101.1.14.jar
+	Failure message: Mod ftbquests requires architectury 13.0.8 or above
+		Currently, architectury is not installed
+		
+	Mod version: 2101.1.14
+	Mod issues URL: https://github.com/FTBTeam/FTB-Mods-Issues/issues
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: sodiumextras --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/sodiumextras-neoforge-1.0.8-1.21.5.jar
+	Failure message: Mod sodiumextras requires minecraft 1.21.5 or above
+		Currently, minecraft is 1.21.1
+		
+	Mod version: 1.0.8
+	Mod issues URL: https://github.com/txnimc/SodiumExtras/issues
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: ftblibrary --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/ftb-library-neoforge-2101.1.19.jar
+	Failure message: Mod ftblibrary requires architectury 13.0.6 or above
+		Currently, architectury is not installed
+		
+	Mod version: 2101.1.19
+	Mod issues URL: https://go.ftb.team/support-mod-issues
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: kubejs --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/kubejs-neoforge-2101.7.1-build.181.jar
+	Failure message: Mod kubejs requires rhino 2101.2.5-build.54 or above
+		Currently, rhino is not installed
+		
+	Mod version: 2101.7.1-build.181
+	Mod issues URL: https://kubejs.com/support?source=kubejs&mc=2101&loader=neoforge
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: ftbteams --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/ftb-teams-neoforge-2101.1.4.jar
+	Failure message: Mod ftbteams requires architectury 13.0.6 or above
+		Currently, architectury is not installed
+		
+	Mod version: 2101.1.4
+	Mod issues URL: https://go.ftb.team/support-mod-issues
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: roughlyenoughitems --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/RoughlyEnoughItems-20.0.811-neoforge.jar
+	Failure message: Mod roughlyenoughitems requires architectury 16.1.0 or above
+		Currently, architectury is not installed
+		
+	Mod version: 20.0.811
+	Mod issues URL: https://github.com/shedaniel/RoughlyEnoughItems/issues
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: roughlyenoughitems --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/RoughlyEnoughItems-20.0.811-neoforge.jar
+	Failure message: Mod roughlyenoughitems requires cloth_config 18.0 or above
+		Currently, cloth_config is 15.0.140
+		
+	Mod version: 20.0.811
+	Mod issues URL: https://github.com/shedaniel/RoughlyEnoughItems/issues
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: sodium --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/sodium-neoforge-0.6.13+mc1.21.6.jar
+	Failure message: Mod sodium requires neoforge 21.4.3-beta or above
+		Currently, neoforge is 21.1.206
+		
+	Mod version: 0.6.13+mc1.21.6
+	Mod issues URL: <No issues URL found>
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: ftbultimine --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/ftb-ultimine-neoforge-2101.1.9.jar
+	Failure message: Mod ftbultimine requires architectury 13.0.6 or above
+		Currently, architectury is not installed
+		
+	Mod version: 2101.1.9
+	Mod issues URL: https://go.ftb.team/support-mod-issues
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: roughlyenoughitems --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/RoughlyEnoughItems-20.0.811-neoforge.jar
+	Failure message: Mod roughlyenoughitems requires neoforge 21.5-beta or above
+		Currently, neoforge is 21.1.206
+		
+	Mod version: 20.0.811
+	Mod issues URL: https://github.com/shedaniel/RoughlyEnoughItems/issues
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: embeddium --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/embeddium-1.0.15+mc1.21.1.jar
+	Failure message: Mod embeddium is incompatible with sodium 0 or above
+		Currently, sodium is 0.6.13+mc1.21.6
+		The reason is: Embeddium cannot be used if Sodium is present. If you want to use Embeddium you will have to remove Sodium.
+	Mod version: 1.0.15+mc1.21.1
+	Mod issues URL: <No issues URL found>
+	Exception message: <No associated exception found>
+
+-- Mod loading issue for: sodium --
+Details:
+	Mod file: /D:/minecreat/.minecraft/versions/1.21.1-NeoForge/mods/sodium-neoforge-0.6.13+mc1.21.6.jar
+	Failure message: Mod sodium is incompatible with embeddium 0.0.1 or above
+		Currently, embeddium is 1.0.15+mc1.21.1
+		The reason is: Sodium and Embeddium cannot be used together. Please remove Embeddium.
+	Mod version: 0.6.13+mc1.21.6
+	Mod issues URL: <No issues URL found>
+	Exception message: <No associated exception found>
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 24.0.1, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 210214608 bytes (200 MiB) / 637534208 bytes (608 MiB) up to 6073352192 bytes (5792 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz
+	Identifier: Intel64 Family 6 Model 165 Stepping 2
+	Microarchitecture: Comet Lake
+	Frequency (GHz): 2.59
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce GTX 1650
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 4096.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.15.7216
+	Memory slot #0 capacity (MiB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 2.67
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MiB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 2.67
+	Memory slot #1 type: DDR4
+	Virtual memory max (MiB): 65443.80
+	Virtual memory used (MiB): 16771.00
+	Swap memory total (MiB): 49152.00
+	Swap memory used (MiB): 587.48
+	Space in storage for jna.tmpdir (MiB): available: 829321.13, total: 1953497.00
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): available: 829321.13, total: 1953497.00
+	Space in storage for io.netty.native.workdir (MiB): available: 829321.13, total: 1953497.00
+	Space in storage for java.io.tmpdir (MiB): available: 6577.82, total: 242921.00
+	Space in storage for workdir (MiB): available: 829321.13, total: 1953497.00
+	JVM Flags: 19 total; -Xmx5768m -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+UseG1GC -XX:G1MixedGCCountTarget=5 -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32m -XX:-OmitStackTraceInFastThrow -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:TieredCompileTaskTimeout=10000 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NmethodSweepActivity=1 -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 11.0.5+main.901c6ea8
+	ModLauncher launch target: forgeclient
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.41.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.41.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.41.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.5.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		client-1.21.1-20240808.144430-srg.jar             |Minecraft                     |minecraft                     |1.21.1              |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		neoforge-21.1.206-universal.jar                   |NeoForge                      |neoforge                      |21.1.206            |Manifest: NOSIGNATURE

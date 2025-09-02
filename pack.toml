@@ -1,0 +1,13 @@
+name = "LoveNest"
+author = "bromine boon"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "afae3ce7f8d8fbaf16c2ac6f3ef35065cd61d57a23c879b03a10010c7e6dda53"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.206"
