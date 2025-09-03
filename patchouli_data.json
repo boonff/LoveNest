@@ -1,5 +1,19 @@
 {
   "bookGuiScale": 0,
   "clickedVisualize": false,
-  "bookData": {}
+  "bookData": {
+    "anvilcraft:guide": {
+      "viewedEntries": [
+        "anvilcraft:basic/item_regeneration",
+        "anvilcraft:apply/gem_transformation",
+        "anvilcraft:machine/automation",
+        "anvilcraft:basic/material",
+        "anvilcraft:smithing/corrupted_beacon",
+        "anvilcraft:process/3",
+        "anvilcraft:apply/item_regeneration"
+      ],
+      "bookmarks": [],
+      "completedManualQuests": []
+    }
+  }
 }

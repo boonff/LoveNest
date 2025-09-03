@@ -1,0 +1,13 @@
+name = "Ponder for KubeJS"
+filename = "ponderjs-neoforge-1.21.1-2.1.3.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/5A34Stj8/versions/Xb2bsfiV/ponderjs-neoforge-1.21.1-2.1.3.jar"
+hash-format = "sha512"
+hash = "e5855995c0b34547446aebf6232352a5352236336f19a95dc008537133edb164eacba9254a71924d5604eef81445cb38844cd60f84aad06724f59c145abd530e"
+
+[update]
+[update.modrinth]
+mod-id = "5A34Stj8"
+version = "Xb2bsfiV"
