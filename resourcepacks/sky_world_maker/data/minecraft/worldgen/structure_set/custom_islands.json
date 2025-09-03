@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "minecraft:custom_island",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 12345,
+    "separation": 24,
+    "spacing": 32
+  }
+}
