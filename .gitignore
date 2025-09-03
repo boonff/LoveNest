@@ -12,8 +12,7 @@ saves/
 schematics/
 tlm_custom_pack/
 
-*.jar
-
+LoveNest.jar
 LoveNest.json
 log4j2.xml
 options.txt
