@@ -10,7 +10,10 @@
         "anvilcraft:basic/material",
         "anvilcraft:smithing/corrupted_beacon",
         "anvilcraft:process/3",
-        "anvilcraft:apply/item_regeneration"
+        "anvilcraft:apply/item_regeneration",
+        "anvilcraft:prop/sliding_rail",
+        "anvilcraft:prop/amulet",
+        "anvilcraft:smithing/jewelcrafting_table"
       ],
       "bookmarks": [],
       "completedManualQuests": []

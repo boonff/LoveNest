@@ -1,0 +1,14 @@
+/place structure minecraft:trial_chambers
+/locate structure #minecraft:on_trial_chambers_maps
+/tp @s -480 ~ 112
+/locate structure #minecraft:on_trial_chambers_maps
+/tp @s -464 ~ 320
+/locate structure #minecraft:on_trial_chambers_maps
+/tp @s 48 ~ 336
+/locate structure #minecraft:on_trial_chambers_maps
+/tp @s 48 ~ 224
+/locate structure #minecraft:on_trial_chambers_maps
+/place template minecraft:trial_chambers/spawner/ranged/poison_skeleton
+/place jigsaw minecraft:trial_chambers/spawner/ranged/poison_skeleton
+/place structure sky_world:sky_island
+/place jigsaw sky_world:start_pool
