@@ -28,3 +28,5 @@ patchouli_data.json
 config/flywheel-client.toml
 config/flywheel-client-*.toml.bak
 config/embeddium-fingerprint.json
+
+.probe
