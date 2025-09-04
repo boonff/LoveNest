@@ -21,7 +21,7 @@
     "type": "minecraft:flat",
     "settings": {
       "layers": [],
-      "biome": "minecraft:nether_wastes",
+      "biome": "sky_world:sky_nether",
       "lakes": false,
       "features": false,
       "structures": {

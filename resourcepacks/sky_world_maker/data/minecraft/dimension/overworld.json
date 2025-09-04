@@ -4,7 +4,7 @@
     "type": "minecraft:flat",
     "settings": {
       "layers": [],
-      "biome": "minecraft:plains",
+      "biome": "sky_world:sky_world",
       "lakes": false,
       "features": false,
       "structures": {
