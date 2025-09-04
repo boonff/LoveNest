@@ -2,6 +2,15 @@
   "bookGuiScale": 0,
   "clickedVisualize": false,
   "bookData": {
+    "touhou_little_maid:memorizable_gensokyo": {
+      "viewedEntries": [
+        "touhou_little_maid:overview/what_is_touhou",
+        "touhou_little_maid:overview/power_point",
+        "touhou_little_maid:overview/world_spawn"
+      ],
+      "bookmarks": [],
+      "completedManualQuests": []
+    },
     "anvilcraft:guide": {
       "viewedEntries": [
         "anvilcraft:basic/item_regeneration",
