@@ -21,3 +21,4 @@ hmclversion.cfg
 
 config/*.zip
 config/yes_steve_model/
+command_history.txt
