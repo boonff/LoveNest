@@ -20,5 +20,6 @@ usernamecache.json
 hmclversion.cfg
 
 config/*.zip
+config/flywheel*
 config/yes_steve_model/
 command_history.txt
