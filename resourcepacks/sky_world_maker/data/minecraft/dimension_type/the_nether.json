@@ -15,12 +15,18 @@
   "infiniburn": "#minecraft:infiniburn_nether",
   "min_y": 0,
   "height": 256,
-  "monster_spawn_light_level": {
-    "type": "minecraft:uniform",
-    "value": {
-      "min_inclusive": 0,
-      "max_inclusive": 7
+  "monster_spawn_light_level": 7,
+  "monster_spawn_block_light_limit": 15,
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "layers": [],
+      "biome": "minecraft:nether_wastes",
+      "lakes": false,
+      "features": false,
+      "structures": {
+        "structures": {}
+      }
     }
-  },
-  "monster_spawn_block_light_limit": 15
+  }
 }
