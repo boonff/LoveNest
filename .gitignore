@@ -5,16 +5,13 @@ defaultconfigs/
 downloads/
 local/
 logs/
-mods/
 natives-windows-x86_64/
 patchouli_books/
-resourcepacks/
 saves/
 schematics/
 tlm_custom_pack/
 
-*.jar
-
+LoveNest.jar
 LoveNest.json
 log4j2.xml
 options.txt
@@ -24,3 +21,4 @@ hmclversion.cfg
 
 config/*.zip
 config/yes_steve_model/
+command_history.txt
