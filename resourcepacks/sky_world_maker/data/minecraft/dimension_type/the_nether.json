@@ -23,10 +23,7 @@
       "layers": [],
       "biome": "sky_world:sky_nether",
       "lakes": false,
-      "features": false,
-      "structures": {
-        "structures": {}
-      }
+      "features": true
     }
   }
 }

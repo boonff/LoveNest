@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "sky_world:sky_world",
+  "step": "raw_generation",
+  "terrain_adaptation": "none",
+  "spawn_overrides": {},
+  "start_pool": "sky_world:main_island_pool",
+  "size": 1,
+  "start_height": {
+    "absolute": 64
+  },
+  "max_distance_from_center": 1,
+  "use_expansion_hack": false
+}
