@@ -11,6 +11,7 @@ patchouli_books/
 saves/
 schematics/
 tlm_custom_pack/
+参考/
 
 LoveNest.jar
 LoveNest.json
@@ -24,3 +25,9 @@ config/*.zip
 config/flywheel*
 config/yes_steve_model/
 command_history.txt
+patchouli_data.json
+config/flywheel-client.toml
+config/flywheel-client-*.toml.bak
+config/embeddium-fingerprint.json
+
+.probe
