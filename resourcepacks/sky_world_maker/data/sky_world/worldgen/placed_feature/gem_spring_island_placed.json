@@ -6,19 +6,21 @@
         },
         {
             "type": "minecraft:rarity_filter",
-            "chance": 16
+            "chance": 256
         },
         {
-            "type": "minecraft:random_offset",
-            "xz_spread": {
+            "type": "minecraft:in_square"
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
                 "type": "minecraft:uniform",
-                "min_inclusive": 0,
-                "max_inclusive": 15
-            },
-            "y_spread": {
-                "type": "minecraft:uniform",
-                "min_inclusive": 0,
-                "max_inclusive": 15
+                "min_inclusive": {
+                    "absolute": 32
+                },
+                "max_inclusive": {
+                    "absolute": 96
+                }
             }
         }
     ]
