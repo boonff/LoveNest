@@ -1,6 +1,11 @@
 .vs/
 .abnormal
 
+#设置config的白名单
+config/
+
+
+
 crash-reports/
 defaultconfigs/
 downloads/
