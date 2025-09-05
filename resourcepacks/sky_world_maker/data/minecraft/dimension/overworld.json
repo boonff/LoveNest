@@ -1,12 +1,16 @@
 {
-  "type": "minecraft:overworld",
-  "generator": {
-    "type": "minecraft:flat",
-    "settings": {
-      "layers": [],
-      "biome": "sky_world:sky_world",
-      "lakes": false,
-      "features": true
+    "type": "minecraft:overworld",
+    "generator": {
+        "type": "minecraft:flat",
+        "settings": {
+            "layers": [
+                {
+                    "height": 512
+                }
+            ],
+            "biome": "sky_world:sky_world",
+            "lakes": false,
+            "features": true
+        }
     }
-  }
 }

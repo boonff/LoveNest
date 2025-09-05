@@ -1,0 +1,25 @@
+{
+    "feature": "sky_world:gem_spring_island",
+    "placement": [
+        {
+            "type": "minecraft:biome"
+        },
+        {
+            "type": "minecraft:rarity_filter",
+            "chance": 16
+        },
+        {
+            "type": "minecraft:random_offset",
+            "xz_spread": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 0,
+                "max_inclusive": 15
+            },
+            "y_spread": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 0,
+                "max_inclusive": 15
+            }
+        }
+    ]
+}

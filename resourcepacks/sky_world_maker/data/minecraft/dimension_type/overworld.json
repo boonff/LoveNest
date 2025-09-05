@@ -16,14 +16,5 @@
   "min_y": -64,
   "height": 384,
   "monster_spawn_light_level": 0,
-  "monster_spawn_block_light_limit": 0,
-  "generator": {
-    "type": "minecraft:flat",
-    "settings": {
-      "layers": [],
-      "biome": "sky_world:sky_world",
-      "lakes": false,
-      "features": true
-    }
-  }
+  "monster_spawn_block_light_limit": 0
 }
