@@ -1,12 +1,11 @@
 {
   "type": "minecraft:overworld",
   "generator": {
-    "type": "minecraft:flat",
-    "settings": {
-      "layers": [],
-      "biome": "sky_world:sky_world",
-      "lakes": false,
-      "features": true
+    "type": "minecraft:noise",
+    "settings": "sky_world:sky_world_noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "sky_world:sky_world"
     }
   }
 }
