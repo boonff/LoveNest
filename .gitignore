@@ -3,6 +3,7 @@
 
 /config/*
 !/config/ftbquests/
+!/config/tweakermore.json
 
 crash-reports/
 defaultconfigs/
