@@ -3,7 +3,7 @@
 
 #设置config的白名单
 config/
-
+!config/
 
 
 crash-reports/
