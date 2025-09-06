@@ -1,0 +1,31 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "7A19F8E85F515028"
+	group: ""
+	id: "7A19F8E85F515028"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "4841DF62795E81F7"
+			tasks: [{
+				id: "65DF8792134F2510"
+				item: { count: 1, id: "minecraft:iron_nugget" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: -2.5d
+		}
+		{
+			id: "2F64C757FF599DCD"
+			tasks: [{
+				id: "7CA14C6A091B9EF1"
+				item: { count: 1, id: "minecraft:bamboo" }
+				type: "item"
+			}]
+			x: -9.0d
+			y: -2.5d
+		}
+	]
+}
