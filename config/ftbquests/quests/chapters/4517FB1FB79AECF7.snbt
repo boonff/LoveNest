@@ -1,0 +1,21 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "4517FB1FB79AECF7"
+	group: ""
+	id: "4517FB1FB79AECF7"
+	order_index: 0
+	quest_links: [ ]
+	quests: [{
+		hide_until_deps_complete: true
+		id: "47321437CC2F60FF"
+		shape: "gear"
+		tasks: [{
+			id: "10ADC53165E80DAD"
+			item: { count: 1, id: "create:wrench" }
+			type: "item"
+		}]
+		x: -3.0d
+		y: -1.0d
+	}]
+}
