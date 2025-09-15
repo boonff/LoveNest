@@ -1,5 +1,5 @@
 // 使用物品事件注册新物品
-StartupEvents.registry('block', event => {
+StartupEvents.registry('item', event => {
     event.create('poppy_melon_juice')
         .food(food => {
             food
