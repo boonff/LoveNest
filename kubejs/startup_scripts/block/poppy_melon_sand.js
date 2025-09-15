@@ -6,7 +6,7 @@ StartupEvents.registry('block', event => {
         // 设置爆炸抗性
         .resistance(0.5)
         // 设置不可正确挖掘
-        .requiresTool(true)
+        .requiresTool(false)
         // 设置材质
         .soundType('sand')
         // 设置完整方块

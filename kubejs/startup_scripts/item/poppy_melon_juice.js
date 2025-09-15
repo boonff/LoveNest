@@ -4,7 +4,7 @@ StartupEvents.registry('item', event => {
         .food(food => {
             food
                 .nutrition(6)
-                .saturation(1)
+                .saturation(0.5)
                 .eaten(ctx => {
                     ctx.player.give('minecraft:glass_bottle')
                 })

@@ -4,6 +4,6 @@ StartupEvents.registry('item', event => {
         .food(food => {
             food
                 .nutrition(3)
-                .saturation(1)
+                .saturation(0.5)
         })
 })
