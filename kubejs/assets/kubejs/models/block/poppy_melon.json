@@ -2,7 +2,7 @@
   "parent": "block/cube_bottom_top",
   "textures": {
     "side": "kubejs:block/poppy_melon_side",
-    "bottom": "kubejs:block/poppy_melon_bottom",
+    "bottom": "kubejs:block/poppy_melon_stem",
     "top": "kubejs:block/poppy_melon_top"
   }
 }
