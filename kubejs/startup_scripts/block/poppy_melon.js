@@ -1,3 +1,9 @@
+const { $ParseResults } = require("com.mojang.brigadier.ParseResults");
+const { $BlockDrops } = require("dev.latvian.mods.kubejs.block.drop.BlockDrops");
+const { $BlockDropSupplier } = require("dev.latvian.mods.kubejs.block.drop.BlockDropSupplier");
+const { $SimpleAnimatedParticle } = require("net.minecraft.client.particle.SimpleAnimatedParticle");
+const { $SignableCommand } = require("net.minecraft.network.chat.SignableCommand");
+
 // 使用方块事件注册新方块
 StartupEvents.registry('block', event => {
     event.create('poppy_melon')
@@ -13,14 +19,24 @@ StartupEvents.registry('block', event => {
         .fullBlock(true)
         // 设置不透明
         .opaque(true)
-        .tagBlock('minecraft:wood') 
+        .tagBlock('minecraft:wood')
         .tagBlock('minecraft:mineable/axe') // 可用斧子挖掘
-        .item(() => {})
-        // .drops(pool => {
-        //     pool.rolls = 1; // 一次掉落
-        //     pool.addItem('kubejs:poppy_melon_slice', 1) // 物品为西瓜片
-        //         .applyBonus(3, 7) // 设置数量范围，但是注意：applyBonus函数通常用于附魔时增加掉落，这里我们不需要附魔效果，而是直接随机数量
-        //         .randomChance(1.0); // 掉落几率100%)
-        // })
+        .item(() => { })
+        .drops(() => {
+            return [
+                {
+                    "rolls": {
+                        "min": 3,
+                        "max": 7
+                    },
+                    "entries": [
+                        {
+                            "type": "minecraft:item",
+                            "name": "minecraft:melon_slice"
+                        }
+                    ]
+                }
+            ]
+        })
 })
 
