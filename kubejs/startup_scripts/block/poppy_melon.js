@@ -22,21 +22,6 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:wood')
         .tagBlock('minecraft:mineable/axe') // 可用斧子挖掘
         .item(() => { })
-        .drops(() => {
-            return [
-                {
-                    "rolls": {
-                        "min": 3,
-                        "max": 7
-                    },
-                    "entries": [
-                        {
-                            "type": "minecraft:item",
-                            "name": "minecraft:melon_slice"
-                        }
-                    ]
-                }
-            ]
-        })
+
 })
 
