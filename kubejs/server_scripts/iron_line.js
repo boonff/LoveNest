@@ -2,6 +2,8 @@ ServerEvents.recipes(event => {
     event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(200);
     event.smelting('kubejs:poppy_melon_slice', 'minecraft:poppy').xp(0.1);
 
+    event.shapeless('kubejs:poppy_melon', '9x kubejs:poppy_melon_slice');
+    event.recipes.anvilcraft.unpack('kubejs:poppy_melon', ChanceItemStack.of('9x kubejs:poppy_melon_slice'));
 
     event.recipes.anvilcraft.block_crush('kubejs:poppy_melon', 'kubejs:poppy_melon_sand');
 
@@ -10,15 +12,11 @@ ServerEvents.recipes(event => {
     event.recipes.anvilcraft.item_compress(['kubejs:poppy_melon_sand', 'minecraft:glass_bottle'], [ChanceItemStack.of('kubejs:poppy_melon_juice')]);
     event.recipes.anvilcraft.item_compress(
         ['kubejs:poppy_melon_sand', 'minecraft:glass_bottle', 'minecraft:glass_bottle'],
-        [ChanceItemStack.of('kubejs:poppy_melon_juice'), ChanceItemStack.of('kubejs:poppy_melon_juice')]
+        [ChanceItemStack.of('2x kubejs:poppy_melon_juice')]
     );
     event.recipes.anvilcraft.item_compress(
         ['kubejs:poppy_melon_sand', 'minecraft:glass_bottle', 'minecraft:glass_bottle', 'minecraft:glass_bottle'],
-        [
-            ChanceItemStack.of('kubejs:poppy_melon_juice'),
-            ChanceItemStack.of('kubejs:poppy_melon_juice'),
-            ChanceItemStack.of('kubejs:poppy_melon_juice')
-        ]
+        [ChanceItemStack.of('3x kubejs:poppy_melon_juice')]
     );
 });
 
