@@ -38,3 +38,4 @@ config/embeddium-fingerprint.json
 
 .probe
 /screenshots
+/.mixin.out
