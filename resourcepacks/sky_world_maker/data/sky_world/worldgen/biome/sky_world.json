@@ -11,7 +11,9 @@
         [
             "sky_world:gem_spring_island_placed"
         ],
-        [],
+        [
+            "minecraft:flower_plains"
+        ],
         [],
         [],
         [],
