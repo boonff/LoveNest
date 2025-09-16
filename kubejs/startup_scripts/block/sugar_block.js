@@ -12,8 +12,5 @@ StartupEvents.registry('block', event => {
         // 设置不透明
         .opaque(true)
         .tagBlock('minecraft:mineable/shovel') // 可用铲子挖掘
-        .drops(() => [
-            ['minecraft:sugar'], 9
-        ])
 })
 
