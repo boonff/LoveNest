@@ -1,10 +1,3 @@
-//铁器时代的配方
-
-//将罂粟花冶炼成铁粒
-ServerEvents.recipes(event => {
-    event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(200);
-})
-
 //将竹子合成竹板
 ServerEvents.recipes(event => {
     event.shaped('minecraft:bamboo_planks', [
@@ -26,3 +19,19 @@ ServerEvents.recipes(event => {
         B: 'minecraft:bamboo'
     })
 })
+
+// 监听战利品表事件，以便修改方块的掉落行为
+LootJS.modifiers((event) => {
+    // 为一些东西创建精准采集掉落：
+    let block_list = [
+        'kubejs:poppy_melon'
+    ]
+    block_list.forEach(block => {
+
+        event.addBlockModifier(block)
+            .matchTool(ItemFilter.hasEnchantment("minecraft:silk_touch"))
+            .removeLoot(Ingredient.all)
+            .addLoot(block)
+    });
+
+});
