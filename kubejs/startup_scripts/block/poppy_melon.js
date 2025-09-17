@@ -28,6 +28,12 @@ StartupEvents.registry('block', event => {
         .sandSoundType()                         // 设置沙子踩踏声音
 })
 
+const directions = {
+    'north': [0, 0, -1],
+    'south': [0, 0, 1],
+    'west': [-1, 0, 0],
+    'east': [1, 0, 0]
+};
 // 直罂粟西瓜苗
 StartupEvents.registry('block', event => {
     event.create('poppy_melon_stem')
@@ -38,8 +44,34 @@ StartupEvents.registry('block', event => {
         .fullBlock(false)
         .opaque(false)
         .noCollision() // 设置无碰撞箱
+        .noDrops() // 设置不掉落任何物品z
+        //TODO .noItem() // 设置不作为物品存在
         .tagBlock('minecraft:replaceable_plant') // 可被其他方块替换
         .tagBlock('minecraft:mineable/hoe') // 可用锄头挖掘
+        .randomTick(event => {
+            let pos = event.block.pos;
+            let level = event.level;
+            const keys = Object.keys(directions);
+            const randomKey = keys[Math.floor(Math.random() * keys.length)];
+            const offset = directions[randomKey];
+
+            const belowBlock = level.getBlock(pos.offset(offset[0], offset[1] - 1, offset[2]));
+            console.log(`belowPos: ${pos.offset(offset[0], offset[1] - 1, offset[2])}`);
+            console.log(`belowBlock: ${belowBlock}`);
+            if (
+                !belowBlock.hasTag('minecraft:sand') &&
+                !belowBlock.hasTag('minecraft:dirt') &&
+                belowBlock != 'kubejs:poppy_melon_sand'
+            ) {
+                return; // 如果下面的方块不是"沙土"或罂粟西瓜沙子，则不进行生长
+            }
+
+            const abovePos = pos.offset(offset[0], offset[1], offset[2]);
+            if (level.getBlock(abovePos) == 'minecraft:air') {
+                level.getBlock(pos).set('kubejs:poppy_attached_melon_stem', { facing: randomKey });
+                level.getBlock(abovePos).set('kubejs:poppy_melon');
+            }
+        })
 })
 
 // 弯罂粟西瓜苗
@@ -52,7 +84,10 @@ StartupEvents.registry('block', event => {
         .fullBlock(false)
         .opaque(false)
         .noCollision() // 设置无碰撞箱
+        .noDrops() // 设置不掉落任何物品
+        //TODO .noItem() // 设置不作为物品存在
+        .property(BlockProperties.HORIZONTAL_FACING) // 设置水平朝向属性
         .tagBlock('minecraft:replaceable_plant') // 可被其他方块替换
         .tagBlock('minecraft:mineable/hoe') // 可用锄头挖掘
-        .property(BlockProperties.HORIZONTAL_FACING)
 })
+
