@@ -10,4 +10,5 @@ StartupEvents.registry('item', event => {
         })
         .useDuration((stack, entity) => 40) // 设置食用时间，单位 ticks
         .useAnimation('drink')
+        .maxStackSize(16)
 })
