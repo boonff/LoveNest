@@ -59,4 +59,5 @@ StartupEvents.registry('block', event => {
         .property(BlockProperties.HORIZONTAL_FACING) // 设置水平朝向属性
         .tagBlock('minecraft:replaceable_plant') // 可被其他方块替换
         .tagBlock('minecraft:mineable/hoe') // 可用锄头挖掘
+        .property(BlockProperties.HORIZONTAL_FACING)
 })
