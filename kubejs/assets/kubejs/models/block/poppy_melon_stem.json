@@ -1,6 +1,8 @@
 {
-    "parent": "block/cube_all",
+    "parent": "block/cross",
     "textures": {
-        "all": "kubejs:block/poppy_melon_stem"
-    }
+        "cross": "kubejs:block/poppy_melon_stem"
+    },
+    "render_type": "cutout",
+    "tintindex": 0
 }
