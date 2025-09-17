@@ -38,6 +38,8 @@ StartupEvents.registry('block', event => {
         .fullBlock(false)
         .opaque(false)
         .noCollision() // 设置无碰撞箱
+        .noDrops() // 设置不掉落任何物品
+        //TODO .noItem() // 设置不作为物品存在
         .tagBlock('minecraft:replaceable_plant') // 可被其他方块替换
         .tagBlock('minecraft:mineable/hoe') // 可用锄头挖掘
 })
@@ -52,6 +54,9 @@ StartupEvents.registry('block', event => {
         .fullBlock(false)
         .opaque(false)
         .noCollision() // 设置无碰撞箱
+        .noDrops() // 设置不掉落任何物品
+        //TODO .noItem() // 设置不作为物品存在
+        .property(BlockProperties.HORIZONTAL_FACING) // 设置水平朝向属性
         .tagBlock('minecraft:replaceable_plant') // 可被其他方块替换
         .tagBlock('minecraft:mineable/hoe') // 可用锄头挖掘
 })
