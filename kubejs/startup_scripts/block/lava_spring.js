@@ -23,7 +23,7 @@ StartupEvents.registry('block', event => {
                 const abovePos = pos.offset(0, 1, 0);
 
                 // 检查上方位置的方块是否是“可替换”的（如空气、草、雪等，避免覆盖其他方块）
-                if (level.getBlock(abovePos) == 'minecraft:air' || level.getBlock(abovePos)()) {
+                if (level.getBlock(abovePos) == 'minecraft:air') {
 
                     // 在上方位置放置 anvilcraft:melt_gem 方块
                     level.getBlock(abovePos).set('minecraft:lava');
