@@ -1,4 +1,49 @@
+let createRecipes = {
+    event: null,
+    init: function (e) {
+        this.event = e;
+        e.recipes.create = this;
+    },
+    filling: function (_result, _input) {
+        let fluid = Fluid.of(_input[0]);
+        let input = Item.of(_input[1]);
+        let results;
+        if (Array.isArray(_result)) {
+            results = _result.map(result => Item.of(result));
+        } else {
+            results = [Item.of(_result)];
+        }
+
+        this.event.custom({
+            type: 'create:filling',
+            ingredients: [
+                { item: input.id, count: input.count },
+                { type: "fluid_stack", fluid: fluid.id, amount: fluid.amount }
+            ],
+            results: results.map(result => { return { id: result.id, count: result.count } })
+        })
+    },
+    emptying: function (_result, _input) {
+        let fluid = Fluid.of(_result[0]);
+        let input = Item.of(_input);
+        let result = Item.of(_result[1]);
+
+        this.event.custom({
+            type: "create:emptying",
+            ingredients: [
+                { item: input.id, count: input.count }
+            ],
+            results: [
+                { id: result.id, count: result.count },
+                { amount: fluid.amount, id: fluid.id }
+            ]
+        })
+    }
+}
+
 ServerEvents.recipes(event => {
+    createRecipes.init(event)
+
     event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(200);
     event.smelting('kubejs:poppy_melon_slice', 'minecraft:poppy').xp(0.1);
 
@@ -19,7 +64,9 @@ ServerEvents.recipes(event => {
         [ChanceItemStack.of('3x kubejs:poppy_melon_juice')]
     );
 
-    // event.custom()
+    event.recipes.create.filling('kubejs:poppy_melon_juice', [Fluid.of('kubejs:poppy_melon_juice', 250), 'minecraft:glass_bottle'])
+    event.recipes.create.emptying([Fluid.of('kubejs:poppy_melon_juice', 250), 'minecraft:glass_bottle'], 'kubejs:poppy_melon_juice')
+
 });
 
 BlockEvents.rightClicked((event) => { // 监听右键点击方块事件
