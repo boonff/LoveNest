@@ -1,6 +1,8 @@
 {
-    "parent": "stem_fruit:block/stem_growth7",
+    "parent": "block/cross",
     "textures": {
-        "stem": "kubejs:block/poppy_melon_stem"
-    }
+        "cross": "kubejs:block/poppy_melon_stem"
+    },
+    "render_type": "cutout",
+    "tintindex": 0
 }
