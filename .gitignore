@@ -40,3 +40,4 @@ config/embeddium-fingerprint.json
 /screenshots
 /.mixin.out
 probe.code-snippets
+kubejs/config/probe-settings.json
