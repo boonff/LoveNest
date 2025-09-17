@@ -41,3 +41,4 @@ config/embeddium-fingerprint.json
 /.mixin.out
 probe.code-snippets
 kubejs/config/probe-settings.json
+kubejs/config/client.json
