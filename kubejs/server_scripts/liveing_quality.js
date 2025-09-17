@@ -20,16 +20,6 @@ ServerEvents.recipes(event => {
     })
 })
 
-// 添加竹子到堆肥桶
-ServerEvents.recipes(event => {
-    event.custom({
-        "type": "minecraft:composting",
-        "ingredient": {
-            "item": "minecraft:bamboo"
-        },
-        "chance": 0.65
-    })
-})
 
 // 添加精准采集掉落
 LootJS.modifiers((event) => {
