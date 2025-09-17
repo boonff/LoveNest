@@ -1,0 +1,6 @@
+{
+    "parent": "stem_fruit:block/stem_growth7",
+    "textures": {
+        "stem": "kubejs:block/poppy_melon_stem"
+    }
+}
