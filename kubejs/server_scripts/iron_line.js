@@ -18,6 +18,8 @@ ServerEvents.recipes(event => {
         ['kubejs:poppy_melon_sand', 'minecraft:glass_bottle', 'minecraft:glass_bottle', 'minecraft:glass_bottle'],
         [ChanceItemStack.of('3x kubejs:poppy_melon_juice')]
     );
+
+    // event.custom()
 });
 
 BlockEvents.rightClicked((event) => { // 监听右键点击方块事件
