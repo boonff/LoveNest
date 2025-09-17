@@ -20,9 +20,19 @@ ServerEvents.recipes(event => {
     })
 })
 
-// 监听战利品表事件，以便修改方块的掉落行为
+// 添加竹子到堆肥桶
+ServerEvents.recipes(event => {
+    event.custom({
+        "type": "minecraft:composting",
+        "ingredient": {
+            "item": "minecraft:bamboo"
+        },
+        "chance": 0.65
+    })
+})
+
+// 添加精准采集掉落
 LootJS.modifiers((event) => {
-    // 为一些东西创建精准采集掉落：
     let block_list = [
         'kubejs:poppy_melon'
     ]
