@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=east": {
+            "model": "kubejs:block/poppy_attached_melon_stem",
+            "y": 180
+        },
+        "facing=north": {
+            "model": "kubejs:block/poppy_attached_melon_stem",
+            "y": 90
+        },
+        "facing=south": {
+            "model": "kubejs:block/poppy_attached_melon_stem",
+            "y": 270
+        },
+        "facing=west": {
+            "model": "kubejs:block/poppy_attached_melon_stem"
+        }
+    }
+}
