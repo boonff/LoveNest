@@ -1,4 +1,4 @@
-// 使用方块事件注册新方块
+// 罂粟西瓜沙子方块
 StartupEvents.registry('block', event => {
     event.create('poppy_melon_sand', "falling")
         // 设置硬度
@@ -15,6 +15,6 @@ StartupEvents.registry('block', event => {
         .opaque(true)
         .tagBlock('minecraft:sand') // 添加沙子标签，使其具有沙子特性
         .tagBlock('minecraft:mineable/shovel') // 可用铲子挖掘
-        .sandSoundType()    
+        .sandSoundType()
 })
 
