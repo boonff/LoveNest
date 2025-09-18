@@ -24,7 +24,7 @@ ServerEvents.recipes(event => {
 // 添加精准采集掉落
 LootJS.modifiers((event) => {
     let block_list = [
-        'kubejs:poppy_melon'
+        'foand:poppy_melon'
     ]
     block_list.forEach(block => {
 

@@ -1,6 +1,6 @@
 // 使用方块事件注册新方块
 StartupEvents.registry('block', event => {
-    event.create('lava_spring')
+    event.create('foand:lava_spring')
         // 设置为不可破坏
         .unbreakable()
         // 设置不可正确挖掘
