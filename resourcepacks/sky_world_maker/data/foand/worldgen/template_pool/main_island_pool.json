@@ -1,5 +1,5 @@
 {
-  "name": "sky_world:main_island_pool",
+  "name": "foand:main_island_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "sky_world:air_island",
+        "location": "foand:air_island",
         "processors": "minecraft:empty"
       }
     }

@@ -1,10 +1,10 @@
 {
   "type": "minecraft:jigsaw",
-  "biomes": "sky_world:sky_world",
+  "biomes": "foand:sky_world",
   "step": "raw_generation",
   "terrain_adaptation": "none",
   "spawn_overrides": {},
-  "start_pool": "sky_world:main_island_pool",
+  "start_pool": "foand:main_island_pool",
   "size": 1,
   "start_height": {
     "absolute": 64

@@ -1,0 +1,3 @@
+place structure foand:main_island 0 64 0
+tp @a 0.5 66 0.5
+setworldspawn 0 66 0
