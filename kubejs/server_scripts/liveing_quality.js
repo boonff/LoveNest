@@ -23,9 +23,17 @@ ServerEvents.recipes(event => {
 
 // 添加精准采集掉落
 LootJS.modifiers((event) => {
-    let block_list = [
-        'foand:poppy_melon'
-    ]
+
+    event.addBlockModifier('foand:poppy_melon')
+        .addAlternativesLoot(
+            LootEntry.of("foand:poppy_melon_slice", { type: 'minecraft:uniform', min: 3, max: 7 }
+            ).when(c =>
+                !c.matchMainHand(ItemFilter.hasEnchantment("minecraft:silk_touch"))
+            ),
+            LootEntry.of("foand:poppy_melon")
+        )
+
+    let block_list = []
     block_list.forEach(block => {
 
         event.addBlockModifier(block)
