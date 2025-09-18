@@ -1,4 +1,6 @@
 ServerEvents.recipes(event => {
+    global.createRecipes.init(event)
+
     event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(200);
     event.smelting('kubejs:poppy_melon_slice', 'minecraft:poppy').xp(0.1);
 
@@ -19,7 +21,9 @@ ServerEvents.recipes(event => {
         [ChanceItemStack.of('3x kubejs:poppy_melon_juice')]
     );
 
-    // event.custom()
+    event.recipes.create.filling('kubejs:poppy_melon_juice', [Fluid.of('kubejs:poppy_melon_juice', 250), 'minecraft:glass_bottle'])
+    event.recipes.create.emptying([Fluid.of('kubejs:poppy_melon_juice', 250), 'minecraft:glass_bottle'], 'kubejs:poppy_melon_juice')
+
 });
 
 BlockEvents.rightClicked((event) => { // 监听右键点击方块事件
