@@ -69,7 +69,76 @@ let createRecipes = {
                 fluid
             ]
         })
+    },
+    sequenced_assembly: function (outputs, input, recipes) {
+        let thisEvent = this.event;
+        return {
+            event: thisEvent,
+            outputs: outputs.map(output => getItem(output)),
+            input: getIngredient(input),
+            recipes: recipes,
+            inter: null,
+            _loops: null,
+            transitionalItem: function (inter) {
+                this.inter = getItem(inter);
+                if (this.inter && this._loops) return this._recipe();
+                return this;
+            },
+            loops: function (items) {
+                this._loops = items;
+                if (this.inter && this._loops) return this._recipe();
+                return this;
+            },
+            _recipe: function () {
+                return this.event.custom({
+                    type: "create:sequenced_assembly",
+                    loops: this._loops,
+                    ingredient: this.input,
+                    results: this.outputs,
+                    sequence: this.recipes,
+                    transitional_item: this.inter
+                })
+            }
+        }
     }
 }
 
 global.createRecipes = createRecipes;
+
+
+global.createSequenced = {
+    createDeploying(output, inputs) {
+        return {
+            "type": "create:deploying",
+            "ingredients": inputs.map(input => getIngredient(input)),
+            "results": [getItem(output)]
+        }
+    },
+    createFilling(output, inputs) {
+        let fluid = getFluid(inputs[0]);
+        let input = getIngredient(inputs[1]);
+        let result = getItem(output);
+        return {
+            type: 'create:filling',
+            ingredients: [
+                input,
+                { type: 'fluid_stack', fluid: fluid.id, amount: fluid.amount }
+            ],
+            results: [result]
+        }
+    },
+    createPressing(output, input) {
+        return {
+            "type": "create:pressing",
+            "ingredients": [getIngredient(input)],
+            "results": [getItem(output)]
+        }
+    },
+    createCutting(output, input) {
+        return {
+            "type": "create:cutting",
+            "ingredients": [getIngredient(input)],
+            "results": [getItem(output)]
+        }
+    }
+}
