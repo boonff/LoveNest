@@ -1,9 +1,0 @@
-{
-    "parent": "block/stem_fruit",
-    "textures": {
-        "stem": "kubejs:block/poppy_melon_stem",
-        "upperstem": "kubejs:block/poppy_attached_melon_stem"
-    },
-    "render_type": "cutout",
-    "tintindex": 0
-}
