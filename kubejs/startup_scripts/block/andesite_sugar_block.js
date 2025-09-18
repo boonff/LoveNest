@@ -1,6 +1,6 @@
 // 使用方块事件注册新方块
 StartupEvents.registry('block', event => {
-    event.create('andesite_sugar_block')
+    event.create('foand:andesite_sugar_block')
         // 设置硬度
         .hardness(1.0)
         // 设置爆炸抗性

@@ -1,6 +1,6 @@
 // 熔岩涌泉
 StartupEvents.registry('block', event => {
-    event.create('gem_spring')
+    event.create('foand:gem_spring')
         .unbreakable()  // 设置为不可破坏
         .requiresTool(false) // 设置不可正确挖掘
         .soundType('stone')// 设置材质
