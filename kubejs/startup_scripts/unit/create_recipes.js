@@ -1,13 +1,14 @@
 function getIngredient(input) {
     let result;
-    if (typeof input === "string" ||
-        ('count' in input && 'id' in input)
-    ) {
+    if ((typeof input) === "string" || Item.isItem(input)) {
         result = Ingredient.of(input);
-    } else if (Array.isArray(input) && _item != [])
+    } else if ('id' in input && 'amount' in input) {
+        result = { type: 'fluid_stack', fluid: input.id, amount: input.amount }
+    } else if (Array.isArray(input) && _item != []) {
         result = getIngredient(input[0])
-    else
+    } else {
         result = input;
+    }
     return result;
 }
 
@@ -15,10 +16,13 @@ function getItem(input) {
     let result;
     if (typeof input === "string") {
         result = Item.of(input);
-    } else if (Array.isArray(input) && _item != [])
+    } else if ('id' in input && 'amount' in input) {
+        result = getFluid(input)
+    } else if (Array.isArray(input) && input != []) {
         result = getItem(input[0])
-    else
+    } else {
         result = input;
+    }
     return result;
 }
 
@@ -40,7 +44,7 @@ let createRecipes = {
         e.recipes.create = this;
     },
     filling: function (_result, _input) {
-        let fluid = getFluid(_input[0]);
+        let fluid = getIngredient(_input[0]);
         let input = getIngredient(_input[1]);
         let result = getItem(_result);
 
@@ -48,14 +52,14 @@ let createRecipes = {
             type: 'create:filling',
             ingredients: [
                 input,
-                { type: 'fluid_stack', fluid: fluid.id, amount: fluid.amount }
+                fluid
             ],
             results: [result]
         })
 
     },
     emptying: function (_result, _input) {
-        let fluid = getFluid(_result[0]);
+        let fluid = getItem(_result[0]);
         let input = getIngredient(_input);
         let result = getItem(_result[1]);
 
@@ -68,6 +72,13 @@ let createRecipes = {
                 result,
                 fluid
             ]
+        })
+    },
+    mixing: function (outputs, inputs) {
+        return this.event.custom({
+            "type": "create:mixing",
+            "ingredients": inputs.map(input => getIngredient(input)),
+            "results": outputs.map(output => getItem(output))
         })
     },
     sequenced_assembly: function (outputs, input, recipes) {
