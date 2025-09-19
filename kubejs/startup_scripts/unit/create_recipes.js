@@ -37,55 +37,56 @@ function getFluid(input) {
     return result;
 }
 
+function getIngredients(ingredients) {
+    if (Array.isArray(ingredients)) {
+        return ingredients.map(i => getIngredient(i))
+    } else {
+        return [getIngredient(ingredients)]
+    }
+}
+
+function getOutputs(outputs) {
+    if (Array.isArray(outputs)) {
+        return outputs.map(i => getItem(i))
+    } else {
+        return [getItem(outputs)]
+    }
+}
+
 let createRecipes = {
     event: null,
     init: function (e) {
         this.event = e;
         e.recipes.create = this;
     },
-    filling: function (_result, _input) {
-        let fluid = getIngredient(_input[0]);
-        let input = getIngredient(_input[1]);
-        let result = getItem(_result);
-
+    filling: function (outputs, inputs) {
         this.event.custom({
             type: 'create:filling',
-            ingredients: [
-                input,
-                fluid
-            ],
-            results: [result]
+            ingredients: getIngredients(inputs),
+            results: getOutputs(outputs)
         })
 
     },
-    emptying: function (_result, _input) {
-        let fluid = getItem(_result[0]);
-        let input = getIngredient(_input);
-        let result = getItem(_result[1]);
+    emptying: function (outputs, inputs) {
 
         return this.event.custom({
             type: "create:emptying",
-            ingredients: [
-                input
-            ],
-            results: [
-                result,
-                fluid
-            ]
+            ingredients: getIngredients(inputs),
+            results: getOutputs(outputs)
         })
     },
     mixing: function (outputs, inputs) {
         return this.event.custom({
             "type": "create:mixing",
-            "ingredients": inputs.map(input => getIngredient(input)),
-            "results": outputs.map(output => getItem(output))
+            ingredients: getIngredients(inputs),
+            results: getOutputs(outputs)
         })
     },
     sequenced_assembly: function (outputs, input, recipes) {
         let thisEvent = this.event;
         return {
             event: thisEvent,
-            outputs: outputs.map(output => getItem(output)),
+            outputs: getOutputs(outputs),
             input: getIngredient(input),
             recipes: recipes,
             inter: null,
@@ -95,8 +96,8 @@ let createRecipes = {
                 if (this.inter && this._loops) return this._recipe();
                 return this;
             },
-            loops: function (items) {
-                this._loops = items;
+            loops: function (times) {
+                this._loops = times;
                 if (this.inter && this._loops) return this._recipe();
                 return this;
             },
@@ -126,14 +127,14 @@ global.createSequenced = {
         }
     },
     createFilling(output, inputs) {
-        let fluid = getFluid(inputs[0]);
+        let fluid = getItem(inputs[0]);
         let input = getIngredient(inputs[1]);
         let result = getItem(output);
         return {
             type: 'create:filling',
             ingredients: [
                 input,
-                { type: 'fluid_stack', fluid: fluid.id, amount: fluid.amount }
+                fluid
             ],
             results: [result]
         }
