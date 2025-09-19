@@ -27,8 +27,8 @@ ServerEvents.recipes(event => {
 });
 
 BlockEvents.rightClicked((event) => { // 监听右键点击方块事件
-    const { level, hand, item, block, entity } = event;
-    const player = entity; // 将触发事件的实体视为玩家
+    const { level, item, block, player } = event;
+    // const player = entity; // 将触发事件的实体视为玩家
 
     // 检查是否为目标方块、主手操作、且手持物品为剪刀
     if (block.id != 'foand:poppy_melon') return; // 确保右键点击的是目标方块
@@ -49,8 +49,9 @@ BlockEvents.rightClicked((event) => { // 监听右键点击方块事件
 
     // 播放剪刀使用音效
     level.runCommandSilent("playsound minecraft:entity.sheep.shear");
+    player.swing();
 
     // 消耗剪刀耐久
-    item.hurt(1, player); // 对剪刀造成1点耐久消耗
+    item.damageValue += 1; // 对剪刀造成1点耐久消耗
 
 });
