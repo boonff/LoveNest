@@ -4,6 +4,4 @@ StartupEvents.registry('fluid', event => {
         .tint(0xfd4f66)
         .noBucket()
         .noBlock()
-        ;
-
 })
