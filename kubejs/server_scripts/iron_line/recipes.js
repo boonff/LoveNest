@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
 
     // 熔炉配方
     event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(200); // 罂粟 —> 铁粒
-    event.smelting('poppy_melon_slice', 'foand:poppy_melon_slice').xp(0.1); // 罂粟西瓜片 -> 铁粒
+    event.smelting('minecraft:iron_nugget', 'foand:poppy_melon_slice').xp(0.1); // 罂粟西瓜片 -> 铁粒
     event.smelting('minecraft:charcoal', 'minecraft:bamboo_block').xp(0.1); // 木炭 -> 竹块
     event.smelting('minecraft:charcoal', 'minecraft:stripped_bamboo_block').xp(0.1); // 木炭 -> 剥皮竹块 
 
