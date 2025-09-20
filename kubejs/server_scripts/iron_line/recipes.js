@@ -18,10 +18,10 @@ ServerEvents.recipes(event => {
     })
 
     // 熔炉配方
-    event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(200); // 铁锭 → 罂粟
-    event.smelting('foand:poppy_melon_slice', 'minecraft:poppy').xp(0.1); // 西瓜切片 → 罂粟
-    event.smelting('minecraft:charcoal', 'minecraft:bamboo_block').xp(0.1); // 竹块 → 木炭
-    event.smelting('minecraft:charcoal', 'minecraft:stripped_bamboo_block').xp(0.1); // 剥皮竹块 → 木炭
+    event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(200); // 罂粟 —> 铁粒
+    event.smelting('poppy_melon_slice', 'foand:poppy_melon_slice').xp(0.1); // 罂粟西瓜片 -> 铁粒
+    event.smelting('minecraft:charcoal', 'minecraft:bamboo_block').xp(0.1); // 木炭 -> 竹块
+    event.smelting('minecraft:charcoal', 'minecraft:stripped_bamboo_block').xp(0.1); // 木炭 -> 剥皮竹块 
 
     // 零星加工
     event.shapeless('foand:poppy_melon', '9x foand:poppy_melon_slice'); // 9片切片 → 西瓜
