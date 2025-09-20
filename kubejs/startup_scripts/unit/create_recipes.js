@@ -58,29 +58,33 @@ let createRecipes = {
     init: function (e) {
         this.event = e;
         e.recipes.create = this;
-    },
-    filling: function (outputs, inputs) {
-        this.event.custom({
-            type: 'create:filling',
-            ingredients: getIngredients(inputs),
-            results: getOutputs(outputs)
-        })
 
-    },
-    emptying: function (outputs, inputs) {
+        let self = this;
+        let normal_recipes = [
+            'filling',
+            'emptying',
+            'mixing',
+            'compacting',
+            'cutting',
+            'deploying',
+            'haunting',
+            'item_application',
+            'milling',
+            'pressing',
+            'sandpaper_polishing',
+            'splashing',
+            
+        ];
 
-        return this.event.custom({
-            type: "create:emptying",
-            ingredients: getIngredients(inputs),
-            results: getOutputs(outputs)
-        })
-    },
-    mixing: function (outputs, inputs) {
-        return this.event.custom({
-            "type": "create:mixing",
-            ingredients: getIngredients(inputs),
-            results: getOutputs(outputs)
-        })
+        normal_recipes.forEach(recipe => {
+            self[recipe] = (outputs, inputs) => {
+                return e.custom({
+                    type: 'create:' + recipe,
+                    ingredients: getIngredients(inputs),
+                    results: getOutputs(outputs)
+                })
+            }
+        });
     },
     sequenced_assembly: function (outputs, input, recipes) {
         let thisEvent = this.event;
