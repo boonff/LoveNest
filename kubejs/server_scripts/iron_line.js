@@ -1,8 +1,8 @@
 ServerEvents.recipes(event => {
     global.createRecipes.init(event)
 
-    event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(200);
-    event.smelting('foand:poppy_melon_slice', 'minecraft:poppy').xp(0.1);
+    event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1);
+    event.smelting('minecraft:iron_nugget', 'foand:poppy_melon_slice').xp(0.1);
 
     event.shapeless('foand:poppy_melon', '9x foand:poppy_melon_slice');
     event.recipes.anvilcraft.unpack('foand:poppy_melon', ChanceItemStack.of('9x foand:poppy_melon_slice'));
