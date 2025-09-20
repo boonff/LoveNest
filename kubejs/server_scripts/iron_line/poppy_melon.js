@@ -1,28 +1,22 @@
-ServerEvents.recipes(event => {
-    global.createRecipes.init(event)
+// 添加精准采集掉落
+LootJS.modifiers((event) => {
+    event.addBlockModifier('foand:poppy_melon')
+        .addAlternativesLoot(
+            LootEntry.of('foand:poppy_melon'
+            ).when(c =>
+                c.matchMainHand(ItemFilter.hasEnchantment("minecraft:silk_touch"))
+            ),
+            LootEntry.of("foand:poppy_melon_slice", { type: 'minecraft:uniform', min: 3, max: 7 })
+        )
 
-    event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(200);
-    event.smelting('foand:poppy_melon_slice', 'minecraft:poppy').xp(0.1);
+    let block_list = []
+    block_list.forEach(block => {
 
-    event.shapeless('foand:poppy_melon', '9x foand:poppy_melon_slice');
-    event.recipes.anvilcraft.unpack('foand:poppy_melon', ChanceItemStack.of('9x foand:poppy_melon_slice'));
-
-    event.recipes.anvilcraft.block_crush('foand:poppy_melon', 'foand:poppy_melon_sand');
-
-    event.recipes.anvilcraft.mesh('foand:poppy_melon_sand', 'create:crushed_raw_iron', 1);
-
-    event.recipes.anvilcraft.item_compress(['foand:poppy_melon_sand', 'minecraft:glass_bottle'], [ChanceItemStack.of('foand:poppy_melon_juice')]);
-    event.recipes.anvilcraft.item_compress(
-        ['foand:poppy_melon_sand', 'minecraft:glass_bottle', 'minecraft:glass_bottle'],
-        [ChanceItemStack.of('2x foand:poppy_melon_juice')]
-    );
-    event.recipes.anvilcraft.item_compress(
-        ['foand:poppy_melon_sand', 'minecraft:glass_bottle', 'minecraft:glass_bottle', 'minecraft:glass_bottle'],
-        [ChanceItemStack.of('3x foand:poppy_melon_juice')]
-    );
-
-    event.recipes.create.filling('foand:poppy_melon_juice', [Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle'])
-    event.recipes.create.emptying([Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle'], 'foand:poppy_melon_juice')
+        event.addBlockModifier(block)
+            .matchTool(ItemFilter.hasEnchantment("minecraft:silk_touch"))
+            .removeLoot(Ingredient.all)
+            .addLoot(block)
+    });
 
 });
 
