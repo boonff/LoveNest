@@ -41,8 +41,8 @@ StartupEvents.registry('block', event => {
             // 判断10%的概率是否触发
             if (randomChance < 0.1) {
                 const abovePos = pos.offset(0, 1, 0);
-                if (level.getBlock(abovePos) == 'minecraft:air' || level.getBlock(abovePos) == 'minecraft:water' ) {
-                    level.getBlock(abovePos).set('minecraft:magma_block');
+                if (level.getBlock(abovePos) == 'minecraft:air') {
+                    level.getBlock(abovePos).set('minecraft:lava');
                     // TODO 添加一些游戏内提示音效或粒子效果
                     // level.playSound(null, abovePos.getX(), abovePos.getY(), abovePos.getZ(), 'block.anvil.place', 1.0, 1.0);
                     // level.addParticle('cloud', abovePos.getX() + 0.5, abovePos.getY() + 0.5, abovePos.getZ() + 0.5, 0, 0, 0);
