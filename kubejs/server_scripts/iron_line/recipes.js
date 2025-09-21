@@ -2,19 +2,30 @@ ServerEvents.recipes(event => {
     global.createRecipes.init(event); // 初始化全局配方
     // 竹子相关
     event.shaped('minecraft:bamboo_planks', [
-        'BB',
-        'BB'
+        'AA',
+        'AA'
     ], {
-        B: 'minecraft:bamboo'
+        A: 'minecraft:bamboo'
     })
 
     event.remove({ output: 'minecraft:bamboo_block' })
     event.shaped('minecraft:bamboo_block', [
-        'BBB',
-        'B B',
-        'BBB'
+        'AAA',
+        'A A',
+        'AAA'
     ], {
-        B: 'minecraft:bamboo'
+        A: 'minecraft:bamboo'
+    })
+
+    event.shaped("foand:bamboo_string", ['A'], { A: 'minecraft:bamboo' })
+
+    event.shaped({ item: 'minecraft:scaffolding', count: 6 }, [
+        'ABA',
+        'A A',
+        'A A'
+    ], {
+        A: 'minecraft:bamboo',
+        B: 'foand:bamboo_string'
     })
 
     // 熔炉配方
