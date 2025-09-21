@@ -1,6 +1,5 @@
 StartupEvents.registry('item', event => {
-    // 罂粟西瓜汁
-    event.create('foand:poppy_melon_juice')
+    event.create('foand:poppy_melon_juice') // 罂粟西瓜汁
         .food(food => {
             food.nutrition(6)
                 .saturation(0.5)
@@ -11,9 +10,9 @@ StartupEvents.registry('item', event => {
         .useDuration((stack, entity) => 40)
         .useAnimation('drink')
         .maxStackSize(16)
-    
-    // 罂粟西瓜片
-    event.create('foand:poppy_melon_slice')
+
+
+    event.create('foand:poppy_melon_slice') // 罂粟西瓜片
         .food(food => {
             food.nutrition(3)
                 .saturation(0.5)
