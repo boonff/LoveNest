@@ -73,7 +73,7 @@ let createRecipes = {
             'pressing',
             'sandpaper_polishing',
             'splashing',
-            
+            'crushing',
         ];
 
         normal_recipes.forEach(recipe => {
