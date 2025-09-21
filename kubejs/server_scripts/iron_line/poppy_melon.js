@@ -46,7 +46,7 @@ BlockEvents.rightClicked((event) => {
     const { level, item, block, player } = event;
     // 确保右键点击的是目标方块
     if (block.id != 'minecraft:melon_stem'
-        && block.id != 'minecraft:melon_attached_stem'
+        && block.id != 'minecraft:attached_melon_stem'
     ) return;
     if (!item.is('minecraft:shears')) return; // TODO 将剪刀改为小刀
 
@@ -69,7 +69,7 @@ BlockEvents.rightClicked((event) => {
     const { level, item, block, player } = event;
     // 确保右键点击的是目标方块
     if (block.id != 'foand:poppy_melon_stem'
-        && block.id != 'foand:poppy_melon_attached_stem'
+        && block.id != 'foand:attached_poppy_melon_stem'
     ) return;
     if (!item.is('minecraft:shears')) return; // TODO 将剪刀改为小刀
 
