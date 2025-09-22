@@ -35,26 +35,27 @@ ServerEvents.recipes(event => {
     event.smelting('minecraft:charcoal', 'minecraft:stripped_bamboo_block').xp(0.1); // 木炭 -> 剥皮竹块 
 
     // 零星加工
-    event.shapeless('foand:poppy_melon', '9x foand:poppy_melon_slice'); // 9片切片 → 西瓜
-    event.recipes.anvilcraft.unpack('foand:poppy_melon', ChanceItemStack.of('9x foand:poppy_melon_slice')); // 西瓜 → 9片切片
+    event.shapeless('foand:poppy_melon', '9x foand:poppy_melon_slice'); // 9片切片 -> 西瓜
+    event.recipes.anvilcraft.unpack('foand:poppy_melon', ChanceItemStack.of('9x foand:poppy_melon_slice')); // 西瓜 -> 9片切片
 
     // 粉碎加工
-    event.recipes.anvilcraft.block_crush('foand:poppy_melon', 'foand:poppy_melon_sand'); // 西瓜 → 西瓜沙
-    event.recipes.anvilcraft.mesh('foand:poppy_melon_sand', 'create:crushed_raw_iron', 1); // 西瓜沙 → 原铁碎
+    event.recipes.anvilcraft.block_crush('foand:poppy_melon', 'foand:poppy_melon_sand'); // 西瓜 -> 西瓜沙
+    event.recipes.anvilcraft.mesh('foand:poppy_melon_sand', 'create:crushed_raw_iron', 1); // 西瓜沙 -> 原铁碎
+    event.recipes.anvilcraft.mesh('foand:poppy_melon_sand', 'minecraft:redstone', { "min": 1, "max": 5 }) // 西瓜沙 -> 红石
 
     // 压缩加工
     event.recipes.anvilcraft.item_compress(
         ['foand:poppy_melon_sand', 'minecraft:glass_bottle'],
         [ChanceItemStack.of('foand:poppy_melon_juice')]
-    ); // 西瓜沙 + 玻璃瓶 → 西瓜汁
+    ); // 西瓜沙 + 玻璃瓶 -> 西瓜汁
     event.recipes.anvilcraft.item_compress(
         ['foand:poppy_melon_sand', 'minecraft:glass_bottle', 'minecraft:glass_bottle'],
         [ChanceItemStack.of('2x foand:poppy_melon_juice')]
-    ); // 西瓜沙 + 2瓶玻璃瓶 → 2x 西瓜汁
+    ); // 西瓜沙 + 2瓶玻璃瓶 -> 2x 西瓜汁
     event.recipes.anvilcraft.item_compress(
         ['foand:poppy_melon_sand', 'minecraft:glass_bottle', 'minecraft:glass_bottle', 'minecraft:glass_bottle'],
         [ChanceItemStack.of('3x foand:poppy_melon_juice')]
-    ); // 西瓜沙 + 3瓶玻璃瓶 → 3x 西瓜汁
+    ); // 西瓜沙 + 3瓶玻璃瓶 -> 3x 西瓜汁
 
     // Create 模组液体操作
     event.recipes.create.filling('foand:poppy_melon_juice', [Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle']); // 装瓶西瓜汁
