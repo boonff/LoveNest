@@ -17,7 +17,7 @@ ServerEvents.recipes(event => {
         A: 'minecraft:bamboo'
     })
 
-    event.shaped("foand:bamboo_string", ['A'], { A: 'minecraft:bamboo' })
+    event.shaped("foand:bamboo_string", ['A'], { A: 'minecraft:bamboo' })// 竹子 -> 竹线
 
     event.shaped({ item: 'minecraft:scaffolding', count: 6 }, [
         'ABA',
@@ -26,7 +26,9 @@ ServerEvents.recipes(event => {
     ], {
         A: 'minecraft:bamboo',
         B: 'foand:bamboo_string'
-    })
+    })  // 脚手架
+
+    event.remove({ output: 'minecraft:ladder' })
 
     // 熔炉配方
     event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(200); // 罂粟 —> 铁粒

@@ -24,28 +24,28 @@ StartupEvents.registry('block', event => {
 
     // 熔岩涌泉
     event.create('foand:lava_spring')
-        // 设置为不可破坏
-        .unbreakable()
-        // 设置不可正确挖掘
-        .requiresTool(false)
-        // 设置材质
-        .soundType('stone')
-        // 设置完整方块
-        .fullBlock(true)
-        // 设置不透明
-        .opaque(true)
+        .unbreakable()       // 设置为不可破坏
+        .requiresTool(false) // 设置不可正确挖掘
+        .soundType('stone')  // 设置材质
+        .fullBlock(true)     // 设置完整方块
+        .opaque(true)        // 设置不透明
+        .lightLevel(3)       // 设置光照等级为3
         .randomTick(event => {
             let pos = event.block.pos;
             let level = event.level;
             let randomChance = Math.random();
-            // 判断10%的概率是否触发
             if (randomChance < 0.1) {
-                const abovePos = pos.offset(0, 1, 0);
-                if (level.getBlock(abovePos) == 'minecraft:air') {
-                    level.getBlock(abovePos).set('minecraft:lava');
+                const topPos = pos.offset(0, 1, 0);
+                const top2Pos = pos.offset(0, 2, 0);
+                if (level.getBlock(topPos).id == 'minecraft:air'
+                    && level.getBlock(top2Pos).id == 'minecraft:air') {
+                    level.getBlock(topPos).set('minecraft:lava');
                     // TODO 添加一些游戏内提示音效或粒子效果
                     // level.playSound(null, abovePos.getX(), abovePos.getY(), abovePos.getZ(), 'block.anvil.place', 1.0, 1.0);
                     // level.addParticle('cloud', abovePos.getX() + 0.5, abovePos.getY() + 0.5, abovePos.getZ() + 0.5, 0, 0, 0);
+                }
+                else if (level.getBlock(topPos).id == 'minecraft:water') {
+                    level.getBlock(topPos).set('minecraft:magma_block');
                 }
             }
         })
