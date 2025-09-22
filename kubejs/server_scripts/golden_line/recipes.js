@@ -4,7 +4,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.createoreexcavation.vein('{"text": "猪灵古战场"}', 'minecraft:piglin_head')
         .placement(128, 8, 114514)
-        .biomeWhitelist('foand:sky_nether')
+        .biomeWhitelist('c:is_nether')
         .alwaysInfinite()
         .priority(10)
         .id('kubejs:golden_ore_nether')
