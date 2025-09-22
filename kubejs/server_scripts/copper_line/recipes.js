@@ -25,6 +25,6 @@ ServerEvents.recipes(event => {
     ])
 
     event.recipes.create.milling('create:crushed_raw_copper', 'anvilcraft:crab_claw');
-    event.recipes.anvilcraft.item_crush('anvilcraft:crab_claw', 'create:crushed_raw_copper');
+    event.recipes.anvilcraft.item_crush('anvilcraft:crab_claw', ChanceItemStack.of('create:crushed_raw_copper'));
     event.recipes.create.crushing(['create:crushed_raw_copper', { id: 'create:crushed_raw_copper', chance: 0.5 }], 'anvilcraft:crab_claw');
 })
