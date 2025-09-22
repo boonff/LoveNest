@@ -29,6 +29,7 @@ StartupEvents.registry('block', event => {
         .soundType('stone')  // 设置材质
         .fullBlock(true)     // 设置完整方块
         .opaque(true)        // 设置不透明
+        .lightLevel(3)       // 设置光照等级为3
         .randomTick(event => {
             let pos = event.block.pos;
             let level = event.level;
