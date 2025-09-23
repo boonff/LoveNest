@@ -62,10 +62,16 @@ ServerEvents.recipes(event => {
     event.smelting('minecraft:charcoal', 'minecraft:bamboo_block').xp(0.1); // 木炭 -> 竹块
     event.smelting('minecraft:charcoal', 'minecraft:stripped_bamboo_block').xp(0.1); // 木炭 -> 剥皮竹块 
 
-    // 零星加工
+    // 物品拆分
     event.shapeless('anvilcraft:sugar_block', '9x minecraft:sugar'); // 9糖 -> 糖块
+    event.recipes.anvilcraft.unpack('anvilcraft:sugar_block', ChanceItemStack.of('9x minecraft:sugar')); // 糖块 -> 9糖
     event.shapeless('foand:poppy_melon', '9x foand:poppy_melon_slice'); // 9片切片 -> 西瓜
+
+    // 解包
     event.recipes.anvilcraft.unpack('foand:poppy_melon', ChanceItemStack.of('9x foand:poppy_melon_slice')); // 西瓜 -> 9片切片
+
+    // 物品粉碎
+    event.recipes.anvilcraft.item_crush('foand:andesite_sugar_block', ChanceItemStack.of('9x foand:andesite_sugar')); // 安山糖块 -> 9安山糖
 
     // 方块粉碎
     event.recipes.anvilcraft.block_crush('foand:poppy_melon', 'foand:poppy_melon_sand'); // 西瓜 -> 西瓜沙
