@@ -1,8 +1,8 @@
 StartupEvents.registry('item', event => {
     event.create('foand:poppy_melon_juice') // 罂粟西瓜汁
         .food(food => {
-            food.nutrition(6)
-                .saturation(0.5)
+            food.nutrition(4)
+                .saturation(0.6)
                 .eaten(ctx => {
                     ctx.player.give('minecraft:glass_bottle')
                 })
