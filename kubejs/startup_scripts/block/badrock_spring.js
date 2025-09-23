@@ -1,4 +1,8 @@
 StartupEvents.registry('block', event => {
+    event.create('foand:melt_gem_block') // 熔炼宝石块
+        .soundType('glass')
+        .noDrops()
+
     // 宝石涌泉
     event.create('foand:gem_spring')
         .unbreakable()  // 设置为不可破坏
