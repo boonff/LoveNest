@@ -1,30 +1,20 @@
 StartupEvents.registry('block', event => {
-    // 注册糖块
+    // 糖块
     event.create('anvilcraft:sugar_block')
-        // 设置硬度
-        .hardness(1.0)
-        // 设置爆炸抗性
-        .resistance(1.0)
-        // 设置材质
-        .soundType('sand')
-        // 设置完整方块
-        .fullBlock(true)
-        // 设置不透明
-        .opaque(true)
+        .hardness(1.0)       // 硬度
+        .resistance(1.0)     // 爆炸抗性
+        .soundType('sand')   // 材质
+        .fullBlock(true)     // 完整方块
+        .opaque(true)        // 不透明   
         .tagBlock('minecraft:mineable/shovel') // 可用铲子挖掘
 
-    // 注册安山糖块
+    // 安山糖块
     event.create('foand:andesite_sugar_block')
-        // 设置硬度
-        .hardness(1.0)
-        // 设置爆炸抗性
-        .resistance(1.0)
-        // 设置材质
-        .soundType('sand')
-        // 设置完整方块
-        .fullBlock(true)
-        // 设置不透明
-        .opaque(true)
+        .hardness(1.0)       // 硬度
+        .resistance(1.0)     // 爆炸抗性
+        .soundType('sand')   // 材质
+        .fullBlock(true)     // 完整方块
+        .opaque(true)        // 不透明
         .tagBlock('minecraft:mineable/shovel') // 可用铲子挖掘
 })
 
