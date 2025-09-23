@@ -1,12 +1,13 @@
 {
     "block.foand.gem_spring": "宝石涌泉",
     "block.foand.melt_gem_block": "熔炼宝石块",
-    "block.fond.lava_spring": "熔岩涌泉",
+    "block.foand.lava_spring": "熔岩涌泉",
     "block.foand.poppy_melon": "虞美人西瓜",
     "block.foand.poppy_melon_stem": "虞美人西瓜苗",
     "block.foand.attached_poppy_melon_stem": "附着的虞美人西瓜苗",
     "block.foand.poppy_melon_sand": "虞美人西瓜沙",
     "block.foand.andesite_sugar_block": "安山糖块",
+    "item.foand.andesite_sugar": "安山糖",
     "item.foand.poppy_melon_juice": "虞美人西瓜汁",
     "item.foand.poppy_melon_slice": "虞美人西瓜片",
     "item.foand.bamboo_string": "竹线"
