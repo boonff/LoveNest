@@ -37,6 +37,13 @@ ServerEvents.recipes(event => {
         B: 'minecraft:stick'
     }) // 蟹笼
 
+    event.shaped('woodenbucket:wooden_bucket', [
+        'A A',
+        ' A ',
+    ], {
+        A: 'minecraft:bamboo_block'
+    }) // 梯子
+
     event.remove({ output: 'minecraft:spyglass' }) // 移除望远镜原版配方
     event.shaped('minecraft:spyglass', [
         ' A ',
@@ -50,7 +57,7 @@ ServerEvents.recipes(event => {
     event.remove({ output: 'minecraft:ladder' })
 
     // 熔炉配方
-    event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(100); // 罂粟 —> 铁粒
+    event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(50); // 罂粟 —> 铁粒
     event.smelting('minecraft:iron_nugget', 'foand:poppy_melon_slice').xp(0.1); // 罂粟西瓜片 -> 铁粒
     event.smelting('minecraft:charcoal', 'minecraft:bamboo_block').xp(0.1); // 木炭 -> 竹块
     event.smelting('minecraft:charcoal', 'minecraft:stripped_bamboo_block').xp(0.1); // 木炭 -> 剥皮竹块 
