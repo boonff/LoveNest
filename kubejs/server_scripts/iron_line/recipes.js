@@ -26,17 +26,27 @@ ServerEvents.recipes(event => {
     ], {
         A: 'minecraft:bamboo',
         B: 'foand:bamboo_string'
-    })  // 脚手架
+    })  // 蟹笼
+
+    event.shaped('anvilcraft:crab_trap', [
+        'BAB',
+        'A A',
+        'BAB'
+    ], {
+        A: 'foand:bamboo_string',
+        B: 'minecraft:stick'
+    }) // 梯子
 
     event.remove({ output: 'minecraft:ladder' })
 
     // 熔炉配方
-    event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(200); // 罂粟 —> 铁粒
+    event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(100); // 罂粟 —> 铁粒
     event.smelting('minecraft:iron_nugget', 'foand:poppy_melon_slice').xp(0.1); // 罂粟西瓜片 -> 铁粒
     event.smelting('minecraft:charcoal', 'minecraft:bamboo_block').xp(0.1); // 木炭 -> 竹块
     event.smelting('minecraft:charcoal', 'minecraft:stripped_bamboo_block').xp(0.1); // 木炭 -> 剥皮竹块 
 
     // 零星加工
+    event.shapeless('anvilcraft:sugar_block', '9x minecraft:sugar'); // 9糖 -> 糖块
     event.shapeless('foand:poppy_melon', '9x foand:poppy_melon_slice'); // 9片切片 -> 西瓜
     event.recipes.anvilcraft.unpack('foand:poppy_melon', ChanceItemStack.of('9x foand:poppy_melon_slice')); // 西瓜 -> 9片切片
 
