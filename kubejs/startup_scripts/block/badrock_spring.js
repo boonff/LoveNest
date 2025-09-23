@@ -1,5 +1,9 @@
 StartupEvents.registry('block', event => {
-    event.create('foand:melt_gem_block') // 熔炼宝石块
+    // 熔炼宝石块
+    event.create('foand:melt_gem_block')
+        .lightLevel(14)
+        .hardness(1.0) // 设置硬度
+        .resistance(1.0) // 设置爆炸抗性
         .soundType('glass')
         .noDrops()
 
