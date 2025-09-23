@@ -1,0 +1,17 @@
+//砍草掉落西瓜种子或南瓜种子
+BlockEvents.broken(event => {
+    if (event.block.id == 'minecraft:short_grass' || event.block.id == 'minecraft:tall_grass') {
+        const block = event.block
+        const itemEntity = event.level.createEntity('item');
+        if (Math.random() < 0.1) {
+            itemEntity.item = Item.of('minecraft:melon_seeds"', 1);
+            itemEntity.setPosition(block.x + 0.5, block.y + 0.5, block.z + 0.5);//掉落物偏移
+            itemEntity.spawn();
+        }
+        else if (Math.random() < 0.1) {
+            itemEntity.item = Item.of('minecraft:pumpkin_seeds', 1);
+            itemEntity.setPosition(block.x + 0.5, block.y + 0.5, block.z + 0.5);
+            itemEntity.spawn();
+        }
+    }
+})
