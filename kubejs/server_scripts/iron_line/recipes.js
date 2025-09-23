@@ -26,7 +26,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'minecraft:bamboo',
         B: 'foand:bamboo_string'
-    })  // 蟹笼
+    })  // 脚手架
 
     event.shaped('anvilcraft:crab_trap', [
         'BAB',
@@ -35,7 +35,17 @@ ServerEvents.recipes(event => {
     ], {
         A: 'foand:bamboo_string',
         B: 'minecraft:stick'
-    }) // 梯子
+    }) // 蟹笼
+
+    event.remove({ output: 'minecraft:spyglass' }) // 移除望远镜原版配方
+    event.shaped('minecraft:spyglass', [
+        ' A ',
+        ' B ',
+        ' B '
+    ], {
+        A: 'minecraft:glass',
+        B: 'minecraft:copper_ingot'
+    }) // 望远镜
 
     event.remove({ output: 'minecraft:ladder' })
 
@@ -50,10 +60,16 @@ ServerEvents.recipes(event => {
     event.shapeless('foand:poppy_melon', '9x foand:poppy_melon_slice'); // 9片切片 -> 西瓜
     event.recipes.anvilcraft.unpack('foand:poppy_melon', ChanceItemStack.of('9x foand:poppy_melon_slice')); // 西瓜 -> 9片切片
 
-    // 粉碎加工
+    // 方块粉碎
     event.recipes.anvilcraft.block_crush('foand:poppy_melon', 'foand:poppy_melon_sand'); // 西瓜 -> 西瓜沙
+
+    // 筛！！
     event.recipes.anvilcraft.mesh('foand:poppy_melon_sand', 'create:crushed_raw_iron', 1); // 西瓜沙 -> 原铁碎
     event.recipes.anvilcraft.mesh('foand:poppy_melon_sand', 'minecraft:redstone', { "min": 1, "max": 5 }) // 西瓜沙 -> 红石
+    event.recipes.anvilcraft.mesh('minecraft:sand', 'minecraft:sugar_cane', { type: 'minecraft:cbinomial', n: 1, p: 0.25 }) // 沙子 -> 甘蔗（概率）
+    event.recipes.anvilcraft.mesh('minecraft:coarse_dirt', 'minecraft:melon_seeds', { type: 'minecraft:cbinomial', n: 1, p: 0.25 }) // 沙子 -> 西瓜种子（概率）
+    event.recipes.anvilcraft.mesh('minecraft:coarse_dirt', 'minecraft:pumpkin_seeds', { type: 'minecraft:cbinomial', n: 1, p: 0.25 }) // 沙子 -> 南瓜种子（概率）
+
 
     // 压缩加工
     event.recipes.anvilcraft.item_compress(
