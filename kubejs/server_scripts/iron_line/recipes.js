@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
         ' A ',
     ], {
         A: 'minecraft:bamboo_block'
-    }) // 梯子
+    }) // 木桶
 
     event.remove({ output: 'minecraft:spyglass' }) // 移除望远镜原版配方
     event.shaped('minecraft:spyglass', [
