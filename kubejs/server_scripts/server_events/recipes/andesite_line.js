@@ -13,6 +13,6 @@ ServerEvents.recipes(event => {
 
     event.recipes.create.deploying('foand:andesite_sugar_block', ['anvilcraft:sugar_block', 'minecraft:andesite'])
 
-    event.recipes.create.mixing('9x create:andesite_alloy', [Fluid.of('foand:poppy_melon_juice', 100), 'foand:andesite_sugar_block'])
-
+    event.recipes.create.mixing('9x create:andesite_alloy', [Fluid.of('foand:poppy_melon_juice', 100), 'foand:andesite_sugar_block']).heated()
+    // event.custom().merge
 })
