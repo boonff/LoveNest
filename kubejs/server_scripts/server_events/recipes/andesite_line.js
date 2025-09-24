@@ -5,22 +5,26 @@ ServerEvents.recipes(event => {
     // 方块压缩
     event.recipes.anvilcraft.block_compress({
         "inputs": [
-            { "blocks": "minecraft:stone" },
+            { "blocks": "anvilcraft:sugar_block" },
             { "blocks": "minecraft:andesite" }
         ],
         "result": { "block": "foand:andesite_sugar_block" }
     }) //糖块 + 安山岩 -> 安山糖块
 
     // 物品注入（item + block -> result）
-    event.recipes.anvilcraft.item_compress({
+    event.recipes.anvilcraft.item_inject({
+        "block_ingredient": {
+            "blocks": "minecraft:andesite"
+        },
+        "block_result": {
+            "block": "foand:andesite_sugar_block"
+        },
         "ingredients": [
-            { "items": "minecraft:andesite" },
-            { "items": "minecraft:sugar_block" }
-        ],
-        "results": [
-            { "id": "foand:andesite_sugar_block" }
+            {
+                "items": "minecraft:sugar_block"
+            }
         ]
-    }) //安山岩 + 糖块 -> 安山糖块
+    }) //TODO 配方不能生效 安山岩 + 糖块 -> 安山糖块
 
     // 物品压缩
     event.recipes.anvilcraft.item_compress({
