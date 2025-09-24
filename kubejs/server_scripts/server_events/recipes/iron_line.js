@@ -1,5 +1,7 @@
 ServerEvents.recipes(event => {
-    global.createRecipes.init(event); // 初始化全局配方
+    // 初始化全局配方
+    global.createRecipes.init(event)
+    global.anvilcraftRecipes.init(event)
     // 竹子相关
     event.shaped('minecraft:bamboo_planks', [
         'AA',
@@ -64,12 +66,19 @@ ServerEvents.recipes(event => {
 
     // 物品拆分
     event.shapeless('anvilcraft:sugar_block', '9x minecraft:sugar'); // 9糖 -> 糖块
-    event.recipes.anvilcraft.unpack('anvilcraft:sugar_block', ChanceItemStack.of('9x minecraft:sugar')); // 糖块 -> 9糖
     event.shapeless('foand:poppy_melon', '9x foand:poppy_melon_slice'); // 9片切片 -> 西瓜
 
     // 解包
-    event.recipes.anvilcraft.unpack('foand:poppy_melon', ChanceItemStack.of('9x foand:poppy_melon_slice')); // 西瓜 -> 9片切片
-
+    event.recipes.anvilcraft.unpack(
+        {
+            "ingredients": [
+                { "items": 'foand:poppy_melon' }
+            ],
+            "results": [
+                { "count": 9, "id": "foand:poppy_melon_slice" }
+            ]
+        }
+    )// 罂粟西瓜 -> 罂粟西瓜片x9
     // 物品粉碎
     event.recipes.anvilcraft.item_crush('foand:andesite_sugar_block', ChanceItemStack.of('9x foand:andesite_sugar')); // 安山糖块 -> 9安山糖
 
