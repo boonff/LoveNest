@@ -8,6 +8,22 @@ ServerEvents.recipes(event => {
         { id: 'minecraft:kelp', chance: 0.1 }
     ], [Fluid.water(1000), 'anvilcraft:crab_trap'])
 
+    // 物品粉碎
+    event.custom({
+        "type": "anvilcraft:item_crush",
+        "ingredients": [
+            {
+                "items": 'anvilcraft:crab_claw'
+            }
+        ],
+        "results": [
+            {
+                "count": 1,
+                "id": 'create:crushed_raw_copper'
+            }
+        ]
+    }) //蟹钳 -> 粉碎铜
+
     event.recipes.create.mixing([
         'anvilcraft:crab_trap',
         'anvilcraft:crab_claw'
@@ -25,6 +41,5 @@ ServerEvents.recipes(event => {
     ])
 
     event.recipes.create.milling('create:crushed_raw_copper', 'anvilcraft:crab_claw');
-    event.recipes.anvilcraft.item_crush('anvilcraft:crab_claw', ChanceItemStack.of('create:crushed_raw_copper'));
     event.recipes.create.crushing(['create:crushed_raw_copper', { id: 'create:crushed_raw_copper', chance: 0.5 }], 'anvilcraft:crab_claw');
 })
