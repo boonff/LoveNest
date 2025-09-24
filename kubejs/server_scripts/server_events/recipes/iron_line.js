@@ -101,4 +101,7 @@ ServerEvents.recipes(event => {
     // Create 模组液体操作
     event.recipes.create.filling('foand:poppy_melon_juice', [Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle']); // 装瓶西瓜汁
     event.recipes.create.emptying([Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle'], 'foand:poppy_melon_juice'); // 倒空西瓜汁瓶
+
+    // 高效配方
+    event.recipes.create.mixing('minecraft:iron_block', [Fluid.of('foand:poppy_melon_juice', 1000), Fluid.lava(1000)]); // 1000mb瓜汁 + 1000mb岩浆 -> 1铁块
 });
