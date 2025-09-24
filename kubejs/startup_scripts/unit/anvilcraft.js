@@ -5,7 +5,6 @@ let anvilcraftRecipes = {
     event: null,
     init: function (event) {
         this.event = event;
-        event.recipes.anvilcraft = this;
 
         let self = this;
         let normal_recipes = [

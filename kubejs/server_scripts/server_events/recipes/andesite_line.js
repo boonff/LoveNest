@@ -1,25 +1,18 @@
 ServerEvents.recipes(event => {
     global.createRecipes.init(event)
+    global.anvilcraftRecipes.init(event)
 
     // 方块压缩
-    event.custom({
-        "type": "anvilcraft:block_compress",
+    event.recipes.anvilcraft.block_compress({
         "inputs": [
-            {
-                "blocks": "anvilcraft:sugar_block"
-            },
-            {
-                "blocks": "minecraft:andesite"
-            }
+            { "blocks": "minecraft:stone" },
+            { "blocks": "minecraft:andesite" }
         ],
-        "result": {
-            "block": "foand:andesite_sugar_block"
-        }
+        "result": { "block": "foand:andesite_sugar_block" }
     }) //糖块 + 安山岩 -> 安山糖块
 
     // 物品注入（item + block -> result）
-    event.custom({
-        "type": "anvilcraft:item_compress",
+    event.recipes.anvilcraft.item_compress({
         "ingredients": [
             { "items": "minecraft:andesite" },
             { "items": "minecraft:sugar_block" }
@@ -30,8 +23,7 @@ ServerEvents.recipes(event => {
     }) //安山岩 + 糖块 -> 安山糖块
 
     // 物品压缩
-    event.custom({
-        "type": "anvilcraft:item_compress",
+    event.recipes.anvilcraft.item_compress({
         "ingredients": [
             { 'count': 2, 'items': 'foand:andesite_sugar_block' },
             { 'count': 2, 'items': 'foand:poppy_melon_juice' },

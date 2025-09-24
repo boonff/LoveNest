@@ -80,32 +80,120 @@ ServerEvents.recipes(event => {
         }
     )// 罂粟西瓜 -> 罂粟西瓜片x9
     // 物品粉碎
-    event.recipes.anvilcraft.item_crush('foand:andesite_sugar_block', ChanceItemStack.of('9x foand:andesite_sugar')); // 安山糖块 -> 9安山糖
-
+    event.recipes.anvilcraft.item_crush(
+        {
+            "ingredients": [
+                { "items": "foand:andesite_sugar_block" }
+            ],
+            "results": [
+                { "count": 9, "id": "foand:andesite_sugar" }
+            ]
+        }
+    ); // 安山糖块 -> 9安山糖
     // 方块粉碎
-    event.recipes.anvilcraft.block_crush('foand:poppy_melon', 'foand:poppy_melon_sand'); // 西瓜 -> 西瓜沙
+    event.recipes.anvilcraft.block_crush(
+        {
+            "input": { "blocks": "foand:poppy_melon" },
+            "result": { "block": "foand:poppy_melon_sand" }
+        }
+    ); // 西瓜 -> 西瓜沙
 
     // 筛！！
-    event.recipes.anvilcraft.mesh('foand:poppy_melon_sand', 'create:crushed_raw_iron', 1); // 西瓜沙 -> 原铁碎
-    event.recipes.anvilcraft.mesh('foand:poppy_melon_sand', 'minecraft:redstone', { "min": 1, "max": 5 }) // 西瓜沙 -> 红石
-    event.recipes.anvilcraft.mesh('minecraft:sand', 'minecraft:sugar_cane', { type: 'minecraft:cbinomial', n: 1, p: 0.25 }) // 沙子 -> 甘蔗（概率）
-    event.recipes.anvilcraft.mesh('minecraft:coarse_dirt', 'minecraft:melon_seeds', { type: 'minecraft:cbinomial', n: 1, p: 0.25 }) // 沙子 -> 西瓜种子（概率）
-    event.recipes.anvilcraft.mesh('minecraft:coarse_dirt', 'minecraft:pumpkin_seeds', { type: 'minecraft:cbinomial', n: 1, p: 0.25 }) // 沙子 -> 南瓜种子（概率）
-
+    event.recipes.anvilcraft.mesh(
+        {
+            "ingredients": [
+                { "items": "foand:poppy_melon_sand" }
+            ],
+            "results": [{
+                "count": {
+                    "type": "minecraft:binomial",
+                    "n": 1.0,
+                    "p": 1
+                },
+                "id": "create:crushed_raw_iron"
+            }, {
+                "count": {
+                    "type": "minecraft:binomial",
+                    "n": 5.0,
+                    "p": 0.8
+                },
+                "id": "minecraft:redstone"
+            }
+            ]
+        }
+    ); // 西瓜沙 -> 原铁碎&红石
+    event.recipes.anvilcraft.mesh({
+        "ingredients": [
+            { "items": "minecraft:sand" }
+        ],
+        "results": [{
+            "count": {
+                "type": "minecraft:binomial",
+                "n": 1.0,
+                "p": 0.25
+            },
+            "id": "minecraft:sugar_cane"
+        }
+        ]
+    }
+    ) // 沙子 -> 甘蔗（概率）
+    event.recipes.anvilcraft.mesh({
+        "ingredients": [
+            { "items": "minecraft:coarse_dirt" }
+        ],
+        "results": [{
+            "count": {
+                "type": "minecraft:binomial",
+                "n": 1.0,
+                "p": 0.25
+            },
+            "id": "minecraft:melon_seeds"
+        },
+        {
+            "count": {
+                "type": "minecraft:binomial",
+                "n": 1.0,
+                "p": 0.25
+            },
+            "id": "minecraft:pumpkin_seeds"
+        }
+        ]
+    }) // 沙砾 -> 西瓜种子&南瓜种子
 
     // 压缩加工
     event.recipes.anvilcraft.item_compress(
-        ['foand:poppy_melon_sand', 'minecraft:glass_bottle'],
-        [ChanceItemStack.of('foand:poppy_melon_juice')]
-    ); // 西瓜沙 + 玻璃瓶 -> 西瓜汁
+        {
+            "ingredients": [
+                { "items": "foand:poppy_melon_sand" },
+                { "items": "minecraft:glass_bottle" }
+            ],
+            "results": [
+                { "id": "foand:poppy_melon_juice" }
+            ]
+        }
+    ); // 西瓜沙x1 + 玻璃瓶 -> 西瓜汁x1
     event.recipes.anvilcraft.item_compress(
-        ['foand:poppy_melon_sand', 'minecraft:glass_bottle', 'minecraft:glass_bottle'],
-        [ChanceItemStack.of('2x foand:poppy_melon_juice')]
-    ); // 西瓜沙 + 2瓶玻璃瓶 -> 2x 西瓜汁
+        {
+            "ingredients": [
+                { "items": "foand:poppy_melon_sand" },
+                { "count": 2, "items": "minecraft:glass_bottle" }
+            ],
+            "results": [
+                { "count": 2, "id": "foand:poppy_melon_juice" }
+            ]
+        }
+    ); // 西瓜沙x2 + 玻璃瓶 -> 西瓜汁x2
     event.recipes.anvilcraft.item_compress(
-        ['foand:poppy_melon_sand', 'minecraft:glass_bottle', 'minecraft:glass_bottle', 'minecraft:glass_bottle'],
-        [ChanceItemStack.of('3x foand:poppy_melon_juice')]
-    ); // 西瓜沙 + 3瓶玻璃瓶 -> 3x 西瓜汁
+        {
+            "ingredients": [
+                { "items": "foand:poppy_melon_sand" },
+                { "count": 3, "items": "minecraft:glass_bottle" }
+            ],
+            "results": [
+                { "count": 3, "id": "foand:poppy_melon_juice" }
+            ]
+        }
+    ); // 西瓜沙x3 + 玻璃瓶 -> 西瓜汁x3
 
     // Create 模组液体操作
     event.recipes.create.filling('foand:poppy_melon_juice', [Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle']); // 装瓶西瓜汁
