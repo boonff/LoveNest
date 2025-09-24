@@ -1,6 +1,7 @@
 .vs/
 .abnormal
 .mixin.out/
+.vscode/recipe.json
 
 /config/*
 !/config/ftbquests/
