@@ -53,6 +53,19 @@ function getOutputs(outputs) {
     }
 }
 
+global.createSequenced = Object.fromEntries([
+    'deploying',
+    'filling',
+    'pressing',
+    'cutting'
+].map(key => [key, (outputs, inputs) => {
+    return {
+        "type": "create:" + key,
+        ingredients: getIngredients(inputs),
+        results: getOutputs(outputs)
+    }
+}]));
+
 let createRecipes = {
     event: null,
     init: function (e) {
@@ -98,50 +111,24 @@ let createRecipes = {
             results: outputs,
             sequence: recipes,
         }))
-
         r['loops'] = (input) => { r.merge({ loops: input }) };
         r['transitionalItem'] = (input) => { r.merge({ transitional_item: input }) };
-
+        return r;
+    },
+    mechanical_crafting: function (output, pattern, key, accept_mirrored = false) {
+        let r = Object(this.event.custom({
+            type: "create:mechanical_crafting",
+            category: "misc",
+            accept_mirrored: accept_mirrored,
+            key: key,
+            pattern: pattern,
+            result: getItem(output)
+        }))
+        r['showNotification'] = (input) => { r.merge({ show_notification: input }) };
         return r;
     }
 }
 
+
+
 global.createRecipes = createRecipes;
-
-
-global.createSequenced = {
-    createDeploying(output, inputs) {
-        return {
-            "type": "create:deploying",
-            "ingredients": inputs.map(input => getIngredient(input)),
-            "results": [getItem(output)]
-        }
-    },
-    createFilling(output, inputs) {
-        let fluid = getItem(inputs[0]);
-        let input = getIngredient(inputs[1]);
-        let result = getItem(output);
-        return {
-            type: 'create:filling',
-            ingredients: [
-                input,
-                fluid
-            ],
-            results: [result]
-        }
-    },
-    createPressing(output, input) {
-        return {
-            "type": "create:pressing",
-            "ingredients": [getIngredient(input)],
-            "results": [getItem(output)]
-        }
-    },
-    createCutting(output, input) {
-        return {
-            "type": "create:cutting",
-            "ingredients": [getIngredient(input)],
-            "results": [getItem(output)]
-        }
-    }
-}
