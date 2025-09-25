@@ -11,6 +11,18 @@ ServerEvents.recipes(event => {
         "result": { "block": "foand:andesite_sugar_block" }
     }) //糖块 + 安山岩 -> 安山糖块
 
+    // 物品粉碎
+    event.recipes.anvilcraft.item_crush(
+        {
+            "ingredients": [
+                { "items": "foand:andesite_sugar_block" }
+            ],
+            "results": [
+                { "count": 4, "id": "foand:andesite_sugar" }
+            ]
+        }
+    ); // 安山糖块 -> 9安山糖
+
     // 物品注入（item + block -> result）
     event.recipes.anvilcraft.item_inject({
         "block_ingredient": { "blocks": "minecraft:andesite" },
@@ -27,9 +39,7 @@ ServerEvents.recipes(event => {
         "results": [
             { "count": 1, "id": 'create:andesite_alloy' }
         ]
-
-    }
-    ) // 安山糖块x2 + 罂粟西瓜汁x2 -> 鞍山合金
+    }) // 安山糖块x2 + 罂粟西瓜汁x2 -> 鞍山合金
 
     event.recipes.create.deploying('foand:andesite_sugar_block', ['anvilcraft:sugar_block', 'minecraft:andesite'])
 
