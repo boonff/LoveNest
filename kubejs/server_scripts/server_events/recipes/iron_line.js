@@ -4,10 +4,17 @@ ServerEvents.recipes(event => {
     global.anvilcraftRecipes.init(event)
 
     // 熔炉配方
-    event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(50); // 罂粟 —> 铁粒
-    event.smelting('minecraft:iron_nugget', 'foand:poppy_melon_slice').xp(0.1); // 罂粟西瓜片 -> 铁粒
-    event.smelting('minecraft:charcoal', 'minecraft:bamboo_block').xp(0.1); // 木炭 -> 竹块
-    event.smelting('minecraft:charcoal', 'minecraft:stripped_bamboo_block').xp(0.1); // 木炭 -> 剥皮竹块 
+    event.smelting('minecraft:iron_nugget',
+        'minecraft:poppy').xp(0.1).cookingTime(50); // 罂粟 —> 铁粒
+
+    event.smelting('minecraft:iron_nugget',
+        'foand:poppy_melon_slice').xp(0.1).cookingTime(50); // 罂粟西瓜片 -> 铁粒
+
+    event.smelting('minecraft:charcoal',
+        'minecraft:bamboo_block').xp(0.1); // 木炭 -> 竹块
+
+    event.smelting('minecraft:charcoal',
+        'minecraft:stripped_bamboo_block').xp(0.1); // 木炭 -> 剥皮竹块 
 
     // 物品拆分
     event.shapeless('anvilcraft:sugar_block', '9x minecraft:sugar'); // 9糖 -> 糖块
@@ -42,15 +49,15 @@ ServerEvents.recipes(event => {
             "results": [{
                 "count": {
                     "type": "minecraft:binomial",
-                    "n": 1.0,
-                    "p": 1
+                    "n": 3.0,
+                    "p": 0.8
                 },
                 "id": "create:crushed_raw_iron"
             }, {
                 "count": {
                     "type": "minecraft:binomial",
-                    "n": 5.0,
-                    "p": 0.8
+                    "n": 3.0,
+                    "p": 0.6
                 },
                 "id": "minecraft:redstone"
             }
