@@ -18,6 +18,8 @@ ServerEvents.recipes(event => {
         "ingredients": [{ "items": "anvilcraft:sugar_block" }]
     }) //安山岩 + 糖块 -> 安山糖块
 
+    event.recipes.create.deploying('foand:andesite_sugar_block', ['minecraft:andesite', 'anvilcraft:sugar_block']) //糖块 + 安山岩 -> 安山糖块
+
     // 物品压缩
     event.recipes.anvilcraft.item_compress({
         "ingredients": [
@@ -27,12 +29,8 @@ ServerEvents.recipes(event => {
         "results": [
             { "count": 1, "id": 'create:andesite_alloy' }
         ]
+    }) // 安山糖块x2 + 罂粟西瓜汁x2 -> 鞍山合金
 
-    }
-    ) // 安山糖块x2 + 罂粟西瓜汁x2 -> 鞍山合金
 
-    event.recipes.create.deploying('foand:andesite_sugar_block', ['anvilcraft:sugar_block', 'minecraft:andesite'])
-
-    event.recipes.create.mixing('9x create:andesite_alloy', [Fluid.of('foand:poppy_melon_juice', 100), 'foand:andesite_sugar_block']).heated()
-    // event.custom().merge
+    event.recipes.create.mixing('create:andesite_alloy', [Fluid.of('foand:poppy_melon_juice', 50), 'foand:andesite_sugar'])
 })
