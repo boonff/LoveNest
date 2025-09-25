@@ -2,61 +2,6 @@ ServerEvents.recipes(event => {
     // 初始化全局配方
     global.createRecipes.init(event)
     global.anvilcraftRecipes.init(event)
-    // 竹子相关
-    event.shaped('minecraft:bamboo_planks', [
-        'AA',
-        'AA'
-    ], {
-        A: 'minecraft:bamboo'
-    })
-
-    event.remove({ output: 'minecraft:bamboo_block' })
-    event.shaped('minecraft:bamboo_block', [
-        'AAA',
-        'A A',
-        'AAA'
-    ], {
-        A: 'minecraft:bamboo'
-    })
-
-    event.shaped("foand:bamboo_string", ['A'], { A: 'minecraft:bamboo' })// 竹子 -> 竹线
-
-    event.shaped({ item: 'minecraft:scaffolding', count: 6 }, [
-        'ABA',
-        'A A',
-        'A A'
-    ], {
-        A: 'minecraft:bamboo',
-        B: 'foand:bamboo_string'
-    })  // 脚手架
-
-    event.shaped('anvilcraft:crab_trap', [
-        'BAB',
-        'A A',
-        'BAB'
-    ], {
-        A: 'foand:bamboo_string',
-        B: 'minecraft:stick'
-    }) // 蟹笼
-
-    event.shaped('woodenbucket:wooden_bucket', [
-        'A A',
-        ' A ',
-    ], {
-        A: 'minecraft:bamboo_block'
-    }) // 木桶
-
-    event.remove({ output: 'minecraft:spyglass' }) // 移除望远镜原版配方
-    event.shaped('minecraft:spyglass', [
-        ' A ',
-        ' B ',
-        ' B '
-    ], {
-        A: 'minecraft:glass',
-        B: 'minecraft:copper_ingot'
-    }) // 望远镜
-
-    event.remove({ output: 'minecraft:ladder' })
 
     // 熔炉配方
     event.smelting('minecraft:iron_nugget', 'minecraft:poppy').xp(0.1).cookingTime(50); // 罂粟 —> 铁粒
