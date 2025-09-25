@@ -79,17 +79,7 @@ ServerEvents.recipes(event => {
             ]
         }
     )// 罂粟西瓜 -> 罂粟西瓜片x9
-    // 物品粉碎
-    event.recipes.anvilcraft.item_crush(
-        {
-            "ingredients": [
-                { "items": "foand:andesite_sugar_block" }
-            ],
-            "results": [
-                { "count": 9, "id": "foand:andesite_sugar" }
-            ]
-        }
-    ); // 安山糖块 -> 9安山糖
+
     // 方块粉碎
     event.recipes.anvilcraft.block_crush(
         {
