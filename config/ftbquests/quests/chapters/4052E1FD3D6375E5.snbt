@@ -3,6 +3,9 @@
 	default_quest_shape: ""
 	filename: "4052E1FD3D6375E5"
 	group: ""
+	icon: {
+		id: "create:brass_ingot"
+	}
 	id: "4052E1FD3D6375E5"
 	order_index: 3
 	quest_links: [ ]

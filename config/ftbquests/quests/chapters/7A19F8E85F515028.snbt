@@ -3,29 +3,75 @@
 	default_quest_shape: ""
 	filename: "7A19F8E85F515028"
 	group: ""
+	icon: {
+		id: "minecraft:anvil"
+	}
 	id: "7A19F8E85F515028"
 	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
-			id: "4841DF62795E81F7"
-			tasks: [{
-				id: "65DF8792134F2510"
-				item: { count: 1, id: "minecraft:iron_nugget" }
-				type: "item"
-			}]
-			x: -6.0d
-			y: -2.5d
-		}
-		{
 			id: "2F64C757FF599DCD"
 			tasks: [{
+				count: 8L
 				id: "7CA14C6A091B9EF1"
 				item: { count: 1, id: "minecraft:bamboo" }
 				type: "item"
 			}]
 			x: -9.0d
 			y: -2.5d
+		}
+		{
+			id: "588F106223495FAE"
+			tasks: [{
+				count: 2L
+				id: "4A7FA780A0734B89"
+				item: { count: 1, id: "minecraft:iron_ingot" }
+				type: "item"
+			}]
+			x: -7.5d
+			y: -2.5d
+		}
+		{
+			id: "3BB9F55C02CC7720"
+			tasks: [{
+				count: 18L
+				id: "293DCDDC1EE09B25"
+				item: { count: 18, id: "minecraft:poppy" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: -4.0d
+		}
+		{
+			id: "5B769D089A2CC0C9"
+			tasks: [{
+				id: "60359F906A330BF4"
+				item: { count: 1, id: "minecraft:shears" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: -4.0d
+		}
+		{
+			id: "417B00501E940151"
+			tasks: [{
+				id: "517FE9E1F91929EF"
+				item: { count: 1, id: "minecraft:charcoal" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: -1.0d
+		}
+		{
+			id: "3A3D8E441C53150B"
+			tasks: [{
+				id: "124D8A87D4A7696C"
+				item: { count: 1, id: "minecraft:bamboo_block" }
+				type: "item"
+			}]
+			x: -9.5d
+			y: -4.0d
 		}
 	]
 }
