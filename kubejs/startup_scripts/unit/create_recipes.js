@@ -37,6 +37,17 @@ function getFluid(input) {
     return result;
 }
 
+function getBlock(input) {
+    let result;
+    if (typeof input === "string") {
+        result = BlockStatePredicate.of(input);
+    } else if (Array.isArray(input) && input != []) {
+        result = getBlock(input[0])
+    } else
+        result = input;
+    return result;
+}
+
 function getIngredients(ingredients) {
     if (Array.isArray(ingredients)) {
         return ingredients.map(i => getIngredient(i))
@@ -53,18 +64,21 @@ function getOutputs(outputs) {
     }
 }
 
-global.createSequenced = Object.fromEntries([
+global.createSequenced = [
     'deploying',
     'filling',
     'pressing',
     'cutting'
-].map(key => [key, (outputs, inputs) => {
-    return {
-        "type": "create:" + key,
-        ingredients: getIngredients(inputs),
-        results: getOutputs(outputs)
-    }
-}]));
+].reduce((acc, key) => {
+    acc[key] = (outputs, inputs) => {
+        return {
+            "type": "create:" + key,
+            ingredients: getIngredients(inputs),
+            results: getOutputs(outputs)
+        }
+    };
+    return acc;
+}, {});
 
 let createRecipes = {
     event: null,
@@ -115,16 +129,17 @@ let createRecipes = {
         r['transitionalItem'] = (input) => { r.merge({ transitional_item: input }) };
         return r;
     },
-    mechanical_crafting: function (output, pattern, key, accept_mirrored = false) {
+    mechanical_crafting(output, pattern, key) {
         let r = Object(this.event.custom({
             type: "create:mechanical_crafting",
             category: "misc",
-            accept_mirrored: accept_mirrored,
+            accept_mirrored: false,
             key: key,
             pattern: pattern,
             result: getItem(output)
         }))
         r['showNotification'] = (input) => { r.merge({ show_notification: input }) };
+        r['acceptMirrored'] = () => { r.merge({ accept_mirrored: true }) };
         return r;
     }
 }
