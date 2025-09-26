@@ -1,0 +1,168 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "658651F6A636B74A"
+	group: ""
+	hide_quest_details_until_startable: true
+	icon: {
+		id: "foand:poppy_melon"
+	}
+	id: "658651F6A636B74A"
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			id: "56A5CE3DD70B516E"
+			tasks: [{
+				id: "254D96C490FC48E7"
+				item: { count: 1, id: "minecraft:bamboo" }
+				type: "item"
+			}]
+			x: -17.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["26D0D34B6C3EDCED"]
+			id: "04B223EDF4699DD4"
+			tasks: [{
+				id: "3272D29BEB2AB66B"
+				item: { count: 1, id: "minecraft:shears" }
+				type: "item"
+			}]
+			x: -14.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["04B223EDF4699DD4"]
+			id: "4B5B07336DA84289"
+			tasks: [{
+				id: "75E5135F5B32E442"
+				item: { count: 1, id: "foand:poppy_melon_slice" }
+				type: "item"
+			}]
+			x: -13.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["219EED0C2B433E89"]
+			id: "26D0D34B6C3EDCED"
+			tasks: [{
+				count: 9L
+				id: "26E4A3163A411602"
+				item: { count: 1, id: "minecraft:iron_nugget" }
+				type: "item"
+			}]
+			x: -16.0d
+			y: -6.0d
+		}
+		{
+			dependencies: [
+				"70CBAB637984BBC0"
+				"04B223EDF4699DD4"
+			]
+			dependency_requirement: "one_completed"
+			id: "32B9CD88F776B3B6"
+			progression_mode: "flexible"
+			rewards: [{
+				count: 9
+				id: "2F33F87E2E1F768E"
+				item: {
+					count: 1
+					id: "foand:poppy_melon_slice"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "71BD177B8FAF42AD"
+				item: { count: 1, id: "foand:poppy_melon_sand" }
+				type: "item"
+			}]
+			x: -13.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["77EA37772F40CBCD"]
+			id: "4016DC071CFD8598"
+			optional: true
+			progression_mode: "flexible"
+			tasks: [{
+				id: "1EEC26339CB5E3E5"
+				item: { count: 1, id: "minecraft:bone_meal" }
+				type: "item"
+			}]
+			x: -13.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["580521AA6855B8EB"]
+			id: "77EA37772F40CBCD"
+			optional: true
+			tasks: [{
+				id: "49D6D3DA6C12F84D"
+				item: { count: 1, id: "minecraft:composter" }
+				type: "item"
+			}]
+			x: -14.5d
+			y: -8.0d
+		}
+		{
+			dependency_requirement: "all_started"
+			id: "219EED0C2B433E89"
+			tasks: [{
+				id: "1A1D9735A5900703"
+				item: { count: 1, id: "minecraft:poppy" }
+				type: "item"
+			}]
+			x: -17.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["56A5CE3DD70B516E"]
+			id: "7985EAE6AD706075"
+			optional: true
+			tasks: [{
+				id: "2DB9AA1E90C62691"
+				item: { count: 1, id: "minecraft:bamboo_block" }
+				type: "item"
+			}]
+			x: -16.0d
+			y: -9.5d
+		}
+		{
+			dependencies: ["7985EAE6AD706075"]
+			id: "396CF67CDB8FEB1C"
+			optional: true
+			tasks: [{
+				id: "2A646FEF90D50698"
+				item: { count: 1, id: "minecraft:charcoal" }
+				type: "item"
+			}]
+			x: -13.0d
+			y: -9.5d
+		}
+		{
+			dependencies: ["56A5CE3DD70B516E"]
+			id: "580521AA6855B8EB"
+			optional: true
+			tasks: [{
+				id: "6FB125362578DCC4"
+				item: { count: 1, id: "minecraft:bamboo_planks" }
+				type: "item"
+			}]
+			x: -16.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["4B5B07336DA84289"]
+			id: "70CBAB637984BBC0"
+			tasks: [{
+				id: "162B0F6166EB284F"
+				item: { count: 1, id: "foand:poppy_melon" }
+				type: "item"
+			}]
+			x: -11.5d
+			y: -6.0d
+		}
+	]
+}
