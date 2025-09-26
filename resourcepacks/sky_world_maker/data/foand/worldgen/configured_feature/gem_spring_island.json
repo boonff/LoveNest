@@ -18,7 +18,7 @@
             "inner_layer_provider": {
                 "type": "minecraft:simple_state_provider",
                 "state": {
-                    "Name": "minecraft:glowstone"
+                    "Name": "foand:melt_gem_block"
                 }
             },
             "inner_placements": [
