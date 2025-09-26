@@ -164,5 +164,15 @@
 			x: -11.5d
 			y: -6.0d
 		}
+		{
+			id: "02622CF64B0BD820"
+			tasks: [{
+				id: "77AD413A6D97F597"
+				item: { count: 1, id: "minecraft:anvil" }
+				type: "item"
+			}]
+			x: -14.5d
+			y: -4.5d
+		}
 	]
 }
