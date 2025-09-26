@@ -13,5 +13,8 @@
     "item.foand.bamboo_string": "竹线",
     "fluid_type.foand.poppy_melon_juice": "虞美人西瓜汁",
     "fluid_type.foand.soulsteel": "灵魂汁子",
-    "fluid_type.foand.blaze": "烈焰血"
+    "fluid_type.foand.blaze": "烈焰血",
+    "item.foand.poppy_melon_juice_bucket": "虞美人西瓜汁桶",
+    "item.foand.soulsteel_bucket": "灵魂汁子桶",
+    "item.foand.blaze_bucket": "烈焰血桶"
 }
