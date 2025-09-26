@@ -16,6 +16,9 @@ StartupEvents.registry('item', event => {
         .food(food => {
             food.nutrition(3)
                 .saturation(0.5)
+                .eaten(ctx => {
+                    ctx.player.give('minecraft:iron_nugget')
+                })
         })
         .useDuration((stack, entity) => 40)
         .useAnimation('eat')
