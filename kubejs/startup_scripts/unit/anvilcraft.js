@@ -43,7 +43,8 @@ let anvilcraftRecipes = {
             'super_heating',
             'time_warp',
             'two_to_one_smithing',
-            'unpack'
+            'unpack',
+            'in_world_recipe'
         ];
 
         normal_recipes.forEach(recipe => {
