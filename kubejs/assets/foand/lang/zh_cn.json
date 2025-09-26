@@ -10,5 +10,8 @@
     "item.foand.andesite_sugar": "安山糖",
     "item.foand.poppy_melon_juice": "虞美人西瓜汁",
     "item.foand.poppy_melon_slice": "虞美人西瓜片",
-    "item.foand.bamboo_string": "竹线"
+    "item.foand.bamboo_string": "竹线",
+    "fluid_type.foand.poppy_melon_juice": "虞美人西瓜汁",
+    "fluid_type.foand.soulsteel": "灵魂汁子",
+    "fluid_type.foand.blaze": "烈焰血"
 }
