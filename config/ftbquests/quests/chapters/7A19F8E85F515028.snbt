@@ -7,17 +7,159 @@
 		id: "minecraft:anvil"
 	}
 	id: "7A19F8E85F515028"
-	order_index: 2
+	order_index: 3
 	quest_links: [ ]
-	quests: [{
-		dependencies: ["32B9CD88F776B3B6"]
-		id: "080EE545FB92D395"
-		tasks: [{
-			id: "5F1B158FDC4D5865"
-			item: { count: 1, id: "minecraft:stripped_oak_wood" }
-			type: "item"
-		}]
-		x: -0.5d
-		y: -0.5d
-	}]
+	quests: [
+		{
+			id: "6B0A8D0561D64450"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "681EE7929FC25358"
+				item: { count: 1, id: "foand:poppy_melon_sand" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: -30.0d
+		}
+		{
+			dependencies: ["109C1151FBEED4F4"]
+			id: "5F33F1ED7BA812F6"
+			tasks: [{
+				id: "13039A9AB2D3C977"
+				item: { count: 1, id: "anvilcraft:hollow_magnet_block" }
+				type: "item"
+			}]
+			x: -12.5d
+			y: -24.5d
+		}
+		{
+			dependencies: ["10C6E1A937EF1892"]
+			id: "109C1151FBEED4F4"
+			tasks: [{
+				id: "74CAB8CE54DCDA40"
+				item: { count: 1, id: "minecraft:lightning_rod" }
+				type: "item"
+			}]
+			x: -12.5d
+			y: -26.0d
+		}
+		{
+			id: "4B2BA752F316C98D"
+			shape: "square"
+			tasks: [{
+				fluid: {
+					amount: 1000
+					id: "anvilcraft:melt_gem"
+				}
+				id: "24092E2AFC5E84D9"
+				type: "fluid"
+			}]
+			x: -6.5d
+			y: -28.5d
+		}
+		{
+			dependencies: ["4B2BA752F316C98D"]
+			id: "4090C9077CC7C31E"
+			tasks: [{
+				id: "490B889D8E563940"
+				item: { count: 1, id: "minecraft:andesite" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: -27.0d
+		}
+		{
+			dependencies: ["4B2BA752F316C98D"]
+			id: "75A61D34C725153E"
+			tasks: [{
+				id: "50BA08A45C68B0A1"
+				item: { count: 1, id: "minecraft:granite" }
+				type: "item"
+			}]
+			x: -6.5d
+			y: -27.0d
+		}
+		{
+			dependencies: ["4B2BA752F316C98D"]
+			id: "65ADDFE2DA3770A8"
+			tasks: [{
+				id: "209C0B68123A7AF1"
+				item: { count: 1, id: "minecraft:diorite" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: -27.0d
+		}
+		{
+			dependencies: ["1ED0F2DA543D1731"]
+			id: "39F568FFBE4D1777"
+			tasks: [{
+				id: "2DAF1BB143809A2B"
+				item: { count: 1, id: "minecraft:sugar_cane" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: -27.0d
+		}
+		{
+			id: "1ED0F2DA543D1731"
+			tasks: [{
+				id: "5F2B344CBC67E461"
+				item: { count: 1, id: "minecraft:sand" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: -28.5d
+		}
+		{
+			dependencies: ["39F568FFBE4D1777"]
+			id: "56FF3023D25E57FD"
+			tasks: [{
+				id: "09FEA301924DEF58"
+				item: { count: 1, id: "anvilcraft:sugar_block" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: -25.5d
+		}
+		{
+			dependencies: [
+				"56FF3023D25E57FD"
+				"4090C9077CC7C31E"
+			]
+			id: "6E198E30A4955E15"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "3A3125DC0D7048E9"
+				item: { count: 1, id: "foand:andesite_sugar_block" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: -24.0d
+		}
+		{
+			id: "1ABDDE62D2964D6A"
+			shape: "square"
+			tasks: [{
+				id: "3983F67017478E5A"
+				item: { count: 1, id: "anvilcraft:crab_claw" }
+				type: "item"
+			}]
+			x: -12.5d
+			y: -29.0d
+		}
+		{
+			dependencies: ["1ABDDE62D2964D6A"]
+			id: "10C6E1A937EF1892"
+			tasks: [{
+				id: "2953BDED240F1D7B"
+				item: { count: 1, id: "minecraft:copper_ingot" }
+				type: "item"
+			}]
+			x: -12.5d
+			y: -27.5d
+		}
+	]
 }
