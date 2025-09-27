@@ -8,12 +8,14 @@
 	quest_links: [ ]
 	quests: [{
 		hide_until_deps_complete: true
+		icon: {
+			id: "create:wrench"
+		}
 		id: "47321437CC2F60FF"
 		shape: "gear"
 		tasks: [{
-			id: "10ADC53165E80DAD"
-			item: { count: 1, id: "create:wrench" }
-			type: "item"
+			id: "3A39266C08EA046D"
+			type: "checkmark"
 		}]
 		x: -3.0d
 		y: -1.0d

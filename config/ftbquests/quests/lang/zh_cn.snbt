@@ -6,15 +6,27 @@
 	chapter.658651F6A636B74A.title: "第一步"
 	chapter.6F70549C8026A2F9.title: "线路"
 	chapter.7A19F8E85F515028.title: "铁砧时代"
-	quest.02622CF64B0BD820.quest_desc: ["屋子里什么都有"]
 	quest.04B223EDF4699DD4.quest_desc: ["看起来很普通的剪刀。可能会很有用"]
+	quest.04B223EDF4699DD4.title: "嫁接"
+	quest.1ED0F2DA543D1731.quest_desc: ["砸两次"]
+	quest.1F40D24A9ED9418A.title: "刷石机"
 	quest.219EED0C2B433E89.quest_desc: ["野生的矿产资源，看起来可以利用"]
+	quest.29E421614D2FF505.title: "观察房间"
+	quest.2F1842F2A38F688C.quest_desc: ["比普通的筛子更结实"]
 	quest.32B9CD88F776B3B6.quest_desc: ["奇怪的剥皮方式。"]
 	quest.4016DC071CFD8598.quest_desc: ["用来催熟各种东西。好像没什么不对劲的。"]
 	quest.47321437CC2F60FF.quest_desc: [""]
 	quest.47321437CC2F60FF.title: "欢迎来到丁真空岛"
 	quest.4B5B07336DA84289.quest_desc: ["有点咯牙，不怎么好吃。经济价值比食用价值更高"]
+	quest.4FF979720B6BA1B5.quest_desc: [""]
 	quest.56A5CE3DD70B516E.quest_desc: ["嚼嚼看"]
-	quest.580521AA6855B8EB.quest_desc: ["只是一块木板"]
 	quest.77EA37772F40CBCD.quest_desc: ["如果竹子也可以堆肥"]
+	quest.7BB752412A8D707D.title: "雷击"
+	task.4E5710FE329DBB6E.title: "我找到了工作台"
+	task.4F1AD4EEAC86418F.title: "我发现了熔炉"
+	task.587C5717CA98C810.title: "我找到了"
+	task.5D41614D541672F3.title: "这里有个铁砧"
+	task.6368B546BC816AC1.title: "观察宝石涌泉"
+	task.64416944DDB0C75E.title: "这里是温泉"
+	task.7C5770F13338977A.title: "我找到了"
 }

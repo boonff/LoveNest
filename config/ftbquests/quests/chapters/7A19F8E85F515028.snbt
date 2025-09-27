@@ -19,8 +19,8 @@
 				item: { count: 1, id: "foand:poppy_melon_sand" }
 				type: "item"
 			}]
-			x: -8.0d
-			y: -30.0d
+			x: -10.0d
+			y: -33.0d
 		}
 		{
 			dependencies: ["109C1151FBEED4F4"]
@@ -30,8 +30,8 @@
 				item: { count: 1, id: "anvilcraft:hollow_magnet_block" }
 				type: "item"
 			}]
-			x: -12.5d
-			y: -24.5d
+			x: -12.0d
+			y: -27.0d
 		}
 		{
 			dependencies: ["10C6E1A937EF1892"]
@@ -41,8 +41,8 @@
 				item: { count: 1, id: "minecraft:lightning_rod" }
 				type: "item"
 			}]
-			x: -12.5d
-			y: -26.0d
+			x: -13.0d
+			y: -28.0d
 		}
 		{
 			id: "4B2BA752F316C98D"
@@ -56,40 +56,7 @@
 				type: "fluid"
 			}]
 			x: -6.5d
-			y: -28.5d
-		}
-		{
-			dependencies: ["4B2BA752F316C98D"]
-			id: "4090C9077CC7C31E"
-			tasks: [{
-				id: "490B889D8E563940"
-				item: { count: 1, id: "minecraft:andesite" }
-				type: "item"
-			}]
-			x: -8.0d
-			y: -27.0d
-		}
-		{
-			dependencies: ["4B2BA752F316C98D"]
-			id: "75A61D34C725153E"
-			tasks: [{
-				id: "50BA08A45C68B0A1"
-				item: { count: 1, id: "minecraft:granite" }
-				type: "item"
-			}]
-			x: -6.5d
-			y: -27.0d
-		}
-		{
-			dependencies: ["4B2BA752F316C98D"]
-			id: "65ADDFE2DA3770A8"
-			tasks: [{
-				id: "209C0B68123A7AF1"
-				item: { count: 1, id: "minecraft:diorite" }
-				type: "item"
-			}]
-			x: -5.0d
-			y: -27.0d
+			y: -31.0d
 		}
 		{
 			dependencies: ["1ED0F2DA543D1731"]
@@ -110,7 +77,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: -28.5d
+			y: -29.0d
 		}
 		{
 			dependencies: ["39F568FFBE4D1777"]
@@ -147,8 +114,8 @@
 				item: { count: 1, id: "anvilcraft:crab_claw" }
 				type: "item"
 			}]
-			x: -12.5d
-			y: -29.0d
+			x: -13.0d
+			y: -31.0d
 		}
 		{
 			dependencies: ["1ABDDE62D2964D6A"]
@@ -158,8 +125,59 @@
 				item: { count: 1, id: "minecraft:copper_ingot" }
 				type: "item"
 			}]
-			x: -12.5d
-			y: -27.5d
+			x: -13.0d
+			y: -29.5d
+		}
+		{
+			icon: {
+				id: "minecraft:spyglass"
+			}
+			id: "123AF1701F8FE7F9"
+			shape: "diamond"
+			tasks: [
+				{
+					id: "24A4F85BC2C08408"
+					item: { count: 1, id: "minecraft:spyglass" }
+					type: "item"
+				}
+				{
+					id: "6368B546BC816AC1"
+					type: "checkmark"
+				}
+			]
+			x: -5.0d
+			y: -32.0d
+		}
+		{
+			id: "6B6BED6BC1BABC57"
+			shape: "diamond"
+			tasks: [{
+				id: "5E3D4806A9B5AA46"
+				item: { count: 1, id: "anvilcraft:crab_trap" }
+				type: "item"
+			}]
+			x: -15.0d
+			y: -32.0d
+		}
+		{
+			icon: {
+				id: "minecraft:spyglass"
+			}
+			id: "1991E3B4AA9D696F"
+			shape: "diamond"
+			tasks: [
+				{
+					id: "4F9DEBB1AF3E27A3"
+					item: { count: 1, id: "minecraft:spyglass" }
+					type: "item"
+				}
+				{
+					id: "53F5A13186CE9318"
+					type: "checkmark"
+				}
+			]
+			x: -15.0d
+			y: -28.5d
 		}
 	]
 }
