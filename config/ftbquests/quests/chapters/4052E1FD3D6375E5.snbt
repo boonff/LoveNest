@@ -4,10 +4,10 @@
 	filename: "4052E1FD3D6375E5"
 	group: ""
 	icon: {
-		id: "create:brass_ingot"
+		id: "create:brass_casing"
 	}
 	id: "4052E1FD3D6375E5"
-	order_index: 4
+	order_index: 6
 	quest_links: [ ]
 	quests: [ ]
 }

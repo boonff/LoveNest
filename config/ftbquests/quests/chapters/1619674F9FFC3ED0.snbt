@@ -1,13 +1,13 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "016B481696ABBF5F"
+	filename: "1619674F9FFC3ED0"
 	group: ""
 	icon: {
-		id: "create:andesite_casing"
+		id: "create:copper_casing"
 	}
-	id: "016B481696ABBF5F"
-	order_index: 5
+	id: "1619674F9FFC3ED0"
+	order_index: 4
 	quest_links: [ ]
 	quests: [ ]
 }
