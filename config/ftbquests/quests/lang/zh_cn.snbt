@@ -6,23 +6,57 @@
 	chapter.658651F6A636B74A.title: "第一步"
 	chapter.6F70549C8026A2F9.title: "线路"
 	chapter.7A19F8E85F515028.title: "铁砧时代"
-	quest.04B223EDF4699DD4.quest_desc: ["看起来很普通的剪刀。可能会很有用"]
-	quest.04B223EDF4699DD4.title: "嫁接"
-	quest.219EED0C2B433E89.quest_desc: ["野生的矿产资源，看起来可以利用"]
+	quest.073147D011BD815D.quest_desc: ["制作一把木稿，去岛上刨点石头吧！"]
+	quest.073147D011BD815D.quest_subtitle: "耐久：3"
+	quest.124DD425652A9871.title: "嫁接虞美人"
+	quest.135B6B80EE793FE7.quest_desc: [
+		"拿竹子堆一点肥，然后去催生一些花吧"
+		"注：竹子堆肥是本整合包中添加的配方，请勿在其他包中尝试"
+	]
+	quest.135B6B80EE793FE7.quest_subtitle: "古法有机肥"
+	quest.14C6867516138A7C.quest_desc: [
+		"现在你可以使用竹子来制作一些板材和棍子"
+		"作者们修改了一些majump的奇妙配方，现在你可以“正确的”用8个竹子来制作一个竹块而不是使用9个"
+	]
+	quest.14C6867516138A7C.quest_subtitle: "mojump小时候学的数学是4+4=9"
 	quest.29E421614D2FF505.title: "观察房间"
-	quest.32B9CD88F776B3B6.quest_desc: ["奇怪的剥皮方式。"]
-	quest.3FBDD93BAFCDF2F1.title: "四处转转"
-	quest.4016DC071CFD8598.quest_desc: ["用来催熟各种东西。好像没什么不对劲的。"]
+	quest.2E93BC045A3F84F2.quest_desc: ["岛上有很多有用的东西，四处转转看看吧！"]
+	quest.2E93BC045A3F84F2.quest_subtitle: "饭后百步走，活到九十九"
+	quest.38D9EC9D21AA9020.title: "第一步的开始！"
+	quest.3FEF40B720149437.quest_desc: [
+		"虞美人的烧炼速度很快，但是给的还是太少了，岛上的铁矿也是有限的"
+		"你需要找点更优质的铁矿来源"
+	]
+	quest.3FEF40B720149437.quest_subtitle: "好少"
+	quest.438019E95B05B5B0.title: "刷石机"
 	quest.47321437CC2F60FF.quest_desc: [""]
 	quest.47321437CC2F60FF.title: "欢迎来到丁真空岛"
-	quest.4B5B07336DA84289.quest_desc: ["有点咯牙，不怎么好吃。经济价值比食用价值更高"]
-	quest.4FF979720B6BA1B5.quest_desc: [""]
-	quest.56A5CE3DD70B516E.quest_desc: ["嚼嚼看"]
-	quest.7BB752412A8D707D.title: "雷击"
+	quest.4A8392AAC9ADDB86.quest_desc: [
+		"你可以从虞美人中烧炼出铁来，作为开启空岛生活的第一步"
+		"当然，实际上空岛内部也有一些矿物资源，你可以去挖~"
+	]
+	quest.4A8392AAC9ADDB86.quest_subtitle: "铁傀儡身上有虞美人，虞美人里面有铁很合理吧"
+	quest.56A5CE3DD70B516E.quest_desc: [
+		"这里没有树木，只有一些竹子可以用"
+		"当然，你要是饿狠了的话可以嚼嚼看"
+	]
+	quest.56A5CE3DD70B516E.quest_subtitle: "基础物资"
+	quest.56A5CE3DD70B516E.title: "获取竹子"
+	quest.63F435BC6F75F553.quest_desc: [
+		"你可以在水池底的岩浆块底下找到它们"
+		"这些涌泉会缓慢的涌出岩浆，或者在水底产生岩浆块"
+		"如果你需要量产岩浆，只盯着它似乎不是个好选择"
+	]
+	quest.63F435BC6F75F553.quest_subtitle: "看，温泉！"
+	quest.63F435BC6F75F553.title: "岩浆涌泉"
+	task.1C7B6FF82031CE45.title: "四处转转"
+	task.373C8EEAEB5E059F.title: "四处转转"
+	task.4C067F9C290707C7.title: "嫁接"
 	task.4E5710FE329DBB6E.title: "我找到了工作台"
 	task.4F1AD4EEAC86418F.title: "我发现了熔炉"
 	task.587C5717CA98C810.title: "我找到了"
 	task.5D41614D541672F3.title: "这里有个铁砧"
 	task.6368B546BC816AC1.title: "观察宝石涌泉"
+	task.6710072522376BD0.title: "更多虞美人"
 	task.7C5770F13338977A.title: "我找到了"
 }

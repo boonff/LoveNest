@@ -19,8 +19,35 @@
 				item: { count: 1, id: "foand:poppy_melon_sand" }
 				type: "item"
 			}]
-			x: -10.0d
-			y: -33.0d
+			x: -7.0d
+			y: -36.0d
+		}
+		{
+			dependencies: ["38D9EC9D21AA9020"]
+			id: "3D89F77A7017C49B"
+			shape: "rsquare"
+			tasks: [{
+				icon: {
+					id: "foand:lava_spring"
+				}
+				id: "24FCBD402E8EA045"
+				observe_type: 0
+				timer: 0L
+				to_observe: "minecraft:magma_block"
+				type: "observation"
+			}]
+			x: -7.0d
+			y: -32.5d
+		}
+		{
+			id: "0D3CB694AC2E5332"
+			tasks: [{
+				id: "2392D03E5DF4A994"
+				item: { count: 1, id: "minecraft:magma_block" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: -31.0d
 		}
 		{
 			id: "2D7C063B917B11DB"
@@ -37,6 +64,7 @@
 			id: "438019E95B05B5B0"
 			shape: "gear"
 			tasks: [{
+				count: 64L
 				id: "561DE98133D4EAAB"
 				item: { count: 1, id: "minecraft:cobblestone" }
 				type: "item"
@@ -45,48 +73,29 @@
 			y: -28.0d
 		}
 		{
-			id: "5A23F0C9AD6F012F"
+			hide_dependency_lines: true
+			id: "3915431356AB3583"
+			shape: "pentagon"
+			size: 2.0d
 			tasks: [{
-				id: "1B39F13B0DFC14DF"
-				item: { count: 1, id: "minecraft:gravel" }
+				id: "5291646C46A07DE6"
+				item: { count: 1, id: "minecraft:redstone" }
 				type: "item"
 			}]
-			x: -8.0d
-			y: -27.0d
+			x: -3.0d
+			y: -31.0d
 		}
 		{
-			dependencies: ["2599E4DED3C26FA7"]
-			id: "2C04CCE3ABB531E6"
+			id: "1B7E4EFBF66D09E7"
+			shape: "hexagon"
+			size: 2.0d
 			tasks: [{
-				id: "38F8B309616AE170"
-				item: { count: 1, id: "minecraft:sand" }
+				id: "2202BAAB2E0996BC"
+				item: { count: 1, id: "create:andesite_alloy" }
 				type: "item"
 			}]
-			x: -6.5d
-			y: -27.0d
-		}
-		{
-			dependencies: ["2599E4DED3C26FA7"]
-			hide_dependent_lines: true
-			id: "3722F2CEB9479E77"
-			tasks: [{
-				id: "34CAB221FB42F339"
-				item: { count: 1, id: "minecraft:coarse_dirt" }
-				type: "item"
-			}]
-			x: -8.0d
-			y: -26.0d
-		}
-		{
-			hide_dependent_lines: true
-			id: "039DEAF7C0D1A3CE"
-			tasks: [{
-				id: "6E3CE9C8ECD7949B"
-				item: { count: 1, id: "minecraft:glass" }
-				type: "item"
-			}]
-			x: -6.5d
-			y: -26.0d
+			x: -3.0d
+			y: -33.0d
 		}
 		{
 			id: "1F3784CAE845986E"
