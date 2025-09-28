@@ -425,17 +425,5 @@
 			x: -22.5d
 			y: -21.5d
 		}
-		{
-			id: "01EDA878688A797C"
-			tasks: [{
-				id: "0F7662DEB3244920"
-				observe_type: 0
-				timer: 0L
-				to_observe: "create:fluid_tank"
-				type: "observation"
-			}]
-			x: -11.5d
-			y: -27.5d
-		}
 	]
 }
