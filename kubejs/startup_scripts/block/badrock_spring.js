@@ -1,8 +1,9 @@
 StartupEvents.registry('block', event => {
     // 熔炼宝石块
     event.create('foand:melt_gem_block')
-        .lightLevel(14)
-        .hardness(1.0) // 设置硬度
+        .opaque(true)
+        .lightLevel(1)
+        .hardness(1.5) // 设置硬度
         .resistance(1.0) // 设置爆炸抗性
         .soundType('glass')
         .noDrops()
@@ -14,6 +15,7 @@ StartupEvents.registry('block', event => {
         .soundType('stone')// 设置材质
         .fullBlock(true)  // 设置完整方块
         .opaque(true)  // 设置不透明
+        .lightLevel(1)
         .randomTick(event => {
             let pos = event.block.pos;
             let level = event.level;
@@ -37,7 +39,7 @@ StartupEvents.registry('block', event => {
         .soundType('stone')  // 设置材质
         .fullBlock(true)     // 设置完整方块
         .opaque(true)        // 设置不透明
-        .lightLevel(3)       // 设置光照等级为3
+        .lightLevel(1)       // 设置光照等级为3
         .randomTick(event => {
             let pos = event.block.pos;
             let level = event.level;
