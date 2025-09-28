@@ -1,11 +1,16 @@
 {
 	chapter.016B481696ABBF5F.title: "安山时代"
 	chapter.1619674F9FFC3ED0.title: "流体时代"
+	chapter.25C63534AAA42A48.title: "里程碑"
 	chapter.4052E1FD3D6375E5.title: "黄铜时代"
 	chapter.4517FB1FB79AECF7.title: "欢迎"
+	chapter.4A1AF0B9AC0B2FF4.title: "基础物流"
 	chapter.658651F6A636B74A.title: "第一步"
 	chapter.6F70549C8026A2F9.title: "线路"
 	chapter.7A19F8E85F515028.title: "铁砧时代"
+	chapter_group.1639BE36FFF0F53B.title: "第一章：初出茅庐"
+	chapter_group.1B4D9BAF7B6D53AE.title: "第二章：力大砖飞"
+	chapter_group.6EB39C4CBB4A460A.title: "第三章：工程控制"
 	quest.073147D011BD815D.quest_desc: ["制作一把木稿，去岛上刨点石头吧！"]
 	quest.073147D011BD815D.quest_subtitle: "耐久：3"
 	quest.124DD425652A9871.title: "嫁接虞美人"
@@ -19,9 +24,11 @@
 		"作者们修改了一些majump的奇妙配方，现在你可以“正确的”用8个竹子来制作一个竹块而不是使用9个"
 	]
 	quest.14C6867516138A7C.quest_subtitle: "mojump小时候学的数学是4+4=9"
+	quest.169BCC302BDEE3BA.title: "第三章：工程控制"
 	quest.29E421614D2FF505.title: "观察房间"
 	quest.2E93BC045A3F84F2.quest_desc: ["岛上有很多有用的东西，四处转转看看吧！"]
 	quest.2E93BC045A3F84F2.quest_subtitle: "饭后百步走，活到九十九"
+	quest.3355D5AD99A5BFA2.title: "第二章：力大砖飞"
 	quest.38D9EC9D21AA9020.title: "第一步的开始！"
 	quest.3FEF40B720149437.quest_desc: [
 		"虞美人的烧炼速度很快，但是给的还是太少了，岛上的铁矿也是有限的"
@@ -42,6 +49,7 @@
 	]
 	quest.56A5CE3DD70B516E.quest_subtitle: "基础物资"
 	quest.56A5CE3DD70B516E.title: "获取竹子"
+	quest.5749D1020E4189ED.title: "第一章：初出茅庐"
 	quest.63F435BC6F75F553.quest_desc: [
 		"你可以在水池底的岩浆块底下找到它们"
 		"这些涌泉会缓慢的涌出岩浆，或者在水底产生岩浆块"

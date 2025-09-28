@@ -2,23 +2,202 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "016B481696ABBF5F"
-	group: ""
+	group: "1B4D9BAF7B6D53AE"
 	icon: {
 		id: "create:andesite_casing"
 	}
 	id: "016B481696ABBF5F"
-	order_index: 4
+	order_index: 0
 	quest_links: [ ]
-	quests: [{
-		id: "70E013FC64DAEB2F"
-		shape: "hexagon"
-		size: 3.0d
-		tasks: [{
-			id: "3835BEAFBFAAC872"
-			item: { count: 1, id: "create:andesite_alloy" }
-			type: "item"
-		}]
-		x: -3.0d
-		y: -7.5d
-	}]
+	quests: [
+		{
+			id: "70E013FC64DAEB2F"
+			shape: "hexagon"
+			size: 3.0d
+			tasks: [{
+				id: "3835BEAFBFAAC872"
+				item: { count: 1, id: "create:andesite_alloy" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: -10.5d
+		}
+		{
+			id: "52A54263A1C7A20A"
+			tasks: [
+				{
+					id: "7EBDE08C2DC503CF"
+					item: { count: 1, id: "create:cogwheel" }
+					type: "item"
+				}
+				{
+					id: "48E7553B372F7452"
+					item: { count: 1, id: "create:large_cogwheel" }
+					type: "item"
+				}
+				{
+					id: "17E9D6382B8B9090"
+					item: { count: 1, id: "create:shaft" }
+					type: "item"
+				}
+			]
+			x: -6.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["70E013FC64DAEB2F"]
+			id: "0EAD8E37117BCCC5"
+			tasks: [{
+				id: "35365782F044962B"
+				item: { count: 1, id: "create:andesite_casing" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["0EAD8E37117BCCC5"]
+			id: "698B038948E5B8CD"
+			tasks: [
+				{
+					id: "4D9144D5CC2AF9C4"
+					item: { count: 1, id: "create:depot" }
+					type: "item"
+				}
+				{
+					id: "215152E334C9771A"
+					item: { count: 1, id: "create:basin" }
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["0EAD8E37117BCCC5"]
+			id: "795C818323E35DB2"
+			tasks: [
+				{
+					id: "3B106019EF56EC82"
+					item: { count: 1, id: "create:mechanical_press" }
+					type: "item"
+				}
+				{
+					id: "081071C09E717931"
+					item: { count: 1, id: "create:mechanical_mixer" }
+					type: "item"
+				}
+				{
+					id: "78A57C4C576009F9"
+					item: { count: 1, id: "create:encased_fan" }
+					type: "item"
+				}
+				{
+					id: "3D6B283487E2760E"
+					item: { count: 1, id: "create:millstone" }
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: -6.5d
+		}
+		{
+			id: "47518864418A9BE4"
+			tasks: [
+				{
+					id: "7A52075D4E0C29A6"
+					item: { count: 1, id: "create:belt_connector" }
+					type: "item"
+				}
+				{
+					id: "2C043BC14B9D4863"
+					item: { count: 1, id: "create:weighted_ejector" }
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: -2.5d
+		}
+		{
+			id: "001D6C9F323293F3"
+			tasks: [{
+				id: "2BB5F907D3FDC36F"
+				item: { count: 1, id: "create:cart_assembler" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: -1.0d
+		}
+		{
+			id: "185AADAA417CE144"
+			tasks: [
+				{
+					id: "112BD39363971C52"
+					item: { count: 1, id: "create:andesite_funnel" }
+					type: "item"
+				}
+				{
+					id: "2A3928A789AA9AA5"
+					item: { count: 1, id: "create:andesite_tunnel" }
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -2.5d
+		}
+		{
+			id: "586EEE96198A7219"
+			tasks: [
+				{
+					id: "66CF4FEE3446F6D2"
+					item: { count: 1, id: "create:mechanical_saw" }
+					type: "item"
+				}
+				{
+					id: "722555C29D146964"
+					item: { count: 1, id: "create:mechanical_drill" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: -6.5d
+		}
+		{
+			id: "4B92153B598F887F"
+			tasks: [{
+				id: "65973F44A64925D9"
+				item: { count: 1, id: "minecraft:kelp" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: -5.0d
+		}
+		{
+			id: "54DA17A70559EDAF"
+			tasks: [{
+				id: "565AC0280D9BFB9A"
+				item: { count: 1, id: "minecraft:dried_kelp" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: -3.5d
+		}
+		{
+			id: "2D345A14EEA61500"
+			tasks: [
+				{
+					id: "497B062288B77FA4"
+					item: { count: 1, id: "create:mechanical_harvester" }
+					type: "item"
+				}
+				{
+					id: "4EC9BC5C1BF48AC1"
+					item: { count: 1, id: "create:mechanical_plough" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: -1.0d
+		}
+	]
 }

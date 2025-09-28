@@ -1,0 +1,56 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "4A1AF0B9AC0B2FF4"
+	group: "1B4D9BAF7B6D53AE"
+	icon: {
+		id: "create:cardboard_package_12x10"
+	}
+	id: "4A1AF0B9AC0B2FF4"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "3CEFA673D13D97EE"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "7AD9F8F3A2523755"
+				item: { count: 1, id: "create:bound_cardboard_block" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: -6.5d
+		}
+		{
+			id: "7E4992CDD252202C"
+			tasks: [{
+				id: "7F874C99208D78F4"
+				item: { count: 1, id: "create:packager" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -3.5d
+		}
+		{
+			id: "7A8C8FBBFDEF2DDF"
+			tasks: [{
+				id: "58F5A58A8E351974"
+				item: { count: 1, id: "create:package_frogport" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: -3.5d
+		}
+		{
+			id: "770D6C3B5D2F287E"
+			tasks: [{
+				id: "4D86828EB2B0F924"
+				item: { count: 1, id: "create:chain_conveyor" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: -3.5d
+		}
+	]
+}

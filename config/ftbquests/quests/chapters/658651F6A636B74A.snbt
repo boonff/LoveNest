@@ -2,13 +2,13 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "658651F6A636B74A"
-	group: ""
+	group: "1639BE36FFF0F53B"
 	hide_quest_details_until_startable: true
 	icon: {
 		id: "minecraft:poppy"
 	}
 	id: "658651F6A636B74A"
-	order_index: 2
+	order_index: 0
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
