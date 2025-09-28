@@ -9,5 +9,16 @@
 	id: "016B481696ABBF5F"
 	order_index: 4
 	quest_links: [ ]
-	quests: [ ]
+	quests: [{
+		id: "70E013FC64DAEB2F"
+		shape: "hexagon"
+		size: 3.0d
+		tasks: [{
+			id: "3835BEAFBFAAC872"
+			item: { count: 1, id: "create:andesite_alloy" }
+			type: "item"
+		}]
+		x: -3.0d
+		y: -7.5d
+	}]
 }
