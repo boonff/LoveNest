@@ -47,4 +47,8 @@ ServerEvents.recipes(event => {
         B: 'minecraft:copper_ingot'
     }) // 望远镜
 
+    event.remove({ output: 'sticky_piston' })
+    event.shaped('sticky_piston', ['A'], { 'A': 'piston' })
+    event.shaped('piston', ['A'], { 'A': 'sticky_piston' })
+
 })
