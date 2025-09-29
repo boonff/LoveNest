@@ -50,6 +50,11 @@
 	]
 	quest.29E421614D2FF505.quest_subtitle: "房间里有一些基础工具方块"
 	quest.29E421614D2FF505.title: "观察房间"
+	quest.2A5918CC7C403EB5.quest_desc: [
+		"现在&6铁砧&r只能靠机器加工，不过使蛮力可以制作出&6开裂的铁砧&r。铁砧变得更便宜了。"
+		"&7&o铁砧可以使用铁块修复&r&r"
+	]
+	quest.2A5918CC7C403EB5.quest_subtitle: "大力出奇迹"
 	quest.2D7C063B917B11DB.title: "第一桶熔岩"
 	quest.2E93BC045A3F84F2.quest_desc: ["岛上有很多有用的东西，四处转转看看吧！"]
 	quest.2E93BC045A3F84F2.quest_subtitle: "饭后百步走，活到九十九"

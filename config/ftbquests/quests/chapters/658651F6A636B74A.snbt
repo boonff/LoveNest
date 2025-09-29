@@ -568,5 +568,16 @@
 			x: -17.5d
 			y: -23.0d
 		}
+		{
+			id: "2A5918CC7C403EB5"
+			size: 1.5d
+			tasks: [{
+				id: "09B1AA639211EFE3"
+				item: { count: 1, id: "minecraft:chipped_anvil" }
+				type: "item"
+			}]
+			x: -20.0d
+			y: -21.5d
+		}
 	]
 }
