@@ -15,7 +15,8 @@
 	quest.02BFC55572F6FBFA.quest_subtitle: "远眺"
 	quest.02BFC55572F6FBFA.title: "望远镜"
 	quest.02CF45C934D1855E.quest_desc: ["小山包那边有不小圆石。"]
-	quest.02CF45C934D1855E.title: "获取圆石"
+	quest.02CF45C934D1855E.quest_subtitle: "获取圆石"
+	quest.02CF45C934D1855E.title: "圆石"
 	quest.03F487399BC585AE.quest_desc: ["播撒骨粉以获得更多&6虞美人&r。"]
 	quest.03F487399BC585AE.quest_subtitle: "播撒骨粉"
 	quest.03F487399BC585AE.title: "骨粉"
@@ -23,11 +24,12 @@
 	quest.05D136CE05DCE0A4.quest_subtitle: "发现新大陆"
 	quest.05D136CE05DCE0A4.title: "熔融宝石块"
 	quest.0760481CB600CF87.quest_desc: [
-		"比普通西瓜更甜，有点咯牙。"
+		"比普通西瓜更甜，不过有点咯牙。"
 		"收获虞美人西瓜不是一件容易的事情，和普通西瓜一样会&6损失&r一些。"
-		"把铁砧搬到农田？这太疯狂了。"
+		"把&6铁砧&r搬到农田？这太疯狂了。"
 	]
-	quest.0760481CB600CF87.title: "收获虞美人西瓜"
+	quest.0760481CB600CF87.quest_subtitle: "收获虞美人西瓜"
+	quest.0760481CB600CF87.title: "虞美人西瓜"
 	quest.0D3CB694AC2E5332.title: "收集岩浆块"
 	quest.124DD425652A9871.quest_desc: ["&6左手&r虞美人&6右手&r剪刀，对准&6西瓜苗&r完成嫁接。"]
 	quest.124DD425652A9871.title: "嫁接虞美人"
@@ -75,7 +77,7 @@
 	quest.487FFDB07B98AD5B.quest_desc: ["奇怪的剥皮方式。"]
 	quest.487FFDB07B98AD5B.title: "西瓜去皮"
 	quest.4A8392AAC9ADDB86.quest_desc: [
-		"你可以从虞美人中&6烧炼&r出铁来，作为开启空岛生活的第一步。"
+		"你可以从虞美人中&6烧炼&r出铁来，作为开启空岛生活的第一步。播撒&6骨粉&r可以获得更多虞美人。"
 		"当然，实际上&6空岛内部&r也有一些&6矿物资源&r，你可以去挖~"
 	]
 	quest.4A8392AAC9ADDB86.quest_subtitle: "铁傀儡先生您的花掉了"

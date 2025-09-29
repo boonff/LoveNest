@@ -63,8 +63,8 @@
 					type: "observation"
 				}
 			]
-			x: -23.0d
-			y: -26.5d
+			x: -21.5d
+			y: -26.0d
 		}
 		{
 			dependencies: ["4517FB1FB79AECF7"]
@@ -98,8 +98,8 @@
 				to_observe: "foand:lava_spring"
 				type: "observation"
 			}]
-			x: -23.0d
-			y: -27.5d
+			x: -22.5d
+			y: -27.0d
 		}
 		{
 			dependencies: ["38D9EC9D21AA9020"]
@@ -170,7 +170,10 @@
 			y: -27.0d
 		}
 		{
-			dependencies: ["7B832F9EB6453D36"]
+			dependencies: [
+				"7B832F9EB6453D36"
+				"043597106534E6E4"
+			]
 			hide_dependent_lines: true
 			id: "77526BD133AD82E8"
 			tasks: [{
@@ -210,6 +213,9 @@
 			dependencies: ["124DD425652A9871"]
 			id: "0760481CB600CF87"
 			tasks: [{
+				icon: {
+					id: "foand:poppy_melon"
+				}
 				id: "6928A61FF5CCDCB1"
 				item: { count: 1, id: "foand:poppy_melon_slice" }
 				type: "item"
@@ -339,7 +345,10 @@
 			y: -20.0d
 		}
 		{
-			dependencies: ["487FFDB07B98AD5B"]
+			dependencies: [
+				"487FFDB07B98AD5B"
+				"0B7D4B1FCA7F083B"
+			]
 			id: "3921824795DE77FC"
 			tasks: [{
 				id: "3E31CE8A28663652"
@@ -394,7 +403,10 @@
 			y: -22.0d
 		}
 		{
-			dependencies: ["593614AE1B73E6B3"]
+			dependencies: [
+				"593614AE1B73E6B3"
+				"6297686D1D740B3D"
+			]
 			id: "02BFC55572F6FBFA"
 			tasks: [{
 				id: "101E158C9A657E88"
@@ -495,6 +507,66 @@
 			}]
 			x: -17.5d
 			y: -18.0d
+		}
+		{
+			dependencies: ["02CF45C934D1855E"]
+			id: "63930D6172C21F2A"
+			tasks: [{
+				id: "527075475190C4A2"
+				item: { count: 1, id: "minecraft:gravel" }
+				type: "item"
+			}]
+			x: -17.5d
+			y: -26.0d
+		}
+		{
+			hide_dependent_lines: true
+			id: "6297686D1D740B3D"
+			tasks: [{
+				id: "454275273298880F"
+				item: { count: 1, id: "minecraft:sand" }
+				type: "item"
+			}]
+			x: -17.5d
+			y: -25.0d
+		}
+		{
+			dependencies: ["63930D6172C21F2A"]
+			hide_dependent_lines: true
+			id: "043597106534E6E4"
+			tasks: [{
+				id: "5AA9C5C1EFFFA694"
+				item: { count: 1, id: "minecraft:coarse_dirt" }
+				type: "item"
+			}]
+			x: -16.5d
+			y: -25.0d
+		}
+		{
+			dependencies: [
+				"63930D6172C21F2A"
+				"6297686D1D740B3D"
+			]
+			dependency_requirement: "one_completed"
+			id: "43207815E6312293"
+			tasks: [{
+				id: "55FE2D8A64D4EC7D"
+				item: { count: 1, id: "minecraft:glass" }
+				type: "item"
+			}]
+			x: -17.5d
+			y: -24.0d
+		}
+		{
+			dependencies: ["43207815E6312293"]
+			id: "0B7D4B1FCA7F083B"
+			tasks: [{
+				id: "70182B78BD5C2EFC"
+				item: { count: 1, id: "minecraft:glass_bottle" }
+				type: "item"
+			}]
+			x: -17.5d
+			y: -23.0d
 		}
 	]
 }
