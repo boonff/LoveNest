@@ -13,51 +13,36 @@
 		{
 			id: "6B0A8D0561D64450"
 			shape: "hexagon"
-			size: 2.0d
+			size: 3.0d
 			tasks: [{
 				id: "681EE7929FC25358"
 				item: { count: 1, id: "foand:poppy_melon_sand" }
 				type: "item"
 			}]
-			x: -7.0d
+			x: -5.0d
 			y: -36.0d
-		}
-		{
-			dependencies: ["38D9EC9D21AA9020"]
-			id: "3D89F77A7017C49B"
-			shape: "rsquare"
-			tasks: [{
-				icon: {
-					id: "foand:lava_spring"
-				}
-				id: "24FCBD402E8EA045"
-				observe_type: 0
-				timer: 0L
-				to_observe: "minecraft:magma_block"
-				type: "observation"
-			}]
-			x: -7.0d
-			y: -32.5d
 		}
 		{
 			id: "0D3CB694AC2E5332"
 			tasks: [{
+				count: 4L
 				id: "2392D03E5DF4A994"
 				item: { count: 1, id: "minecraft:magma_block" }
 				type: "item"
 			}]
-			x: -7.0d
-			y: -31.0d
+			x: -6.5d
+			y: -34.0d
 		}
 		{
+			dependencies: ["0D3CB694AC2E5332"]
 			id: "2D7C063B917B11DB"
 			tasks: [{
 				id: "242A1E529AB55593"
 				item: { count: 1, id: "minecraft:lava_bucket" }
 				type: "item"
 			}]
-			x: -7.0d
-			y: -29.5d
+			x: -6.5d
+			y: -32.5d
 		}
 		{
 			dependencies: ["2D7C063B917B11DB"]
@@ -69,8 +54,8 @@
 				item: { count: 1, id: "minecraft:cobblestone" }
 				type: "item"
 			}]
-			x: -7.0d
-			y: -28.0d
+			x: -6.5d
+			y: -31.0d
 		}
 		{
 			hide_dependency_lines: true
@@ -82,8 +67,8 @@
 				item: { count: 1, id: "minecraft:redstone" }
 				type: "item"
 			}]
-			x: -3.0d
-			y: -31.0d
+			x: -2.0d
+			y: -30.0d
 		}
 		{
 			id: "1B7E4EFBF66D09E7"
@@ -94,8 +79,19 @@
 				item: { count: 1, id: "create:andesite_alloy" }
 				type: "item"
 			}]
-			x: -3.0d
-			y: -33.0d
+			x: -5.0d
+			y: -29.0d
+		}
+		{
+			id: "6772F3E7BE664336"
+			shape: "hexagon"
+			tasks: [{
+				id: "37D8F47005985437"
+				item: { count: 1, id: "anvilcraft:crab_claw" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: -36.0d
 		}
 	]
 }

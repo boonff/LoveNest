@@ -9,5 +9,16 @@
 	id: "4052E1FD3D6375E5"
 	order_index: 0
 	quest_links: [ ]
-	quests: [ ]
+	quests: [{
+		id: "5FF54C68B0640C82"
+		shape: "hexagon"
+		size: 2.0d
+		tasks: [{
+			id: "294DA352063D70D2"
+			item: { count: 1, id: "create:brass_ingot" }
+			type: "item"
+		}]
+		x: 0.0d
+		y: -3.0d
+	}]
 }

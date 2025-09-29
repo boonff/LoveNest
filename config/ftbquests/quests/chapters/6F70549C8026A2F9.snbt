@@ -3,6 +3,9 @@
 	default_quest_shape: ""
 	filename: "6F70549C8026A2F9"
 	group: ""
+	hide_quest_details_until_startable: true
+	hide_quest_until_deps_complete: true
+	hide_quest_until_deps_visible: true
 	icon: {
 		id: "create:cogwheel"
 	}
@@ -12,6 +15,9 @@
 	quests: [
 		{
 			dependencies: ["5749D1020E4189ED"]
+			icon: {
+				id: "minecraft:poppy"
+			}
 			id: "32AC1A4A5AA66283"
 			tasks: [{
 				id: "3BB455C0A2AE5681"
@@ -62,11 +68,14 @@
 				item: { count: 1, id: "create:railway_casing" }
 				type: "item"
 			}]
-			x: 0.9285714285714235d
+			x: 1.0d
 			y: -2.0d
 		}
 		{
 			dependencies: ["42EB770E1D2FEDA2"]
+			icon: {
+				id: "create:cardboard_package_12x10"
+			}
 			id: "392737BE9A3F226D"
 			tasks: [{
 				id: "0145EC181B4D065A"
@@ -93,7 +102,7 @@
 				item: { count: 1, id: "minecraft:redstone" }
 				type: "item"
 			}]
-			x: -12.0d
+			x: -11.5d
 			y: -2.0d
 		}
 		{
@@ -144,6 +153,9 @@
 		}
 		{
 			dependencies: ["64CB6C9CFF27F9FD"]
+			icon: {
+				id: "minecraft:brick"
+			}
 			id: "3355D5AD99A5BFA2"
 			size: 2.0d
 			tasks: [{
@@ -155,6 +167,9 @@
 			y: -0.4821428571428541d
 		}
 		{
+			icon: {
+				id: "minecraft:bamboo"
+			}
 			id: "5749D1020E4189ED"
 			shape: "circle"
 			size: 2.0d
