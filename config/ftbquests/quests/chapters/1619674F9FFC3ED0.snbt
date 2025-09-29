@@ -2,12 +2,68 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "1619674F9FFC3ED0"
-	group: ""
+	group: "1B4D9BAF7B6D53AE"
 	icon: {
 		id: "create:copper_casing"
 	}
 	id: "1619674F9FFC3ED0"
-	order_index: 5
+	order_index: 2
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			icon: {
+				id: "create:deployer"
+			}
+			id: "2A639E5E8EA0E681"
+			shape: "hexagon"
+			size: 3.0d
+			x: -1.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["2A639E5E8EA0E681"]
+			id: "0785FA3C0D9C6DBA"
+			tasks: [
+				{
+					id: "58D0EC1BD92AC6CE"
+					item: { count: 1, id: "create:fluid_pipe" }
+					type: "item"
+				}
+				{
+					id: "5234D6EFC9C61C65"
+					item: { count: 1, id: "create:fluid_valve" }
+					type: "item"
+				}
+				{
+					id: "2DA5495DF3704D9D"
+					item: { count: 1, id: "create:mechanical_pump" }
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["2A639E5E8EA0E681"]
+			id: "5DB780D5053184F2"
+			tasks: [{
+				id: "039E8C4AAC07B4E1"
+				item: { count: 1, id: "create:fluid_tank" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["2A639E5E8EA0E681"]
+			id: "5D98A4BA095D47BB"
+			tasks: [{
+				id: "43A5A0CBE851DFD8"
+				item: { count: 1, id: "create:copper_casing" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: -2.0d
+		}
+	]
 }

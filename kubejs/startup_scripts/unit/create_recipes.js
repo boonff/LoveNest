@@ -14,7 +14,7 @@ function getIngredient(input) {
 
 function getItem(input) {
     let result;
-    if (typeof input === "string") {
+    if (typeof input === "string" || Item.isItem(input)) {
         result = Item.of(input);
     } else if ('id' in input && 'amount' in input) {
         result = getFluid(input)
@@ -28,7 +28,7 @@ function getItem(input) {
 
 function getFluid(input) {
     let result;
-    if (typeof input === "string") {
+    if (typeof input === "string" || Item.isItem(input)) {
         result = Fluid.of(input, 1000);
     } else if (Array.isArray(input) && input != []) {
         result = getFluid(input[0])

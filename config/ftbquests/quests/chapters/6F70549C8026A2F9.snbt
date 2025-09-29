@@ -3,6 +3,9 @@
 	default_quest_shape: ""
 	filename: "6F70549C8026A2F9"
 	group: ""
+	hide_quest_details_until_startable: true
+	hide_quest_until_deps_complete: true
+	hide_quest_until_deps_visible: true
 	icon: {
 		id: "create:cogwheel"
 	}
@@ -11,25 +14,29 @@
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["5749D1020E4189ED"]
+			icon: {
+				id: "minecraft:poppy"
+			}
 			id: "32AC1A4A5AA66283"
 			tasks: [{
 				id: "3BB455C0A2AE5681"
 				item: { count: 1, id: "foand:poppy_melon_sand" }
 				type: "item"
 			}]
-			x: -12.0d
-			y: -1.5d
+			x: -12.5d
+			y: -0.5d
 		}
 		{
-			dependencies: ["64CB6C9CFF27F9FD"]
+			dependencies: ["3355D5AD99A5BFA2"]
 			id: "42EB770E1D2FEDA2"
 			tasks: [{
 				id: "12F629E737AFCDFB"
 				item: { count: 1, id: "create:andesite_casing" }
 				type: "item"
 			}]
-			x: -8.0d
-			y: -1.5d
+			x: -6.9285714285714235d
+			y: -0.5d
 		}
 		{
 			dependencies: ["42EB770E1D2FEDA2"]
@@ -39,19 +46,19 @@
 				item: { count: 1, id: "create:copper_casing" }
 				type: "item"
 			}]
-			x: -6.5d
-			y: -3.0d
+			x: -5.9285714285714235d
+			y: -1.5d
 		}
 		{
-			dependencies: ["42EB770E1D2FEDA2"]
+			dependencies: ["169BCC302BDEE3BA"]
 			id: "131EC1CC81E2E4A8"
 			tasks: [{
 				id: "6BE9B9899C63BDBD"
 				item: { count: 1, id: "create:brass_casing" }
 				type: "item"
 			}]
-			x: -5.0d
-			y: -1.5d
+			x: -0.0714285714285765d
+			y: -0.5d
 		}
 		{
 			dependencies: ["131EC1CC81E2E4A8"]
@@ -61,28 +68,31 @@
 				item: { count: 1, id: "create:railway_casing" }
 				type: "item"
 			}]
-			x: -3.5d
-			y: -3.0d
+			x: 1.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["42EB770E1D2FEDA2"]
+			icon: {
+				id: "create:cardboard_package_12x10"
+			}
 			id: "392737BE9A3F226D"
 			tasks: [{
 				id: "0145EC181B4D065A"
 				item: { count: 1, id: "create:packager" }
 				type: "item"
 			}]
-			x: -6.5d
-			y: 0.0d
+			x: -5.9285714285714235d
+			y: 0.5d
 		}
 		{
-			dependencies: ["131EC1CC81E2E4A8"]
+			dependencies: ["498E6CE3112149B5"]
 			icon: {
 				id: "anvilcraft:royal_anvil"
 			}
 			id: "280710E42D186335"
-			x: -2.0d
-			y: -1.5d
+			x: 2.9285714285714235d
+			y: -0.5d
 		}
 		{
 			dependencies: ["32AC1A4A5AA66283"]
@@ -92,8 +102,8 @@
 				item: { count: 1, id: "minecraft:redstone" }
 				type: "item"
 			}]
-			x: -10.5d
-			y: -3.0d
+			x: -11.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["32AC1A4A5AA66283"]
@@ -103,8 +113,8 @@
 				item: { count: 1, id: "minecraft:anvil" }
 				type: "item"
 			}]
-			x: -10.0d
-			y: -1.5d
+			x: -11.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["131EC1CC81E2E4A8"]
@@ -112,8 +122,75 @@
 				id: "create:stock_link"
 			}
 			id: "2300A000E707B549"
-			x: -3.5d
-			y: 0.0d
+			x: 0.9285714285714235d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6DE8D09CAC0C2ECA"]
+			icon: {
+				id: "create:mechanical_arm"
+			}
+			id: "169BCC302BDEE3BA"
+			size: 2.0d
+			tasks: [{
+				id: "458699C10DD05867"
+				item: { count: 1, id: "create:andesite_door" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -0.5178571428571423d
+		}
+		{
+			dependencies: ["131EC1CC81E2E4A8"]
+			id: "498E6CE3112149B5"
+			tasks: [{
+				id: "36BCF733BA60E06F"
+				item: { count: 1, id: "create:brass_door" }
+				type: "item"
+			}]
+			x: 1.4285714285714235d
+			y: -0.5d
+		}
+		{
+			dependencies: ["64CB6C9CFF27F9FD"]
+			icon: {
+				id: "minecraft:brick"
+			}
+			id: "3355D5AD99A5BFA2"
+			size: 2.0d
+			tasks: [{
+				id: "5C4314AB3911911B"
+				item: { count: 1, id: "minecraft:brick" }
+				type: "item"
+			}]
+			x: -9.0d
+			y: -0.4821428571428541d
+		}
+		{
+			icon: {
+				id: "minecraft:bamboo"
+			}
+			id: "5749D1020E4189ED"
+			shape: "circle"
+			size: 2.0d
+			tasks: [{
+				id: "0FCA07663E4D344A"
+				item: { count: 1, id: "minecraft:bamboo" }
+				type: "item"
+			}]
+			x: -14.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["42EB770E1D2FEDA2"]
+			id: "6DE8D09CAC0C2ECA"
+			tasks: [{
+				id: "7F333C9F044EBC6B"
+				item: { count: 1, id: "create:brass_ingot" }
+				type: "item"
+			}]
+			x: -4.9285714285714235d
+			y: -0.5d
 		}
 	]
 }
