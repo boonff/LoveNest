@@ -381,12 +381,22 @@
 		}
 		{
 			dependencies: ["5657CCBB122FA0AC"]
+			icon: {
+				id: "create:crushed_raw_copper"
+			}
 			id: "593614AE1B73E6B3"
-			tasks: [{
-				id: "782BF4762A88CD26"
-				item: { count: 1, id: "minecraft:copper_ingot" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "3E6F2AEB5852D476"
+					item: { count: 1, id: "create:crushed_raw_copper" }
+					type: "item"
+				}
+				{
+					id: "782BF4762A88CD26"
+					item: { count: 1, id: "minecraft:copper_ingot" }
+					type: "item"
+				}
+			]
 			x: -21.5d
 			y: -22.0d
 		}
