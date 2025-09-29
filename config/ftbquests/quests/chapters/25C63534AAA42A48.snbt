@@ -7,7 +7,31 @@
 		id: "create:brass_ingot"
 	}
 	id: "25C63534AAA42A48"
-	order_index: 3
+	order_index: 0
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			id: "08D5D943250B3207"
+			shape: "hexagon"
+			size: 3.0d
+			tasks: [{
+				id: "3F0CF663B02AE9CC"
+				item: { count: 1, id: "create:andesite_alloy" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08D5D943250B3207"]
+			id: "2946B3B190AA3981"
+			tasks: [{
+				id: "70388A5EB9D930FC"
+				item: { count: 1, id: "anvilcraft:singularity_crystal" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+	]
 }

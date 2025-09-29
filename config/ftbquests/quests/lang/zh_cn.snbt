@@ -11,60 +11,119 @@
 	chapter_group.1639BE36FFF0F53B.title: "第一章：初出茅庐"
 	chapter_group.1B4D9BAF7B6D53AE.title: "第二章：力大砖飞"
 	chapter_group.6EB39C4CBB4A460A.title: "第三章：工程控制"
-	quest.073147D011BD815D.quest_desc: ["制作一把木稿，去岛上刨点石头吧！"]
-	quest.073147D011BD815D.quest_subtitle: "耐久：3"
+	quest.001D6C9F323293F3.title: "动态结构"
+	quest.02BFC55572F6FBFA.quest_subtitle: "远眺"
+	quest.02BFC55572F6FBFA.title: "望远镜"
+	quest.02CF45C934D1855E.quest_desc: ["小山包那边有不小圆石。"]
+	quest.02CF45C934D1855E.title: "获取圆石"
+	quest.03F487399BC585AE.quest_desc: ["播撒骨粉以获得更多&6虞美人&r。"]
+	quest.03F487399BC585AE.quest_subtitle: "播撒骨粉"
+	quest.03F487399BC585AE.title: "骨粉"
+	quest.05D136CE05DCE0A4.quest_desc: [""]
+	quest.05D136CE05DCE0A4.quest_subtitle: "发现新大陆"
+	quest.05D136CE05DCE0A4.title: "熔融宝石块"
+	quest.0760481CB600CF87.quest_desc: [
+		"比普通西瓜更甜，有点咯牙。"
+		"收获虞美人西瓜不是一件容易的事情，和普通西瓜一样会&6损失&r一些。"
+		"把铁砧搬到农田？这太疯狂了。"
+	]
+	quest.0760481CB600CF87.title: "收获虞美人西瓜"
+	quest.0D3CB694AC2E5332.title: "收集岩浆块"
+	quest.124DD425652A9871.quest_desc: ["&6左手&r虞美人&6右手&r剪刀，对准&6西瓜苗&r完成嫁接。"]
 	quest.124DD425652A9871.title: "嫁接虞美人"
 	quest.135B6B80EE793FE7.quest_desc: [
-		"拿竹子堆一点肥，然后去催生一些花吧"
-		"注：竹子堆肥是本整合包中添加的配方，请勿在其他包中尝试"
+		"拿&6竹子堆一点肥&r，然后去催生一些&6虞美人&r吧。"
+		"&7&o注：竹子堆肥是本整合包中添加的配方，请勿在其他包中尝试。&r&r"
 	]
-	quest.135B6B80EE793FE7.quest_subtitle: "古法有机肥"
-	quest.14C6867516138A7C.quest_desc: [
-		"现在你可以使用竹子来制作一些板材和棍子"
-		"作者们修改了一些majump的奇妙配方，现在你可以“正确的”用8个竹子来制作一个竹块而不是使用9个"
-	]
-	quest.14C6867516138A7C.quest_subtitle: "mojump小时候学的数学是4+4=9"
+	quest.135B6B80EE793FE7.quest_subtitle: "堆肥"
+	quest.135B6B80EE793FE7.title: "堆肥桶"
+	quest.1635A60B937C37E5.title: "\"废石\"刷石机"
 	quest.169BCC302BDEE3BA.title: "第三章：工程控制"
+	quest.235F1B7CB88F49B8.quest_desc: [
+		"&l竹线：&r"
+		"&6竹线&r可代替&6线&r制作部分木工具。"
+		"{@pagebreak}"
+		"&l竹板：&r"
+		"4+4=8"
+	]
+	quest.29E421614D2FF505.quest_subtitle: "房间里有一些基础工具方块"
 	quest.29E421614D2FF505.title: "观察房间"
+	quest.2D7C063B917B11DB.title: "第一桶熔岩"
 	quest.2E93BC045A3F84F2.quest_desc: ["岛上有很多有用的东西，四处转转看看吧！"]
 	quest.2E93BC045A3F84F2.quest_subtitle: "饭后百步走，活到九十九"
+	quest.32AC1A4A5AA66283.title: "第一步"
 	quest.3355D5AD99A5BFA2.title: "第二章：力大砖飞"
 	quest.38D9EC9D21AA9020.title: "第一步的开始！"
+	quest.3921824795DE77FC.quest_subtitle: "物品压缩"
+	quest.3921824795DE77FC.title: "小瓶虞美人西瓜汁"
+	quest.3AA82F76715C0858.quest_desc: ["复活吧我的爱人"]
+	quest.3AA82F76715C0858.quest_subtitle: "蟹钳养殖"
+	quest.3AA82F76715C0858.title: "蟹笼"
+	quest.3BD863BADB8FCAC8.quest_desc: ["耐久3"]
 	quest.3FEF40B720149437.quest_desc: [
-		"虞美人的烧炼速度很快，但是给的还是太少了，岛上的铁矿也是有限的"
-		"你需要找点更优质的铁矿来源"
+		"虞美人的烧炼速度很快，但是根本不够用。岛上的矿产资源也非常有限。"
+		"你需要找点更优质的铁矿来源。"
 	]
 	quest.3FEF40B720149437.quest_subtitle: "好少"
-	quest.438019E95B05B5B0.title: "刷石机"
+	quest.3FEF40B720149437.title: "铁粒"
+	quest.438019E95B05B5B0.title: "很多很多石头"
+	quest.45D9D882FF92D271.quest_desc: [""]
+	quest.45D9D882FF92D271.quest_subtitle: "筛取红石粉"
+	quest.45D9D882FF92D271.title: "红石粉"
 	quest.47321437CC2F60FF.quest_desc: [""]
 	quest.47321437CC2F60FF.title: "欢迎来到丁真空岛"
+	quest.487FFDB07B98AD5B.quest_desc: ["奇怪的剥皮方式。"]
+	quest.487FFDB07B98AD5B.title: "西瓜去皮"
 	quest.4A8392AAC9ADDB86.quest_desc: [
-		"你可以从虞美人中烧炼出铁来，作为开启空岛生活的第一步"
-		"当然，实际上空岛内部也有一些矿物资源，你可以去挖~"
+		"你可以从虞美人中&6烧炼&r出铁来，作为开启空岛生活的第一步。"
+		"当然，实际上&6空岛内部&r也有一些&6矿物资源&r，你可以去挖~"
 	]
-	quest.4A8392AAC9ADDB86.quest_subtitle: "铁傀儡身上有虞美人，虞美人里面有铁很合理吧"
+	quest.4A8392AAC9ADDB86.quest_subtitle: "铁傀儡先生您的花掉了"
+	quest.4A8392AAC9ADDB86.title: "虞美人"
+	quest.5657CCBB122FA0AC.quest_desc: ["蟹钳不能填饱肚子，但是抓一点准没坏处。"]
+	quest.5657CCBB122FA0AC.quest_subtitle: "打捞蟹钳"
+	quest.5657CCBB122FA0AC.title: "蟹钳"
 	quest.56A5CE3DD70B516E.quest_desc: [
-		"这里没有树木，只有一些竹子可以用"
-		"当然，你要是饿狠了的话可以嚼嚼看"
+		"这里没有树木，只有一些竹子可以用。"
+		"当然，你要是饿狠了的话可以&6嚼嚼看&r。"
 	]
-	quest.56A5CE3DD70B516E.quest_subtitle: "基础物资"
-	quest.56A5CE3DD70B516E.title: "获取竹子"
+	quest.56A5CE3DD70B516E.quest_subtitle: "收获竹子"
+	quest.56A5CE3DD70B516E.title: "竹子"
 	quest.5749D1020E4189ED.title: "第一章：初出茅庐"
+	quest.593614AE1B73E6B3.quest_subtitle: "蟹钳制铜"
+	quest.593614AE1B73E6B3.title: "铜锭"
+	quest.5A7CDA67E0ACFED9.quest_desc: ["使用&6铁砧&r下砸&6避雷针&r召唤雷电，会导致制铁砧&6损坏&r。"]
+	quest.5A7CDA67E0ACFED9.title: "引雷"
+	quest.5D6FE3D59FCA627A.quest_subtitle: "方块压缩"
+	quest.63BADBE628C55B1C.quest_subtitle: "雷击铁块"
 	quest.63F435BC6F75F553.quest_desc: [
-		"你可以在水池底的岩浆块底下找到它们"
-		"这些涌泉会缓慢的涌出岩浆，或者在水底产生岩浆块"
-		"如果你需要量产岩浆，只盯着它似乎不是个好选择"
+		"你可以在水池底的岩浆块底下找到它们。"
+		"这些涌泉会缓慢的涌出岩浆，或者在水底产生岩浆块。"
+		"如果你需要量产岩浆，只盯着它似乎不是个好选择。"
 	]
 	quest.63F435BC6F75F553.quest_subtitle: "看，温泉！"
 	quest.63F435BC6F75F553.title: "岩浆涌泉"
+	quest.64CB6C9CFF27F9FD.title: "铁砧时代"
+	quest.680AB41D249B0599.quest_subtitle: "筛取粉碎铁矿石"
+	quest.680AB41D249B0599.title: "粉碎铁矿石"
+	quest.77526BD133AD82E8.quest_desc: ["过&6砂土&r可以获得&6少量&r西瓜种子。"]
+	quest.77526BD133AD82E8.quest_subtitle: "筛取种子"
+	quest.77526BD133AD82E8.title: "西瓜种子"
+	quest.784F8BB0BBF93D0D.quest_desc: [""]
+	quest.784F8BB0BBF93D0D.quest_subtitle: "提炼白糖"
+	quest.784F8BB0BBF93D0D.title: "白糖"
+	quest.7B832F9EB6453D36.quest_desc: ["可以当做&6筛网&r来用，比普通的筛网更坚固。"]
+	quest.7B832F9EB6453D36.quest_subtitle: "筛"
+	quest.7B832F9EB6453D36.title: "脚手架"
+	task.15533F70057B32E0.title: "找到温泉源头"
 	task.1C7B6FF82031CE45.title: "四处转转"
 	task.373C8EEAEB5E059F.title: "四处转转"
-	task.4C067F9C290707C7.title: "嫁接"
-	task.4E5710FE329DBB6E.title: "我找到了工作台"
-	task.4F1AD4EEAC86418F.title: "我发现了熔炉"
+	task.4E5710FE329DBB6E.title: "这里有个工作台"
+	task.4F1AD4EEAC86418F.title: "这里有个熔炉"
 	task.587C5717CA98C810.title: "我找到了"
 	task.5D41614D541672F3.title: "这里有个铁砧"
 	task.6368B546BC816AC1.title: "观察宝石涌泉"
+	task.64E8021BCBC63335.title: "耐久3"
 	task.6710072522376BD0.title: "更多虞美人"
 	task.7C5770F13338977A.title: "我找到了"
 }

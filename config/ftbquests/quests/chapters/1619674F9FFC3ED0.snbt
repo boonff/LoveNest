@@ -7,22 +7,21 @@
 		id: "create:copper_casing"
 	}
 	id: "1619674F9FFC3ED0"
-	order_index: 1
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
+			icon: {
+				id: "create:deployer"
+			}
 			id: "2A639E5E8EA0E681"
 			shape: "hexagon"
-			size: 2.0d
-			tasks: [{
-				id: "328919E5AF0DF225"
-				item: { count: 1, id: "minecraft:copper_ingot" }
-				type: "item"
-			}]
-			x: -0.5d
-			y: -3.5d
+			size: 3.0d
+			x: -1.0d
+			y: -4.0d
 		}
 		{
+			dependencies: ["2A639E5E8EA0E681"]
 			id: "0785FA3C0D9C6DBA"
 			tasks: [
 				{
@@ -42,27 +41,29 @@
 				}
 			]
 			x: -2.5d
-			y: -1.5d
+			y: -2.0d
 		}
 		{
+			dependencies: ["2A639E5E8EA0E681"]
 			id: "5DB780D5053184F2"
 			tasks: [{
 				id: "039E8C4AAC07B4E1"
 				item: { count: 1, id: "create:fluid_tank" }
 				type: "item"
 			}]
-			x: -0.5d
-			y: 0.5d
+			x: -1.0d
+			y: -2.0d
 		}
 		{
+			dependencies: ["2A639E5E8EA0E681"]
 			id: "5D98A4BA095D47BB"
 			tasks: [{
 				id: "43A5A0CBE851DFD8"
 				item: { count: 1, id: "create:copper_casing" }
 				type: "item"
 			}]
-			x: -0.5d
-			y: -1.5d
+			x: 0.5d
+			y: -2.0d
 		}
 	]
 }
