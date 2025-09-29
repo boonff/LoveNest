@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
             "results": [{
                 "count": {
                     "type": "minecraft:binomial",
-                    "n": 3.0,
+                    "n": 4.0,
                     "p": 0.8
                 },
                 "id": "create:crushed_raw_iron"
@@ -137,10 +137,20 @@ ServerEvents.recipes(event => {
         }
     ); // 西瓜沙x3 + 玻璃瓶 -> 西瓜汁x3
 
-    // Create 模组液体操作
-    event.recipes.create.filling('foand:poppy_melon_juice', [Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle']); // 装瓶西瓜汁
-    event.recipes.create.emptying([Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle'], 'foand:poppy_melon_juice'); // 倒空西瓜汁瓶
+    // create 手持点击
+    event.remove({ output: 'anvil' })
+    event.remove({ output: 'chipped_anvil' })
+    event.remove({ output: 'damaged_anvil' })
+    event.recipes.create.item_application('minecraft:chipped_anvil',
+        ['minecraft:iron_block', 'minecraft:iron_ingot']) // 铁块+铁锭->铁砧
+
+    // create 模组液体操作
+    event.recipes.create.filling('foand:poppy_melon_juice',
+        [Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle']); // 装瓶西瓜汁
+    event.recipes.create.emptying([Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle'],
+        'foand:poppy_melon_juice'); // 倒空西瓜汁瓶
 
     // 高效配方
-    event.recipes.create.mixing('minecraft:iron_block', [Fluid.of('foand:poppy_melon_juice', 1000), Fluid.lava(1000)]); // 1000mb瓜汁 + 1000mb岩浆 -> 1铁块
+    event.recipes.create.mixing('minecraft:iron_block',
+        [Fluid.of('foand:poppy_melon_juice', 1000), Fluid.lava(1000)]); // 1000mb瓜汁 + 1000mb岩浆 -> 1铁块
 });
