@@ -110,10 +110,10 @@ let createRecipes = {
                     ingredients: getIngredients(inputs),
                     results: getOutputs(outputs)
                 }))
-                r['heated'] = () => { r.merge({ heat_requirement: "heated" }) };
-                r['superheated'] = () => { r.merge({ heat_requirement: "heated" }) };
-                r['keepHeldItem'] = (input) => { r.merge({ keep_held_item: input }) };
-                r['processingTime'] = (input) => { r.merge({ processing_time: input }) }
+                r['heated'] = () => { r.merge({ heat_requirement: "heated" }); return r };
+                r['superheated'] = () => { r.merge({ heat_requirement: "heated" }); return r };
+                r['keepHeldItem'] = (input) => { r.merge({ keep_held_item: input }); return r };
+                r['processingTime'] = (input) => { r.merge({ processing_time: input }); return r }
                 return r;
             }
         });
@@ -121,12 +121,12 @@ let createRecipes = {
     sequenced_assembly: function (outputs, input, recipes) {
         let r = Object(this.event.custom({
             type: "create:sequenced_assembly",
-            ingredient: input,
-            results: outputs,
+            ingredient: getIngredients(input),
+            results: getOutputs(outputs),
             sequence: recipes,
         }))
-        r['loops'] = (input) => { r.merge({ loops: input }) };
-        r['transitionalItem'] = (input) => { r.merge({ transitional_item: input }) };
+        r['loops'] = (input) => { r.merge({ loops: input }); return r };
+        r['transitionalItem'] = (input) => { r.merge({ transitional_item: getItem(input) }); return r };
         return r;
     },
     mechanical_crafting(output, pattern, key) {
@@ -138,8 +138,8 @@ let createRecipes = {
             pattern: pattern,
             result: getItem(output)
         }))
-        r['showNotification'] = (input) => { r.merge({ show_notification: input }) };
-        r['acceptMirrored'] = () => { r.merge({ accept_mirrored: true }) };
+        r['showNotification'] = (input) => { r.merge({ show_notification: input }); return r };
+        r['acceptMirrored'] = () => { r.merge({ accept_mirrored: true }); return r };
         return r;
     }
 }
