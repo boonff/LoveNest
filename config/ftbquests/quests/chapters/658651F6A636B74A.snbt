@@ -361,18 +361,18 @@
 		{
 			dependencies: ["45D9D882FF92D271"]
 			icon: {
-				id: "anvilcraft:sugar_block"
+				id: "minecraft:sugar"
 			}
 			id: "784F8BB0BBF93D0D"
 			tasks: [
 				{
-					id: "52AC00EF7CBF3C30"
-					item: { count: 1, id: "anvilcraft:sugar_block" }
+					id: "31879B838830E394"
+					item: { count: 1, id: "minecraft:sugar" }
 					type: "item"
 				}
 				{
-					id: "31879B838830E394"
-					item: { count: 1, id: "minecraft:sugar" }
+					id: "52AC00EF7CBF3C30"
+					item: { count: 1, id: "anvilcraft:sugar_block" }
 					type: "item"
 				}
 			]

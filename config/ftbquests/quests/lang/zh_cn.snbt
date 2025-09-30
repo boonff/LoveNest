@@ -61,6 +61,7 @@
 	quest.32AC1A4A5AA66283.title: "第一步"
 	quest.3355D5AD99A5BFA2.title: "第二章：力大砖飞"
 	quest.38D9EC9D21AA9020.title: "第一步的开始！"
+	quest.3921824795DE77FC.quest_desc: ["一瓶富含铁元素的西瓜汁。"]
 	quest.3921824795DE77FC.quest_subtitle: "物品压缩"
 	quest.3921824795DE77FC.title: "小瓶虞美人西瓜汁"
 	quest.3AA82F76715C0858.quest_desc: ["复活吧我的爱人"]
@@ -74,8 +75,8 @@
 	quest.3FEF40B720149437.quest_subtitle: "好少"
 	quest.3FEF40B720149437.title: "铁粒"
 	quest.438019E95B05B5B0.title: "很多很多石头"
-	quest.45D9D882FF92D271.quest_desc: [""]
-	quest.45D9D882FF92D271.quest_subtitle: "筛取红石粉"
+	quest.45D9D882FF92D271.quest_desc: ["从虞美人西瓜沙中&6筛&r出来的红糖，尝起来甜甜的。"]
+	quest.45D9D882FF92D271.quest_subtitle: "红糖"
 	quest.45D9D882FF92D271.title: "红石粉"
 	quest.47321437CC2F60FF.quest_desc: [""]
 	quest.47321437CC2F60FF.title: "欢迎来到丁真空岛"
@@ -111,14 +112,15 @@
 	quest.63F435BC6F75F553.quest_subtitle: "看，温泉！"
 	quest.63F435BC6F75F553.title: "岩浆涌泉"
 	quest.64CB6C9CFF27F9FD.title: "铁砧时代"
+	quest.680AB41D249B0599.quest_desc: ["罂粟西瓜沙没有种子，里面只有铁粒。试试把它们&6筛&r出来。"]
 	quest.680AB41D249B0599.quest_subtitle: "筛取粉碎铁矿石"
 	quest.680AB41D249B0599.title: "粉碎铁矿石"
 	quest.77526BD133AD82E8.quest_desc: ["过&6砂土&r可以获得&6少量&r西瓜种子。"]
 	quest.77526BD133AD82E8.quest_subtitle: "筛取种子"
 	quest.77526BD133AD82E8.title: "西瓜种子"
-	quest.784F8BB0BBF93D0D.quest_desc: [""]
+	quest.784F8BB0BBF93D0D.quest_desc: ["使用&6膨发&r工艺将红糖提炼为白糖"]
 	quest.784F8BB0BBF93D0D.quest_subtitle: "提炼白糖"
-	quest.784F8BB0BBF93D0D.title: "白糖"
+	quest.784F8BB0BBF93D0D.title: "糖"
 	quest.7B832F9EB6453D36.quest_desc: ["可以当做&6筛网&r来用，比普通的筛网更坚固。"]
 	quest.7B832F9EB6453D36.quest_subtitle: "筛"
 	quest.7B832F9EB6453D36.title: "脚手架"
