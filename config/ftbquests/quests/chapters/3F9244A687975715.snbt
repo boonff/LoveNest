@@ -1,0 +1,124 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "3F9244A687975715"
+	group: ""
+	icon: {
+		id: "minecraft:redstone"
+	}
+	id: "3F9244A687975715"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "764FEFF694D6B6D7"
+			tasks: [{
+				id: "61B86016E45FCEB9"
+				item: { count: 1, id: "minecraft:piston" }
+				type: "item"
+			}]
+			x: -4.5d
+			y: -2.5d
+		}
+		{
+			id: "01EE428C79202D8A"
+			tasks: [{
+				id: "58903E784274A0CC"
+				item: { count: 1, id: "minecraft:sticky_piston" }
+				type: "item"
+			}]
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			id: "55B39C1D913CC590"
+			tasks: [{
+				id: "4F833EF7D9BA7B73"
+				item: { count: 1, id: "minecraft:repeater" }
+				type: "item"
+			}]
+			x: -5.5d
+			y: -2.5d
+		}
+		{
+			id: "6076A92C1BAABADC"
+			tasks: [{
+				id: "3AF3BDB071E586D1"
+				item: { count: 1, id: "minecraft:comparator" }
+				type: "item"
+			}]
+			x: -5.5d
+			y: -1.5d
+		}
+		{
+			id: "28CA17F266465F80"
+			tasks: [{
+				id: "54267B619903F406"
+				item: { count: 1, id: "minecraft:copper_bulb" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: -2.5d
+		}
+		{
+			id: "475604F1B9E27E7E"
+			tasks: [{
+				id: "075E1169DA4C51F5"
+				item: { count: 1, id: "minecraft:redstone_lamp" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: -1.5d
+		}
+		{
+			id: "7C30688C58391905"
+			tasks: [{
+				id: "4246871D4ABF85D3"
+				item: { count: 1, id: "minecraft:target" }
+				type: "item"
+			}]
+			x: -6.5d
+			y: -2.5d
+		}
+		{
+			id: "61F37A854E4F1095"
+			tasks: [{
+				id: "3B4DE24D7FF16E88"
+				item: { count: 1, id: "minecraft:redstone" }
+				type: "item"
+			}]
+			x: -7.5d
+			y: -2.5d
+		}
+		{
+			id: "46F9107A5DA1AEE8"
+			tasks: [{
+				id: "15971B5113575924"
+				item: { count: 1, id: "minecraft:redstone_torch" }
+				type: "item"
+			}]
+			x: -7.5d
+			y: -1.5d
+		}
+		{
+			id: "7138424A62CE84DD"
+			tasks: [{
+				id: "25C651D88B5A4589"
+				item: { count: 1, id: "minecraft:dispenser" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -1.5d
+		}
+		{
+			id: "310C4AFEF6212E0F"
+			tasks: [{
+				id: "5B8DF20580C69FA8"
+				item: { count: 1, id: "minecraft:dropper" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -2.5d
+		}
+	]
+}

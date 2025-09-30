@@ -48,7 +48,53 @@ ServerEvents.recipes(event => {
     }) // 望远镜
 
     event.remove({ output: 'sticky_piston' })
-    event.shaped('sticky_piston', ['A'], { 'A': 'piston' })
-    event.shaped('piston', ['A'], { 'A': 'sticky_piston' })
+    event.shaped('sticky_piston', ['A'], { 'A': 'piston' }) //活塞 -> 粘性活塞
+    event.shaped('piston', ['A'], { 'A': 'sticky_piston' }) //粘性活塞 -> 活塞
+
+    event.remove({ output: 'minecraft:copper_bulb' })
+    event.shaped('minecraft:copper_bulb', [
+        ' B ',
+        'BAB',
+        ' C '
+    ], {
+        A: 'minecraft:lantern',
+        B: 'minecraft:copper_ingot',
+        C: 'minecraft:redstone'
+    }
+    )// 铜灯
+
+    event.remove({ output: 'minecraft:comparator' })
+    event.shaped('minecraft:comparator', [
+        ' A ',
+        'ABA',
+        'CCC'
+    ], {
+        A: 'minecraft:redstone_torch',
+        B: 'minecraft:sugar',
+        C: 'minecraft:stone'
+    }
+    )// 红石比较器
+
+    event.remove({ output: 'minecraft:daylight_detector' })
+    event.shaped('minecraft:daylight_detector', [
+        'AAA',
+        'BBB',
+        'CCC'
+    ], {
+        A: 'minecraft:glass',
+        B: 'minecraft:sugar',
+        C: '#minecraft:wooden_slabs'
+    })// 阳关传感器
+
+    event.remove({ output: 'minecraft:observer' })
+    event.shaped('minecraft:observer', [
+        'AAA',
+        'BBC',
+        'AAA'
+    ], {
+        A: 'minecraft:stone',
+        B: 'minecraft:redstone',
+        C: 'minecraft:sugar'
+    })
 
 })
