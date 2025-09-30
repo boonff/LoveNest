@@ -41,6 +41,21 @@ ServerEvents.recipes(event => {
         ]
     }) // 安山糖块x2 + 罂粟西瓜汁x2 -> 安山合金
 
+    // 膨发
+    event.recipes.anvilcraft.bulging({
+        "fluid": "minecraft:water",
+        "ingredients": [
+            {
+                "items": "minecraft:redstone"
+            }
+        ],
+        "results": [
+            {
+                "id": "minecraft:sugar"
+            }
+        ]
+    })
+
     event.recipes.create.deploying('foand:andesite_sugar_block',
         ['minecraft:andesite', 'anvilcraft:sugar_block']) //糖块 + 安山岩 -> 安山糖块
 
