@@ -56,8 +56,8 @@ ServerEvents.recipes(event => {
             }, {
                 "count": {
                     "type": "minecraft:binomial",
-                    "n": 3.0,
-                    "p": 0.6
+                    "n": 4.0,
+                    "p": 0.8
                 },
                 "id": "minecraft:redstone"
             }
