@@ -427,7 +427,11 @@
 			y: -21.0d
 		}
 		{
-			dependencies: ["02BFC55572F6FBFA"]
+			dependencies: [
+				"02BFC55572F6FBFA"
+				"593614AE1B73E6B3"
+			]
+			dependency_requirement: "one_completed"
 			icon: {
 				id: "foand:melt_gem_block"
 			}
