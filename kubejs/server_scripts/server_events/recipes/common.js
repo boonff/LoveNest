@@ -98,17 +98,11 @@ ServerEvents.recipes(event => {
     })
 
     // 使用 Item.of 创建带 NBT 的烈焰人头
-    const blaze_head = 'minecraft:player_head[profile={id:[I;1278799121,1500139476,-1424152845,-2034119764],name:"MHF_Blaze",properties:[{name:"textures",value:"ewogICJ0aW1lc3RhbXAiIDogMTc1OTU4MjU2NDk3NiwKICAicHJvZmlsZUlkIiA6ICI0YzM4ZWQxMTU5NmE0ZmQ0YWIxZDI2ZjM4NmMxY2JhYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJNSEZfQmxhemUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDA2ZTM0MmY5MGVjNTM4YWFhMTU1MmIyMjRmMjY0YTA0MDg0MDkwMmUxMjZkOTFlY2U2MTM5YWE1YjNjN2NjMyIKICAgIH0KICB9Cn0="}]}]'
+    // const blaze_head = 'minecraft:player_head[profile={id:[I;1278799121,1500139476,-1424152845,-2034119764],name:"MHF_Blaze",properties:[{name:"textures",value:"ewogICJ0aW1lc3RhbXAiIDogMTc1OTU4MjU2NDk3NiwKICAicHJvZmlsZUlkIiA6ICI0YzM4ZWQxMTU5NmE0ZmQ0YWIxZDI2ZjM4NmMxY2JhYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJNSEZfQmxhemUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDA2ZTM0MmY5MGVjNTM4YWFhMTU1MmIyMjRmMjY0YTA0MDg0MDkwMmUxMjZkOTFlY2U2MTM5YWE1YjNjN2NjMyIKICAgIH0KICB9Cn0="}]}]'
+    const blaze_head = 'foand:blaze_head'
     event.recipes.create.item_application(
-        'stone',
-        ['glass', blaze_head]
+        'create:blaze_burner',
+        ['create:empty_blaze_burner', blaze_head]
     )
-
-    event.shapeless('glass', blaze_head)
-    event.shapeless(blaze_head, 'glass')
-
-
-
-
 
 })
