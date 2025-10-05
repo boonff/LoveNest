@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "foand:block/blaze_head" },
+    "facing=east": { "model": "foand:block/blaze_head", "y": 90 },
+    "facing=south": { "model": "foand:block/blaze_head", "y": 180 },
+    "facing=west": { "model": "foand:block/blaze_head", "y": 270 }
+  }
+}
