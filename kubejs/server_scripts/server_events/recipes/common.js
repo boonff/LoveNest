@@ -105,4 +105,6 @@ ServerEvents.recipes(event => {
         ['create:empty_blaze_burner', blaze_head]
     )
 
+    event.recipes.create.filling(blaze_head, ['#create:packages', Fluid.of('foand:blaze', 1000)])
+
 })
