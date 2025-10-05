@@ -30,13 +30,6 @@ ServerEvents.recipes(event => {
         B: 'foand:bamboo_string'
     })  // 脚手架
 
-    event.shaped('woodenbucket:wooden_bucket', [
-        'A A',
-        ' A ',
-    ], {
-        A: 'minecraft:bamboo_block'
-    }) // 木桶
-
     event.remove({ output: 'minecraft:spyglass' }) // 移除望远镜原版配方
     event.shaped('minecraft:spyglass', [
         ' A ',
