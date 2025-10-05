@@ -98,11 +98,16 @@ ServerEvents.recipes(event => {
     })
 
     // 使用 Item.of 创建带 NBT 的烈焰人头
-    const blaze_head = 'minecraft:player_head[profile={id:[I;1278799121,1500139476,-1424152845,-2034119764],name:"MHF_Blaze",properties:[{name:"textures",signature:"W06clORmFIH+Jof9K3bQrxIqutTbYZUa4xxv6RBJL1Hnp0Q6U9dPKpR0PZtiDX9fRpWALnuuZJ1+E7hqrR9UU1R7QDv11xX4agmw1E8VtwkIY8KnQrH8LA2dJpcjWwEP+yQMHSqa9GagkVkW15JdLJ2+PYJu6Gk093qRG3YQS+2iIk9XeH3Uq9YbEJUFA5D2UIYnuXzr/69mpnyqJSw7ePQcPA332PZQHDPu9QYVcRnpScG9tPvntjsjgjRyzroy7HykCbeDfQ1KTsV/IEFWsdxG+brvH23b3AmbFgxvSGpEb32qi88N06GFgoNzOYhi0DytJxmkbE0ElG0Mh9/hvtOfakTIyU5CBL9Yeup6nYcqSmTq7JKfnav9XE2HNkpDdBqX9Kk94uttrULew4+qwYIpq/YNllyGsN2g/JbT4oIW0px4hd196Y1PNbH5CKAhA6vjgia6u4dALTbuVswxSCrBViGVdTJbvPY+GpOPQDwAjgZoFv0/zAlCQIukQdJmjM7sRtlCYShKzgJodYZrNFjnSeBsQi2UFvSsQ94uBrml2LhhPSdxjCp8DoG+cXxs/k8OtoNHZtXuHb1kt+n1J6KtDEik1qQ8MO9+b3WBbYBt+VZ2QuuRfnuScKQoX8dsGBDcW7TXSeIpi6V7oGBAnH/Ajkw24Yk+EoNuIrPEaio=",value:"ewogICJ0aW1lc3RhbXAiIDogMTc1OTU4MjU2NDk3NiwKICAicHJvZmlsZUlkIiA6ICI0YzM4ZWQxMTU5NmE0ZmQ0YWIxZDI2ZjM4NmMxY2JhYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJNSEZfQmxhemUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDA2ZTM0MmY5MGVjNTM4YWFhMTU1MmIyMjRmMjY0YTA0MDg0MDkwMmUxMjZkOTFlY2U2MTM5YWE1YjNjN2NjMyIKICAgIH0KICB9Cn0="}]}]'
+    const blaze_head = 'minecraft:player_head[profile={id:[I;1278799121,1500139476,-1424152845,-2034119764],name:"MHF_Blaze",properties:[{name:"textures",value:"ewogICJ0aW1lc3RhbXAiIDogMTc1OTU4MjU2NDk3NiwKICAicHJvZmlsZUlkIiA6ICI0YzM4ZWQxMTU5NmE0ZmQ0YWIxZDI2ZjM4NmMxY2JhYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJNSEZfQmxhemUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDA2ZTM0MmY5MGVjNTM4YWFhMTU1MmIyMjRmMjY0YTA0MDg0MDkwMmUxMjZkOTFlY2U2MTM5YWE1YjNjN2NjMyIKICAgIH0KICB9Cn0="}]}]'
     event.recipes.create.item_application(
-        'create:blaze_burner',
-        ['create:empty_blaze_burner', blaze_head]
+        'stone',
+        ['glass', blaze_head]
     )
+
+    event.shapeless('glass', blaze_head)
+    event.shapeless(blaze_head, 'glass')
+
+
 
 
 
