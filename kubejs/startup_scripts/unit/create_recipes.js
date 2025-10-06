@@ -2,7 +2,7 @@ function getIngredient(input) {
     let result;
     if ((typeof input) === "string" || Item.isItem(input)) {
         result = Ingredient.of(input);
-    } else if ('id' in input && 'amount' in input) {
+    } else if ((typeof input) === "object" && 'id' in input && 'amount' in input) {
         result = { type: 'fluid_stack', fluid: input.id, amount: input.amount }
     } else if (Array.isArray(input) && _item != []) {
         result = getIngredient(input[0])
@@ -16,7 +16,7 @@ function getItem(input) {
     let result;
     if (typeof input === "string" || Item.isItem(input)) {
         result = Item.of(input);
-    } else if ('id' in input && 'amount' in input) {
+    } else if ((typeof input) === "object" && 'id' in input && 'amount' in input) {
         result = getFluid(input)
     } else if (Array.isArray(input) && input != []) {
         result = getItem(input[0])
@@ -111,7 +111,7 @@ let createRecipes = {
                     results: getOutputs(outputs)
                 }))
                 r['heated'] = () => { r.merge({ heat_requirement: "heated" }); return r };
-                r['superheated'] = () => { r.merge({ heat_requirement: "heated" }); return r };
+                r['superheated'] = () => { r.merge({ heat_requirement: "superheated" }); return r };
                 r['keepHeldItem'] = (input) => { r.merge({ keep_held_item: input }); return r };
                 r['processingTime'] = (input) => { r.merge({ processing_time: input }); return r }
                 return r;
