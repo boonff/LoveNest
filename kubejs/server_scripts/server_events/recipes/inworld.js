@@ -1,5 +1,5 @@
 ServerEvents.recipes(event => {
-    // 铁砧砸黑曜石产生黑曜石粉
+    // 铁砧砸黑曜石产生黑曜石粉 
     event.custom({
         "type": "anvillib:in_world_recipe",
         "compatible": true,
@@ -37,4 +37,6 @@ ServerEvents.recipes(event => {
         "max_efficiency": 1,
         "trigger": "anvilcraft:on_anvil_fall_on"
     })
+
+    //TODO 金矿
 })
