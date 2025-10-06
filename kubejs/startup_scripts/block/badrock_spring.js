@@ -59,4 +59,18 @@ StartupEvents.registry('block', event => {
                 }
             }
         })
+
+    // 血肉团块
+    event.create('foand:corpse_mass')
+
 });
+
+PowerfulEvents.registerCapabilities(event => {
+    // 让血肉团块中可以抽取出灵魂汁
+    event.registerBlock('powerfuljs:constant_fluid', {
+        content: Fluid.of('foand:soulsteel', 1000),
+        maxReceive: 20,
+        maxExtract: 20,
+        validator: "foand:soulsteel",
+    }, 'foand:corpse_mass')
+})
