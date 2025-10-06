@@ -9,4 +9,6 @@ StartupEvents.registry('item', event => {
         })
         .maxStackSize(64)
         .tooltip('好吃不硌牙')
+
+    event.create('foand:iodine') // 碘
 })
