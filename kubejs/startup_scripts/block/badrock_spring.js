@@ -62,6 +62,9 @@ StartupEvents.registry('block', event => {
 
     // 血肉团块
     event.create('foand:corpse_mass')
+        .hardness(55) // 设置硬度
+        .resistance(1200) // 设置爆炸抗性
+        .soundType('sand')
         .noDrops()
         // 让血肉团块中可以抽取出灵魂汁
         .blockEntity(info => {
