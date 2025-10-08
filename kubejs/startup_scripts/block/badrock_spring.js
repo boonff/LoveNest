@@ -59,4 +59,24 @@ StartupEvents.registry('block', event => {
                 }
             }
         })
+
+    // 血肉团块
+    event.create('foand:corpse_mass')
+        .hardness(55) // 设置硬度
+        .resistance(1200) // 设置爆炸抗性
+        .soundType('sand')
+        .noDrops()
+        // 让血肉团块中可以抽取出灵魂汁
+        .blockEntity(info => {
+            info.fluidTank('tank', [], 1, Fluid.of('foand:soulsteel', 1))
+        })
+
 });
+
+PowerfulEvents.registerCapabilities(event => {
+    // 让血肉团块中可以抽取出灵魂汁
+    event.registerBlock('powerfuljs:constant_fluid', {
+        content: Fluid.of('foand:soulsteel', 1),
+        maxReceive: 0,
+    }, 'foand:corpse_mass')
+})
