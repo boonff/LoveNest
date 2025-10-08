@@ -105,6 +105,8 @@ ServerEvents.recipes(event => {
         ['create:empty_blaze_burner', blaze_head]
     )
 
-    event.recipes.create.filling(blaze_head, ['#create:packages', Fluid.of('foand:blaze', 1000)])
+    // 注液
+    event.recipes.create.filling(blaze_head,
+        ['#create:packages', Fluid.of('foand:blaze', 1000)])//纸箱+烈焰血 -> 烈焰人头
 
 })
