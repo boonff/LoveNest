@@ -16,5 +16,11 @@
     "fluid_type.foand.blaze": "烈焰血",
     "item.foand.poppy_melon_juice_bucket": "虞美人西瓜汁桶",
     "item.foand.soulsteel_bucket": "灵魂汁子桶",
-    "item.foand.blaze_bucket": "烈焰血桶"
+    "item.foand.blaze_bucket": "烈焰血桶",
+    "kubejs.ponder.lightning_test.header": "避雷针引雷",
+    "kubejs.ponder.lightning_test.text_1": "放置铁十字架",
+    "kubejs.ponder.lightning_test.text_2": "磁铁产出",
+    "kubejs.ponder.lightning_test.text_3": "有小概率会发生爆炸",
+    "kubejs.ponder.lightning_test.text_4": "过高等级的铁砧会损坏避雷针",
+    "kubejs.ponder.lightning_test.text_5": "并且会发生爆炸"
 }
