@@ -1,12 +1,16 @@
 {
-    "feature": "foand:corpse_mass_island",
+    "feature": "foand:hell_block_column",
     "placement": [
         {
             "type": "minecraft:biome"
         },
         {
+            "type": "minecraft:count",
+            "count": 10
+        },
+        {
             "type": "minecraft:rarity_filter",
-            "chance": 64
+            "chance": 16
         },
         {
             "type": "minecraft:in_square"
@@ -19,7 +23,7 @@
                     "absolute": 0
                 },
                 "max_inclusive": {
-                    "absolute": 256
+                    "absolute": 128
                 }
             }
         }

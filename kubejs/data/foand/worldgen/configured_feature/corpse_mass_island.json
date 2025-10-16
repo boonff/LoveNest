@@ -43,7 +43,7 @@
         "crack": {
             "base_crack_size": 2,
             "crack_point_offset": 2,
-            "generate_crack_chance": 0
+            "generate_crack_chance": 0.2
         },
         "distribution_points": 1,
         "invalid_blocks_threshold": 99,
@@ -66,5 +66,4 @@
         "use_alternate_layer0_chance": 0,
         "use_potential_placements_chance": 0
     }
-    
 }

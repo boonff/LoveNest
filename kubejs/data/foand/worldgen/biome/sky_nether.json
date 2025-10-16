@@ -16,7 +16,8 @@
     },
     "features": [
         [
-            "foand:corpse_mass_island_placed"
+            "foand:corpse_mass_island_placed",
+            "foand:hell_block_column_placed"
         ],
         [],
         [],
