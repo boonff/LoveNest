@@ -4,8 +4,8 @@
   "parent": "block/block",
   "render_type": "cutout",
   "textures": {
-    "3": "foand:block/net",
-    "particle": "foand:block/net",
+    "3": "foand:block/net_lit",
+    "particle": "foand:block/net_lit",
     "back": "foand:block/brass_casing"
   },
   "elements": [
