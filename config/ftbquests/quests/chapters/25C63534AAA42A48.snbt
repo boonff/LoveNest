@@ -23,15 +23,14 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["08D5D943250B3207"]
-			id: "2946B3B190AA3981"
+			id: "7ED5490D8327E05B"
 			tasks: [{
-				id: "70388A5EB9D930FC"
-				item: { count: 1, id: "anvilcraft:singularity_crystal" }
+				id: "05DF6BCC9D9CCD5D"
+				item: { count: 1, id: "create:brass_ingot" }
 				type: "item"
 			}]
 			x: 0.0d
-			y: 2.5d
+			y: 6.0d
 		}
 	]
 }

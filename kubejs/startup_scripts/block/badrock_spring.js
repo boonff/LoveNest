@@ -43,8 +43,7 @@ StartupEvents.registry('block', event => {
         .randomTick(event => {
             let pos = event.block.pos;
             let level = event.level;
-            let randomChance = Math.random();
-            if (randomChance < 0.1) {
+            if (Math.random() < 0.1) {
                 const topPos = pos.offset(0, 1, 0);
                 const top2Pos = pos.offset(0, 2, 0);
                 if (level.getBlock(topPos).id == 'minecraft:air'

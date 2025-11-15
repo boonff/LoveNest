@@ -55,7 +55,7 @@ const tagBlocks = [
 Ponder.registry(event => {
     tagBlocks.forEach(block => {
         event.create(block)
-            .scene("lightning_test", "避雷针测试", (scene, util) => {
+            .scene("ponder_lightning", "避雷针测试", (scene, util) => {
                 scene.showBasePlate();
 
                 /**--------避雷针引雷----------**/
