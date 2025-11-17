@@ -12,4 +12,4 @@ StartupEvents.registry('block', event => {
         .placementState((callback) => {
             callback.set(BlockProperties.HORIZONTAL_FACING, callback.horizontalDirection.opposite)
         })
-});
+}) 

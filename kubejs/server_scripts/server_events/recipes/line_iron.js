@@ -3,24 +3,29 @@ ServerEvents.recipes(event => {
     global.createRecipes.init(event)
     global.anvilcraftRecipes.init(event)
 
-    // 熔炉配方
+    /*-------------------------- 熔炉 --------------------------*/
+    // 罂粟 —> 铁粒
     event.smelting('minecraft:iron_nugget',
-        'minecraft:poppy').xp(0.1).cookingTime(50); // 罂粟 —> 铁粒
+        'minecraft:poppy').xp(0.1).cookingTime(50)
+    // 罂粟西瓜片 -> 铁粒
 
     event.smelting('minecraft:iron_nugget',
-        'foand:poppy_melon_slice').xp(0.1).cookingTime(50); // 罂粟西瓜片 -> 铁粒
-
+        'foand:poppy_melon_slice').xp(0.1).cookingTime(50)
+    // 木炭 -> 竹块
     event.smelting('minecraft:charcoal',
-        'minecraft:bamboo_block').xp(0.1); // 木炭 -> 竹块
-
+        'minecraft:bamboo_block').xp(0.1)
+    // 木炭 -> 剥皮竹块 
     event.smelting('minecraft:charcoal',
-        'minecraft:stripped_bamboo_block').xp(0.1); // 木炭 -> 剥皮竹块 
+        'minecraft:stripped_bamboo_block').xp(0.1)
 
-    // 物品拆分
-    event.shapeless('anvilcraft:sugar_block', '9x minecraft:sugar'); // 9糖 -> 糖块
-    event.shapeless('foand:poppy_melon', '9x foand:poppy_melon_slice'); // 9片切片 -> 西瓜
+    /*-------------------------- 物品拆分 --------------------------*/
+    // 9糖 -> 糖块
+    event.shapeless('anvilcraft:sugar_block', '9x minecraft:sugar')
+    // 9片切片 -> 西瓜
+    event.shapeless('foand:poppy_melon', '9x foand:poppy_melon_slice')
 
-    // 解包
+    /*---------------------------- 解包 ---------------------------*/
+    // 罂粟西瓜 -> 罂粟西瓜片x9
     event.recipes.anvilcraft.unpack(
         {
             "ingredients": [
@@ -30,17 +35,19 @@ ServerEvents.recipes(event => {
                 { "count": 9, "id": "foand:poppy_melon_slice" }
             ]
         }
-    )// 罂粟西瓜 -> 罂粟西瓜片x9
+    )
 
-    // 方块粉碎
+    /*---------------------------- 方块粉碎 ---------------------------*/
+    // 西瓜 -> 西瓜沙
     event.recipes.anvilcraft.block_crush(
         {
             "input": { "blocks": "foand:poppy_melon" },
             "result": { "block": "foand:poppy_melon_sand" }
         }
-    ); // 西瓜 -> 西瓜沙
+    )
 
-    // 筛！！
+    /*--------------------------- 筛！！ ---------------------------*/
+    // 西瓜沙 -> 原铁碎&红石
     event.recipes.anvilcraft.mesh(
         {
             "ingredients": [
@@ -63,7 +70,8 @@ ServerEvents.recipes(event => {
             }
             ]
         }
-    ); // 西瓜沙 -> 原铁碎&红石
+    )
+    // 沙子 -> 甘蔗（概率）
     event.recipes.anvilcraft.mesh({
         "ingredients": [
             { "items": "minecraft:sand" }
@@ -77,8 +85,8 @@ ServerEvents.recipes(event => {
             "id": "minecraft:sugar_cane"
         }
         ]
-    }
-    ) // 沙子 -> 甘蔗（概率）
+    })
+    // 沙砾 -> 西瓜种子&南瓜种子
     event.recipes.anvilcraft.mesh({
         "ingredients": [
             { "items": "minecraft:coarse_dirt" }
@@ -100,9 +108,10 @@ ServerEvents.recipes(event => {
             "id": "minecraft:pumpkin_seeds"
         }
         ]
-    }) // 沙砾 -> 西瓜种子&南瓜种子
+    })
 
-    // 压缩加工
+    /*------------------------------- 压缩加工 -------------------------------*/
+    // 西瓜沙x1 + 玻璃瓶 -> 西瓜汁x1
     event.recipes.anvilcraft.item_compress(
         {
             "ingredients": [
@@ -113,7 +122,8 @@ ServerEvents.recipes(event => {
                 { "id": "foand:poppy_melon_juice" }
             ]
         }
-    ); // 西瓜沙x1 + 玻璃瓶 -> 西瓜汁x1
+    )
+    // 西瓜沙x2 + 玻璃瓶 -> 西瓜汁x2
     event.recipes.anvilcraft.item_compress(
         {
             "ingredients": [
@@ -124,7 +134,8 @@ ServerEvents.recipes(event => {
                 { "count": 2, "id": "foand:poppy_melon_juice" }
             ]
         }
-    ); // 西瓜沙x2 + 玻璃瓶 -> 西瓜汁x2
+    )
+    // 西瓜沙x3 + 玻璃瓶 -> 西瓜汁x3
     event.recipes.anvilcraft.item_compress(
         {
             "ingredients": [
@@ -135,22 +146,23 @@ ServerEvents.recipes(event => {
                 { "count": 3, "id": "foand:poppy_melon_juice" }
             ]
         }
-    ); // 西瓜沙x3 + 玻璃瓶 -> 西瓜汁x3
-
-    // create 手持点击
+    )
+    /*---------------------------- create 手持点击 ------------------------*/
+    // 铁块+铁锭->铁砧
     event.remove({ output: 'anvil' })
     event.remove({ output: 'chipped_anvil' })
     event.remove({ output: 'damaged_anvil' })
     event.recipes.create.item_application('minecraft:chipped_anvil',
-        ['minecraft:iron_block', 'minecraft:iron_ingot']) // 铁块+铁锭->铁砧
+        ['minecraft:iron_block', 'minecraft:iron_ingot'])
 
-    // create 模组液体操作
+    /* -------------------------- create 流体 --------------------------*/
+    // 西瓜汁装瓶
     event.recipes.create.filling('foand:poppy_melon_juice',
-        [Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle']); // 装瓶西瓜汁
+        [Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle'])
+    // 倒出西瓜汁
     event.recipes.create.emptying([Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle'],
-        'foand:poppy_melon_juice'); // 倒空西瓜汁瓶
-
-    // 高效配方
+        'foand:poppy_melon_juice')
+    // 1000mb瓜汁 + 1000mb岩浆 -> 1铁块
     event.recipes.create.mixing('minecraft:iron_block',
-        [Fluid.of('foand:poppy_melon_juice', 1000), Fluid.lava(1000)]); // 1000mb瓜汁 + 1000mb岩浆 -> 1铁块
-});
+        [Fluid.of('foand:poppy_melon_juice', 1000), Fluid.lava(1000)])
+}) 

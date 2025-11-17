@@ -2,7 +2,7 @@ ServerEvents.recipes(event => {
     global.createRecipes.init(event)
     global.anvilcraftRecipes.init(event)
 
-    // 方块压缩
+    /*------------------ 方块压缩 -------------------*/
     event.recipes.anvilcraft.block_compress({
         "inputs": [
             { "blocks": "anvilcraft:sugar_block" },
@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
         "result": { "block": "foand:andesite_sugar_block" }
     }) //糖块 + 安山岩 -> 安山糖块
 
-    // 物品粉碎
+    /*------------------ 物品粉碎-------------------*/
     event.recipes.anvilcraft.item_crush(
         {
             "ingredients": [
@@ -21,7 +21,7 @@ ServerEvents.recipes(event => {
                 { "count": 4, "id": "foand:andesite_sugar" }
             ]
         }
-    ); // 安山糖块 -> 安山糖x4
+    )  // 安山糖块 -> 安山糖x4
 
     // 物品注入（item + block -> result）
     event.recipes.anvilcraft.item_inject({
@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
         "ingredients": [{ "items": "anvilcraft:sugar_block" }]
     }) //安山岩 + 糖块 -> 安山糖块
 
-    // 物品压缩
+    /*------------------- 物品压缩-------------------*/
     event.recipes.anvilcraft.item_compress({
         "ingredients": [
             { 'items': 'foand:andesite_sugar' },
@@ -41,7 +41,7 @@ ServerEvents.recipes(event => {
         ]
     }) // 安山糖块x2 + 罂粟西瓜汁x2 -> 安山合金
 
-    // 膨发
+    /*------------------- 膨发----------------------*/
     event.recipes.anvilcraft.bulging({
         "fluid": "minecraft:water",
         "ingredients": [
@@ -54,11 +54,15 @@ ServerEvents.recipes(event => {
                 "id": "minecraft:sugar"
             }
         ]
-    })
+    })// 红石 + 水 -> 糖
 
+    /*--------------------使用------------------------*/
+    //糖块 + 安山岩 -> 安山糖块
     event.recipes.create.deploying('foand:andesite_sugar_block',
-        ['minecraft:andesite', 'anvilcraft:sugar_block']) //糖块 + 安山岩 -> 安山糖块
+        ['minecraft:andesite', 'anvilcraft:sugar_block'])
 
+    /*--------------------搅拌---------------------------*/
+    // 安山糖 + 罂粟西瓜汁50mb -> 安山合金
     event.recipes.create.mixing('create:andesite_alloy',
         [Fluid.of('foand:poppy_melon_juice', 50), 'foand:andesite_sugar'])
 })

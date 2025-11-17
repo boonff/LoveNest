@@ -17,6 +17,6 @@ LootJS.modifiers((event) => {
             .matchTool(ItemFilter.hasEnchantment("minecraft:silk_touch"))
             .removeLoot(Ingredient.all)
             .addLoot(block)
-    });
+    }) 
 
-});
+}) 

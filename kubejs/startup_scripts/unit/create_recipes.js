@@ -1,51 +1,51 @@
 function getIngredient(input) {
-    let result;
+    let result
     if ((typeof input) === "string" || Item.isItem(input)) {
-        result = Ingredient.of(input);
+        result = Ingredient.of(input)
     } else if ((typeof input) === "object" && 'id' in input && 'amount' in input) {
         result = { type: 'fluid_stack', fluid: input.id, amount: input.amount }
     } else if (Array.isArray(input) && _item != []) {
         result = getIngredient(input[0])
     } else {
-        result = input;
+        result = input
     }
-    return result;
+    return result
 }
 
 function getItem(input) {
-    let result;
+    let result
     if (typeof input === "string" || Item.isItem(input)) {
-        result = Item.of(input);
+        result = Item.of(input)
     } else if ((typeof input) === "object" && 'id' in input && 'amount' in input) {
         result = getFluid(input)
     } else if (Array.isArray(input) && input != []) {
         result = getItem(input[0])
     } else {
-        result = input;
+        result = input
     }
-    return result;
+    return result
 }
 
 function getFluid(input) {
-    let result;
+    let result
     if (typeof input === "string" || Item.isItem(input)) {
-        result = Fluid.of(input, 1000);
+        result = Fluid.of(input, 1000)
     } else if (Array.isArray(input) && input != []) {
         result = getFluid(input[0])
     } else
-        result = input;
-    return result;
+        result = input
+    return result
 }
 
 function getBlock(input) {
-    let result;
+    let result
     if (typeof input === "string") {
-        result = BlockStatePredicate.of(input);
+        result = BlockStatePredicate.of(input)
     } else if (Array.isArray(input) && input != []) {
         result = getBlock(input[0])
     } else
-        result = input;
-    return result;
+        result = input
+    return result
 }
 
 function getIngredients(ingredients) {
@@ -76,17 +76,17 @@ global.createSequenced = [
             ingredients: getIngredients(inputs),
             results: getOutputs(outputs)
         }
-    };
-    return acc;
-}, {});
+    }
+    return acc
+}, {})
 
 let createRecipes = {
     event: null,
     init: function (e) {
-        this.event = e;
-        e.recipes.create = this;
+        this.event = e
+        e.recipes.create = this
 
-        let self = this;
+        let self = this
         let normal_recipes = [
             'filling',
             'emptying',
@@ -101,7 +101,7 @@ let createRecipes = {
             'sandpaper_polishing',
             'splashing',
             'crushing',
-        ];
+        ]
 
         normal_recipes.forEach(recipe => {
             self[recipe] = (outputs, inputs) => {
@@ -110,13 +110,13 @@ let createRecipes = {
                     ingredients: getIngredients(inputs),
                     results: getOutputs(outputs)
                 }))
-                r['heated'] = () => { r.merge({ heat_requirement: "heated" }); return r };
-                r['superheated'] = () => { r.merge({ heat_requirement: "superheated" }); return r };
-                r['keepHeldItem'] = (input) => { r.merge({ keep_held_item: input }); return r };
+                r['heated'] = () => { r.merge({ heat_requirement: "heated" }); return r }
+                r['superheated'] = () => { r.merge({ heat_requirement: "superheated" }); return r }
+                r['keepHeldItem'] = (input) => { r.merge({ keep_held_item: input }); return r }
                 r['processingTime'] = (input) => { r.merge({ processing_time: input }); return r }
-                return r;
+                return r
             }
-        });
+        })
     },
     sequenced_assembly: function (outputs, input, recipes) {
         let r = Object(this.event.custom({
@@ -125,9 +125,9 @@ let createRecipes = {
             results: getOutputs(outputs),
             sequence: recipes,
         }))
-        r['loops'] = (input) => { r.merge({ loops: input }); return r };
-        r['transitionalItem'] = (input) => { r.merge({ transitional_item: getItem(input) }); return r };
-        return r;
+        r['loops'] = (input) => { r.merge({ loops: input }); return r }
+        r['transitionalItem'] = (input) => { r.merge({ transitional_item: getItem(input) }); return r }
+        return r
     },
     mechanical_crafting(output, pattern, key) {
         let r = Object(this.event.custom({
@@ -138,12 +138,12 @@ let createRecipes = {
             pattern: pattern,
             result: getItem(output)
         }))
-        r['showNotification'] = (input) => { r.merge({ show_notification: input }); return r };
-        r['acceptMirrored'] = () => { r.merge({ accept_mirrored: true }); return r };
-        return r;
+        r['showNotification'] = (input) => { r.merge({ show_notification: input }); return r }
+        r['acceptMirrored'] = () => { r.merge({ accept_mirrored: true }); return r }
+        return r
     }
 }
 
 
 
-global.createRecipes = createRecipes;
+global.createRecipes = createRecipes 

@@ -11,5 +11,5 @@ StartupEvents.modifyCreativeTab('foand:foand_tab', event => {
     ]
     items.forEach(item => {
         event.add(item)
-    }); 
+    })  
 })

@@ -7,11 +7,11 @@ StartupEvents.registry('item', event => {
                     if (ctx.player != null) {
                         ctx.player.give('minecraft:glass_bottle')
                     } else {
-                        let pos = ctx.entity.position();
-                        const itemEntity = ctx.level.createEntity('item');
-                        itemEntity.item = Item.of('minecraft:glass_bottle', 1); // 设置掉落物为瓶子，数量为1
-                        itemEntity.setPosition(pos.x + 0.5, pos.y + 0.5, pos.z + 0.5);//掉落物偏移
-                        itemEntity.spawn(); // 生成掉落物实体到世界
+                        let pos = ctx.entity.position() 
+                        const itemEntity = ctx.level.createEntity('item') 
+                        itemEntity.item = Item.of('minecraft:glass_bottle', 1)  // 设置掉落物为瓶子，数量为1
+                        itemEntity.setPosition(pos.x + 0.5, pos.y + 0.5, pos.z + 0.5) //掉落物偏移
+                        itemEntity.spawn()  // 生成掉落物实体到世界
                     }
                 })
         })
@@ -28,11 +28,11 @@ StartupEvents.registry('item', event => {
                     if (ctx.player != null) {
                         ctx.player.give('minecraft:iron_nugget')
                     } else {
-                        let pos = ctx.entity.position();
-                        const itemEntity = ctx.level.createEntity('item');
-                        itemEntity.item = Item.of('minecraft:iron_nugget', 1); // 设置掉落物为铁粒，数量为1
-                        itemEntity.setPosition(pos.x + 0.5, pos.y + 0.5, pos.z + 0.5);//掉落物偏移
-                        itemEntity.spawn(); // 生成掉落物实体到世界
+                        let pos = ctx.entity.position() 
+                        const itemEntity = ctx.level.createEntity('item') 
+                        itemEntity.item = Item.of('minecraft:iron_nugget', 1)  // 设置掉落物为铁粒，数量为1
+                        itemEntity.setPosition(pos.x + 0.5, pos.y + 0.5, pos.z + 0.5) //掉落物偏移
+                        itemEntity.spawn()  // 生成掉落物实体到世界
                     }
                 })
         })
