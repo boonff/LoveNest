@@ -36,7 +36,7 @@ function genQuartzCluster(level, pos, facing, count) {
 }
 
 function getRandom(count) {
-    return (0.1 * ((count + 1) / 5)) > Math.random()
+    return (0.04 * ((count + 1) / 5)) > Math.random()
 }
 
 function countMicaNozzle(level, posList) {
