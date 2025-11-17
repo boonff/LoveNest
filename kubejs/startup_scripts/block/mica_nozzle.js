@@ -18,25 +18,25 @@ StartupEvents.registry('block', event => {
             let level = event.level
             const upPos = pos.offset(0, 1, 0)
             const downPos = pos.offset(0, -1, 0)
+
             if (level.getBlock(upPos).id == 'minecraft:air') {
                 const count = countMicaNozzle(level, getDownPositions(pos))
-                genQuartzCluster(level, upPos, count)
+                genQuartzCluster(level, upPos, "up", count)
             } else if (level.getBlock(downPos).id == 'minecraft:air') {
                 const count = countMicaNozzle(level, getUpPositions(pos))
-                genQuartzCluster(level, downPos, count)
+                genQuartzCluster(level, downPos, "down", count)
             }
         })
 })
 
 // 生成规则：纵向连接的云母收集器数量越多，生成云母簇的概率越大（上限5）
-function genQuartzCluster(level, pos, count) {
-    console.log("云母收集器count：", count)
+function genQuartzCluster(level, pos, facing, count) {
     if (getRandom(count))
-        level.getBlock(pos).set('foand:quartz_cluster')
+        level.getBlock(pos).set('foand:quartz_cluster', { facing: facing })
 }
 
 function getRandom(count) {
-    return (0.5 * (count / 5) + 0.1) > Math.random()
+    return (0.1 * ((count + 1) / 5)) > Math.random()
 }
 
 function countMicaNozzle(level, posList) {
