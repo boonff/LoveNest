@@ -2,6 +2,7 @@ ServerEvents.recipes(event => {
     global.createRecipes.init(event)
 
     /*---------------------- 工作台 --------------------*/
+    // 蟹笼
     event.shaped('anvilcraft:crab_trap', [
         'BAB',
         'A A',
@@ -9,8 +10,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'foand:bamboo_string',
         B: 'minecraft:stick'
-    }) // 蟹笼
-
+    })
     /*---------------------- 搅拌 ----------------------*/
     event.recipes.create.mixing([
         'anvilcraft:crab_trap',
@@ -20,6 +20,7 @@ ServerEvents.recipes(event => {
     ], [Fluid.water(1000), 'anvilcraft:crab_trap'])
 
     /*--------------------- 物品粉碎 ---------------------*/
+    //蟹钳 -> 粉碎铜
     event.custom({
         "type": "anvilcraft:item_crush",
         "ingredients": [
@@ -33,8 +34,7 @@ ServerEvents.recipes(event => {
                 "id": 'create:crushed_raw_copper'
             }
         ]
-    }) //蟹钳 -> 粉碎铜
-
+    })
     event.recipes.create.mixing([
         'anvilcraft:crab_trap',
         'anvilcraft:crab_claw'
