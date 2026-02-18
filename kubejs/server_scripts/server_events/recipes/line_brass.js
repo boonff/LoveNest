@@ -13,4 +13,7 @@ ServerEvents.recipes(event => {
         C: "anvilcraft:nether_dust",
         D: "create:nozzle"
     })
+
+    /* -------------------------- 搅拌 --------------------------- */
+
 })
