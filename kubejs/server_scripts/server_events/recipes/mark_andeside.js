@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
         [Fluid.of('foand:zinc_iodide_solution', 250)]).heated()
     // 灵魂汁 + 熔岩 = 烈焰血
     event.recipes.create.mixing(Fluid.of('foand:blaze', 50),
-        [Fluid.of('foand:soulsteel', 250), Fluid.lava(100)])
+        [Fluid.of('foand:soul_juice', 250), Fluid.lava(100)])
 
     /*-----------注液配方-----------*/
     // 烈焰血 + 包裹 = 烈焰人头颅

@@ -3,9 +3,9 @@ StartupEvents.registry('fluid', event => {
         .tint(0xfd4f66)
         .noBlock()
 
-    event.create('foand:soulsteel')// 液态灵魂
-        .stillTexture('foand:fluid/soulsteel/still')
-        .flowingTexture('foand:fluid/soulsteel/flowing')
+    event.create('foand:soul_juice')// 液态灵魂
+        .stillTexture('foand:fluid/soul_juice/still')
+        .flowingTexture('foand:fluid/soul_juice/flowing')
         .noBlock()
 
     event.create('foand:blaze')// 烈焰血
