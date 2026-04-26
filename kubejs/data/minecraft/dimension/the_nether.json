@@ -2,7 +2,7 @@
   "type": "minecraft:the_nether",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "foand:sky_world_noise",
+    "settings": "foand:lava_level",
     "biome_source": {
       "type": "minecraft:fixed",
       "biome": "foand:sky_nether"
