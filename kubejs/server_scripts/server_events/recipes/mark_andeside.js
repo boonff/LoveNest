@@ -23,9 +23,9 @@ ServerEvents.recipes(event => {
 
     /*-----------注液配方-----------*/
     // 烈焰血 + 包裹 = 烈焰人头颅
-    event.recipes.create.item_application('create:blaze_burner', ['create:empty_blaze_burner', "foand:blaze_head"])
+    event.recipes.create.item_application('create:blaze_burner', ['create:empty_blaze_burner', 'create_dragons_plus:rare_blaze_pacakge'])
 
 
     // 把烈焰人头放到烈焰燃烧室中
-    event.recipes.create.filling("foand:blaze_head", ['#create:packages', Fluid.of('foand:blaze', 1000)])
+    event.recipes.create.filling('create_dragons_plus:rare_blaze_pacakge', ['#create:packages', Fluid.of('foand:blaze', 1000)])
 })

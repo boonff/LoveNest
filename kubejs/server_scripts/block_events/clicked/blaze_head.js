@@ -7,7 +7,7 @@ BlockEvents.rightClicked((event) => {
     if (!(block.id == 'create:blaze_burner' && block.properties['blaze'] == 'none')) return 
 
     const mainhand = player.mainHandItem 
-    if (!mainhand.is('foand:blaze_head')) return  // 确保主手拿着烈焰人头
+    if (!mainhand.is('create_dragons_plus:rare_blaze_pacakge')) return  // 确保主手拿着烈焰人头
 
     block.properties['blaze'] = 'smouldering'
     block.set('create:blaze_burner', { 'blaze': 'smouldering' })
