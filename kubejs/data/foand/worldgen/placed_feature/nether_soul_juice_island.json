@@ -1,16 +1,12 @@
 {
-    "feature": "foand:hell_block_column",
+    "feature": "foand:nether_soul_juice_island",
     "placement": [
         {
             "type": "minecraft:biome"
         },
         {
-            "type": "minecraft:count",
-            "count": 10
-        },
-        {
             "type": "minecraft:rarity_filter",
-            "chance": 16
+            "chance": 64
         },
         {
             "type": "minecraft:in_square"
@@ -23,7 +19,7 @@
                     "absolute": 0
                 },
                 "max_inclusive": {
-                    "absolute": 128
+                    "absolute": 256
                 }
             }
         }
