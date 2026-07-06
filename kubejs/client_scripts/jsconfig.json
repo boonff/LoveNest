@@ -11,11 +11,11 @@
             "../../.probe/client/probe-types"
         ],
         "baseUrl": "../../.probe/client/probe-types",
+        "ignoreDeprecations": "6.0",
         "skipLibCheck": true
     },
     "include": [
         "./**/*.js",
-        "./**/*.ts",
-        null
+        "./**/*.ts"
     ]
 }
