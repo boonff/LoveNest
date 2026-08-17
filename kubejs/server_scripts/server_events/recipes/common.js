@@ -21,6 +21,14 @@ ServerEvents.recipes(event => {
     })
     // 竹子 -> 竹线
     event.shaped("foand:bamboo_string", ['A'], { A: 'minecraft:bamboo' })
+    // 传送带（竹线制作）
+    event.remove({ output: 'create:belt_connector' })
+    event.shaped('create:belt_connector', [
+        'AAA',
+        'AAA'
+    ], {
+        A: 'foand:bamboo_string'
+    })
     // 脚手架
     event.shaped({ item: 'minecraft:scaffolding', count: 6 }, [
         'ABA',

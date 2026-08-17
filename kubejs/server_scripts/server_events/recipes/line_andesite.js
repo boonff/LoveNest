@@ -56,13 +56,20 @@ ServerEvents.recipes(event => {
         ]
     })// 红石 + 水 -> 糖
 
-    /*--------------------使用------------------------*/
+    /*--------------------辊压------------------------*/
     //糖块 + 安山岩 -> 安山糖块
-    event.recipes.create.deploying('foand:andesite_sugar_block',
+    event.recipes.create.compacting('foand:andesite_sugar_block',
         ['minecraft:andesite', 'anvilcraft:sugar_block'])
 
-    /*--------------------搅拌---------------------------*/
+    /*---------------------压缩--------------------------*/
+        // 删除配方
+    event.remove({ output: 'create:andesite_alloy' })
     // 安山糖 + 罂粟西瓜汁50mb -> 安山合金
-    event.recipes.create.mixing('create:andesite_alloy',
+    event.recipes.create.compacting('create:andesite_alloy',
         [Fluid.of('foand:poppy_melon_juice', 50), 'foand:andesite_sugar'])
+
+    /*---------------------搅拌--------------------------*/
+    // 罂粟西瓜沙 -> 罂粟西瓜汁200mb
+    event.recipes.create.mixing(Fluid.of('foand:poppy_melon_juice', 200),
+        'foand:poppy_melon_sand')
 })
