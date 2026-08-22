@@ -1,23 +1,8 @@
-// 破坏虞美人西瓜时，相邻的弯苗恢复为直苗
-// （对应 Kotlin 版 AttachedStemBlock 失去西瓜后的表现）
-const POPPY_DIRECTIONS = {
-    'north': [0, 0, -1],
-    'south': [0, 0, 1],
-    'west': [-1, 0, 0],
-    'east': [1, 0, 0]
-}
-
+// 下方方块被破坏时，上方的西瓜秧立即掉落（掉 1 粒西瓜种子）
+// randomTick 检查耕地有延迟，这里提供即时响应
 BlockEvents.broken(event => {
-    if (event.block.id != 'foand:poppy_melon') return
-
-    const pos = event.block.pos
-    const level = event.level
-
-    for (const key in POPPY_DIRECTIONS) {
-        const offset = POPPY_DIRECTIONS[key]
-        const neighbor = level.getBlock(pos.offset(offset[0], offset[1], offset[2]))
-        if (neighbor.id == 'foand:attached_poppy_melon_stem') {
-            level.getBlock(neighbor.pos).set('foand:poppy_melon_stem')
-        }
+    const above = event.level.getBlock(event.block.pos.offset(0, 1, 0))
+    if (above.id == 'foand:poppy_melon_stem' || above.id == 'foand:attached_poppy_melon_stem') {
+        event.level.destroyBlock(above.pos, true)
     }
 })

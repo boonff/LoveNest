@@ -32,7 +32,7 @@ BlockEvents.rightClicked((event) => {
     const mainhand = player.offHandItem 
     if (!mainhand.is('minecraft:poppy')) return  // 确保主手拿着罂粟
 
-    level.getBlock(block.pos).set('foand:poppy_melon_stem') 
+    level.getBlock(block.pos).set('foand:poppy_melon_stem') // 变成虞美人苗（无 age 属性，basic 方块）
 
     level.runCommandSilent("playsound minecraft:entity.sheep.shear") // 播放剪刀使用音效
     player.swing() // 播放玩家挥动手臂的动画
