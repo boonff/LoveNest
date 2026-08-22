@@ -62,14 +62,14 @@ ServerEvents.recipes(event => {
         ['minecraft:andesite', 'anvilcraft:sugar_block'])
 
     /*---------------------压缩--------------------------*/
-        // 删除配方
-    event.remove({ output: 'create:andesite_alloy' })
-    // 安山糖 + 罂粟西瓜汁50mb -> 安山合金
-    event.recipes.create.compacting('create:andesite_alloy',
-        [Fluid.of('foand:poppy_melon_juice', 50), 'foand:andesite_sugar'])
+    // 删除配方
+    event.remove({ output: 'create:andesite_alloy', type: 'create:mixing' })
+    // 安山糖 + 罂粟西瓜汁1000mb -> 安山合金
+    event.recipes.create.compacting('create:andesite_alloy_block',
+        [Fluid.of('foand:poppy_melon_juice', `1000`), 'foand:andesite_sugar_block'])
 
     /*---------------------搅拌--------------------------*/
-    // 罂粟西瓜沙 -> 罂粟西瓜汁200mb
-    event.recipes.create.mixing(Fluid.of('foand:poppy_melon_juice', 200),
+    // 罂粟西瓜沙 -> 罂粟西瓜汁1000mb
+    event.recipes.create.mixing(Fluid.of('foand:poppy_melon_juice', 1000),
         'foand:poppy_melon_sand')
 })
