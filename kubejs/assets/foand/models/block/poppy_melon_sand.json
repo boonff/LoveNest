@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "foand:block/poppy_melon_sand"
+  }
+}

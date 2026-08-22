@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "side": "foand:block/poppy_melon_side",
+    "bottom": "foand:block/poppy_melon_bottom",
+    "top": "foand:block/poppy_melon_top"
+  }
+}
