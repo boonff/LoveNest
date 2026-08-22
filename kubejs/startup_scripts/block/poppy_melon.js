@@ -43,7 +43,7 @@ StartupEvents.registry('block', event => {
         .grassSoundType()
         .fullBlock(false)
         .opaque(false)
-        .noCollision()                          // 无碰撞箱
+        .box(0.25, 0.0, 0.25, 0.75, 0.75, 0.75) // 缩小碰撞体积：4×12×4 像素，贴合茎模型
         .noItem()                               // 不作为物品存在（Kotlin 版未注册 BlockItem）
         .tagBlock('minecraft:replaceable_plant') // 可被其他方块替换
         .tagBlock('minecraft:mineable/hoe')     // 可用锄头挖掘
@@ -82,7 +82,7 @@ StartupEvents.registry('block', event => {
         .grassSoundType()
         .fullBlock(false)
         .opaque(false)
-        .noCollision()
+        .box(0.25, 0.0, 0.25, 0.75, 0.75, 0.75) // 缩小碰撞体积：4×12×4 像素，贴合茎模型
         .noItem()
         .property(BlockProperties.HORIZONTAL_FACING) // 弯苗朝向西瓜所在方向
         .tagBlock('minecraft:replaceable_plant')
