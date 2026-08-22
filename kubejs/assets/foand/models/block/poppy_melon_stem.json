@@ -1,0 +1,7 @@
+{
+  "parent": "block/stem_growth7",
+  "textures": {
+    "stem": "foand:block/poppy_melon_stem"
+  },
+  "render_type": "cutout"
+}

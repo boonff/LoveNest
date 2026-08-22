@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=east": {
+            "model": "foand:block/attached_poppy_melon_stem",
+            "y": 180
+        },
+        "facing=north": {
+            "model": "foand:block/attached_poppy_melon_stem",
+            "y": 90
+        },
+        "facing=south": {
+            "model": "foand:block/attached_poppy_melon_stem",
+            "y": 270
+        },
+        "facing=west": {
+            "model": "foand:block/attached_poppy_melon_stem"
+        }
+    }
+}

@@ -1,22 +1,14 @@
 
-// 添加精准采集掉落
-LootJS.modifiers((event) => {
-    event.addBlockModifier('foand:poppy_melon')
-        .addAlternativesLoot(
-            LootEntry.of('foand:poppy_melon'
-            ).when(c =>
-                c.matchMainHand(ItemFilter.hasEnchantment("minecraft:silk_touch"))
-            ),
-            LootEntry.of("foand:poppy_melon_slice", { type: 'minecraft:uniform', min: 3, max: 7 })
-        )
+// 虞美人西瓜的精准采集掉落
+// 普通掉落（3~9 片）由 startup_scripts/block/poppy_melon.js 的 .drops() 定义
+// 这里仅处理精准采集：移除片，改掉西瓜本体
 
-    let block_list = []
-    block_list.forEach(block => {
+BlockEvents.drops(event => {
+    if (event.block.id != 'foand:poppy_melon') return
 
-        event.addBlockModifier(block)
-            .matchTool(ItemFilter.hasEnchantment("minecraft:silk_touch"))
-            .removeLoot(Ingredient.all)
-            .addLoot(block)
-    }) 
-
-}) 
+    const tool = event.tool
+    if (tool && tool.hasEnchantment('minecraft:silk_touch')) {
+        event.removeItem('foand:poppy_melon_slice') // 移除虞美人西瓜片
+        event.addItem(Item.of('foand:poppy_melon')) // 掉落西瓜本体
+    }
+})
