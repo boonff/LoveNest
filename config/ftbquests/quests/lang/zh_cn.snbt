@@ -40,6 +40,7 @@
 	]
 	quest.135B6B80EE793FE7.quest_subtitle: "堆肥"
 	quest.135B6B80EE793FE7.title: "堆肥桶"
+	quest.14213E075B04E95D.title: "探索下界"
 	quest.1635A60B937C37E5.title: "\"废石\"刷石机"
 	quest.169BCC302BDEE3BA.title: "第三章：工程控制"
 	quest.235F1B7CB88F49B8.quest_desc: [
@@ -66,9 +67,10 @@
 	quest.3921824795DE77FC.quest_subtitle: "物品压缩"
 	quest.3921824795DE77FC.title: "小瓶虞美人西瓜汁"
 	quest.3AA82F76715C0858.quest_desc: ["复活吧我的爱人"]
-	quest.3AA82F76715C0858.quest_subtitle: "蟹钳养殖"
+	quest.3AA82F76715C0858.quest_subtitle: "螃蟹养殖"
 	quest.3AA82F76715C0858.title: "蟹笼"
 	quest.3BD863BADB8FCAC8.quest_desc: ["耐久3"]
+	quest.3BD863BADB8FCAC8.title: "基础工具"
 	quest.3FEF40B720149437.quest_desc: [
 		"虞美人的烧炼速度很快，但是根本不够用。岛上的矿产资源也非常有限。"
 		"你需要找点更优质的铁矿来源。"
@@ -89,6 +91,7 @@
 	]
 	quest.4A8392AAC9ADDB86.quest_subtitle: "铁傀儡先生您的花掉了"
 	quest.4A8392AAC9ADDB86.title: "虞美人"
+	quest.52A54263A1C7A20A.title: "传动"
 	quest.5657CCBB122FA0AC.quest_desc: ["蟹钳不能填饱肚子，但是抓一点准没坏处。"]
 	quest.5657CCBB122FA0AC.quest_subtitle: "打捞蟹钳"
 	quest.5657CCBB122FA0AC.title: "蟹钳"
@@ -124,7 +127,7 @@
 	quest.784F8BB0BBF93D0D.title: "糖"
 	quest.7B832F9EB6453D36.quest_desc: ["可以当做&6筛网&r来用，比普通的筛网更坚固。"]
 	quest.7B832F9EB6453D36.quest_subtitle: "筛"
-	quest.7B832F9EB6453D36.title: "脚手架"
+	quest.7B832F9EB6453D36.title: "筛网"
 	task.15533F70057B32E0.title: "找到温泉源头"
 	task.1C7B6FF82031CE45.title: "四处转转"
 	task.373C8EEAEB5E059F.title: "四处转转"

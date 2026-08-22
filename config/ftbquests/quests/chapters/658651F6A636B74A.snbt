@@ -63,8 +63,8 @@
 					type: "observation"
 				}
 			]
-			x: -21.5d
-			y: -26.0d
+			x: -22.5d
+			y: -28.5d
 		}
 		{
 			dependencies: ["4517FB1FB79AECF7"]
@@ -98,7 +98,7 @@
 				to_observe: "foand:lava_spring"
 				type: "observation"
 			}]
-			x: -22.5d
+			x: -24.0d
 			y: -27.0d
 		}
 		{
@@ -115,7 +115,7 @@
 				to_observe: "minecraft:grass_block"
 				type: "observation"
 			}]
-			x: -21.5d
+			x: -22.5d
 			y: -27.0d
 		}
 		{
@@ -130,7 +130,7 @@
 				item: { count: 1, id: "minecraft:poppy" }
 				type: "item"
 			}]
-			x: -18.5d
+			x: -17.5d
 			y: -25.0d
 		}
 		{
@@ -141,8 +141,8 @@
 				item: { count: 1, id: "minecraft:iron_nugget" }
 				type: "item"
 			}]
-			x: -18.5d
-			y: -24.0d
+			x: -17.5d
+			y: -23.5d
 		}
 		{
 			dependencies: ["56A5CE3DD70B516E"]
@@ -153,7 +153,7 @@
 				type: "item"
 			}]
 			x: -20.5d
-			y: -24.0d
+			y: -23.5d
 		}
 		{
 			dependencies: [
@@ -166,7 +166,7 @@
 				item: { count: 1, id: "minecraft:cobblestone" }
 				type: "item"
 			}]
-			x: -17.5d
+			x: -16.0d
 			y: -27.0d
 		}
 		{
@@ -181,8 +181,8 @@
 				item: { count: 1, id: "minecraft:melon_seeds" }
 				type: "item"
 			}]
-			x: -19.5d
-			y: -23.0d
+			x: -19.0d
+			y: -22.0d
 		}
 		{
 			dependencies: [
@@ -206,8 +206,8 @@
 					type: "item"
 				}
 			]
-			x: -18.5d
-			y: -23.0d
+			x: -17.5d
+			y: -22.0d
 		}
 		{
 			dependencies: ["124DD425652A9871"]
@@ -220,8 +220,8 @@
 				item: { count: 1, id: "foand:poppy_melon_slice" }
 				type: "item"
 			}]
-			x: -18.5d
-			y: -22.0d
+			x: -17.5d
+			y: -20.5d
 		}
 		{
 			dependencies: [
@@ -242,8 +242,8 @@
 				item: { count: 1, id: "foand:poppy_melon_sand" }
 				type: "item"
 			}]
-			x: -18.5d
-			y: -21.0d
+			x: -17.5d
+			y: -19.0d
 		}
 		{
 			dependencies: ["3AA82F76715C0858"]
@@ -253,8 +253,8 @@
 				item: { count: 1, id: "anvilcraft:crab_claw" }
 				type: "item"
 			}]
-			x: -21.5d
-			y: -23.0d
+			x: -22.0d
+			y: -22.0d
 		}
 		{
 			dependencies: ["56A5CE3DD70B516E"]
@@ -264,8 +264,8 @@
 				item: { count: 1, id: "minecraft:scaffolding" }
 				type: "item"
 			}]
-			x: -19.5d
-			y: -24.0d
+			x: -19.0d
+			y: -23.5d
 		}
 		{
 			dependencies: ["56A5CE3DD70B516E"]
@@ -276,7 +276,7 @@
 				item: { count: 1, id: "minecraft:wooden_pickaxe" }
 				type: "item"
 			}]
-			x: -19.5d
+			x: -19.0d
 			y: -25.0d
 		}
 		{
@@ -296,7 +296,7 @@
 					type: "item"
 				}
 			]
-			x: -21.5d
+			x: -22.0d
 			y: -25.0d
 		}
 		{
@@ -307,8 +307,8 @@
 				item: { count: 1, id: "anvilcraft:crab_trap" }
 				type: "item"
 			}]
-			x: -21.5d
-			y: -24.0d
+			x: -22.0d
+			y: -23.5d
 		}
 		{
 			dependencies: ["135B6B80EE793FE7"]
@@ -320,7 +320,7 @@
 				type: "item"
 			}]
 			x: -20.5d
-			y: -23.0d
+			y: -22.0d
 		}
 		{
 			dependencies: ["487FFDB07B98AD5B"]
@@ -330,8 +330,8 @@
 				item: { count: 1, id: "minecraft:redstone" }
 				type: "item"
 			}]
-			x: -19.5d
-			y: -20.0d
+			x: -19.0d
+			y: -19.0d
 		}
 		{
 			dependencies: ["487FFDB07B98AD5B"]
@@ -341,8 +341,8 @@
 				item: { count: 1, id: "create:crushed_raw_iron" }
 				type: "item"
 			}]
-			x: -18.5d
-			y: -20.0d
+			x: -17.5d
+			y: -17.5d
 		}
 		{
 			dependencies: [
@@ -355,8 +355,8 @@
 				item: { count: 1, id: "foand:poppy_melon_juice" }
 				type: "item"
 			}]
-			x: -17.5d
-			y: -20.0d
+			x: -16.0d
+			y: -19.0d
 		}
 		{
 			dependencies: ["45D9D882FF92D271"]
@@ -376,8 +376,8 @@
 					type: "item"
 				}
 			]
-			x: -19.5d
-			y: -19.0d
+			x: -19.0d
+			y: -17.5d
 		}
 		{
 			dependencies: ["5657CCBB122FA0AC"]
@@ -397,8 +397,8 @@
 					type: "item"
 				}
 			]
-			x: -21.5d
-			y: -22.0d
+			x: -22.0d
+			y: -20.5d
 		}
 		{
 			dependencies: ["593614AE1B73E6B3"]
@@ -409,22 +409,23 @@
 				item: { count: 1, id: "minecraft:lightning_rod" }
 				type: "item"
 			}]
-			x: -22.5d
-			y: -22.0d
+			x: -23.5d
+			y: -20.5d
 		}
 		{
 			dependencies: [
 				"593614AE1B73E6B3"
-				"6297686D1D740B3D"
+				"43207815E6312293"
 			]
+			hide_dependency_lines: true
 			id: "02BFC55572F6FBFA"
 			tasks: [{
 				id: "101E158C9A657E88"
 				item: { count: 1, id: "minecraft:spyglass" }
 				type: "item"
 			}]
-			x: -21.5d
-			y: -21.0d
+			x: -22.0d
+			y: -19.0d
 		}
 		{
 			dependencies: [
@@ -441,8 +442,8 @@
 				item: { count: 1, id: "anvilcraft:melt_gem_bucket" }
 				type: "item"
 			}]
-			x: -21.5d
-			y: -20.0d
+			x: -22.0d
+			y: -17.5d
 		}
 		{
 			dependencies: ["05D136CE05DCE0A4"]
@@ -452,8 +453,8 @@
 				item: { count: 1, id: "minecraft:andesite" }
 				type: "item"
 			}]
-			x: -21.5d
-			y: -19.0d
+			x: -22.0d
+			y: -16.0d
 		}
 		{
 			dependencies: [
@@ -476,8 +477,8 @@
 					type: "item"
 				}
 			]
-			x: -20.5d
-			y: -18.0d
+			x: -19.0d
+			y: -16.0d
 		}
 		{
 			dependencies: ["05D136CE05DCE0A4"]
@@ -492,8 +493,8 @@
 				to_observe: "foand:gem_spring"
 				type: "observation"
 			}]
-			x: -20.5d
-			y: -20.0d
+			x: -23.5d
+			y: -17.5d
 		}
 		{
 			dependencies: ["5A7CDA67E0ACFED9"]
@@ -503,8 +504,8 @@
 				item: { count: 1, id: "anvilcraft:hollow_magnet_block" }
 				type: "item"
 			}]
-			x: -22.5d
-			y: -21.0d
+			x: -25.0d
+			y: -20.5d
 		}
 		{
 			dependencies: [
@@ -519,8 +520,8 @@
 				item: { count: 1, id: "create:andesite_alloy" }
 				type: "item"
 			}]
-			x: -17.5d
-			y: -18.0d
+			x: -16.0d
+			y: -16.0d
 		}
 		{
 			dependencies: ["02CF45C934D1855E"]
@@ -530,8 +531,8 @@
 				item: { count: 1, id: "minecraft:gravel" }
 				type: "item"
 			}]
-			x: -17.5d
-			y: -26.0d
+			x: -16.0d
+			y: -25.0d
 		}
 		{
 			hide_dependent_lines: true
@@ -541,8 +542,8 @@
 				item: { count: 1, id: "minecraft:sand" }
 				type: "item"
 			}]
-			x: -17.5d
-			y: -25.0d
+			x: -16.0d
+			y: -23.5d
 		}
 		{
 			dependencies: ["63930D6172C21F2A"]
@@ -553,8 +554,8 @@
 				item: { count: 1, id: "minecraft:coarse_dirt" }
 				type: "item"
 			}]
-			x: -16.5d
-			y: -25.0d
+			x: -14.5d
+			y: -23.5d
 		}
 		{
 			dependencies: [
@@ -568,8 +569,8 @@
 				item: { count: 1, id: "minecraft:glass" }
 				type: "item"
 			}]
-			x: -17.5d
-			y: -24.0d
+			x: -16.0d
+			y: -22.0d
 		}
 		{
 			dependencies: ["43207815E6312293"]
@@ -579,8 +580,8 @@
 				item: { count: 1, id: "minecraft:glass_bottle" }
 				type: "item"
 			}]
-			x: -17.5d
-			y: -23.0d
+			x: -16.0d
+			y: -20.5d
 		}
 		{
 			id: "2A5918CC7C403EB5"
@@ -590,8 +591,8 @@
 				item: { count: 1, id: "minecraft:chipped_anvil" }
 				type: "item"
 			}]
-			x: -20.0d
-			y: -21.5d
+			x: -20.25d
+			y: -20.25d
 		}
 	]
 }

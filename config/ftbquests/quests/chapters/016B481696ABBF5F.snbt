@@ -7,14 +7,14 @@
 		id: "create:andesite_casing"
 	}
 	id: "016B481696ABBF5F"
-	order_index: 1
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["1B7E4EFBF66D09E7"]
 			id: "70E013FC64DAEB2F"
 			shape: "hexagon"
-			size: 3.0d
+			size: 2.0d
 			tasks: [{
 				id: "3835BEAFBFAAC872"
 				item: { count: 1, id: "create:andesite_alloy" }
@@ -43,7 +43,7 @@
 					type: "item"
 				}
 			]
-			x: -0.5d
+			x: -1.5d
 			y: -10.5d
 		}
 		{
@@ -55,7 +55,7 @@
 				type: "item"
 			}]
 			x: -3.0d
-			y: -8.0d
+			y: -8.5d
 		}
 		{
 			dependencies: ["0EAD8E37117BCCC5"]
@@ -72,8 +72,8 @@
 					type: "item"
 				}
 			]
-			x: -4.5d
-			y: -9.0d
+			x: -4.0d
+			y: -9.5d
 		}
 		{
 			dependencies: ["0EAD8E37117BCCC5"]
@@ -83,8 +83,8 @@
 				item: { count: 1, id: "create:millstone" }
 				type: "item"
 			}]
-			x: -1.5d
-			y: -9.0d
+			x: -2.0d
+			y: -9.5d
 		}
 		{
 			dependencies: ["54DA17A70559EDAF"]
@@ -155,8 +155,8 @@
 					type: "item"
 				}
 			]
-			x: -1.0d
-			y: -8.0d
+			x: -1.5d
+			y: -8.5d
 		}
 		{
 			dependencies: ["467E692A9490BF64"]
@@ -210,19 +210,6 @@
 			y: -5.0d
 		}
 		{
-			dependencies: ["7CAFF8C2D044C6C7"]
-			id: "01EBCC71E2C61A31"
-			shape: "pentagon"
-			size: 2.0d
-			tasks: [{
-				id: "47948E5FA4D82FA1"
-				item: { count: 1, id: "create:cardboard" }
-				type: "item"
-			}]
-			x: -7.0d
-			y: -7.0d
-		}
-		{
 			dependencies: ["7F36641C77361681"]
 			id: "1E588D82E2ACF9B2"
 			tasks: [{
@@ -242,7 +229,7 @@
 				type: "item"
 			}]
 			x: -1.5d
-			y: -7.0d
+			y: -7.5d
 		}
 		{
 			dependencies: ["0EAD8E37117BCCC5"]
@@ -254,7 +241,7 @@
 				type: "item"
 			}]
 			x: -3.0d
-			y: -6.5d
+			y: -7.0d
 		}
 		{
 			dependencies: ["0EAD8E37117BCCC5"]
@@ -264,8 +251,8 @@
 				item: { count: 1, id: "create:mechanical_press" }
 				type: "item"
 			}]
-			x: -5.0d
-			y: -8.0d
+			x: -4.5d
+			y: -8.5d
 		}
 		{
 			dependencies: ["0EAD8E37117BCCC5"]
@@ -279,6 +266,19 @@
 			}]
 			x: -5.0d
 			y: -6.0d
+		}
+		{
+			dependencies: ["7CAFF8C2D044C6C7"]
+			id: "01EBCC71E2C61A31"
+			shape: "pentagon"
+			size: 2.0d
+			tasks: [{
+				id: "47948E5FA4D82FA1"
+				item: { count: 1, id: "create:cardboard" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: -8.0d
 		}
 	]
 }

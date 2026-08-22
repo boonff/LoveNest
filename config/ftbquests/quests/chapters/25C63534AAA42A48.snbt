@@ -7,7 +7,7 @@
 		id: "create:brass_ingot"
 	}
 	id: "25C63534AAA42A48"
-	order_index: 0
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
@@ -19,17 +19,192 @@
 				item: { count: 1, id: "create:andesite_alloy" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: -9.0d
+			y: 4.5d
 		}
 		{
+			dependencies: [
+				"6A4AEADA2C8BA2CB"
+				"7421E27DCD15CEC3"
+				"20017B01AD62D402"
+			]
 			id: "7ED5490D8327E05B"
+			shape: "hexagon"
+			size: 3.0d
 			tasks: [{
 				id: "05DF6BCC9D9CCD5D"
 				item: { count: 1, id: "create:brass_ingot" }
 				type: "item"
 			}]
-			x: 0.0d
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["08D5D943250B3207"]
+			id: "4561F2A2DBC036DF"
+			tasks: [{
+				id: "70497A6B79C5F5D1"
+				item: { count: 1, id: "minecraft:slime_ball" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4561F2A2DBC036DF"]
+			id: "6FF95FFF311B01F1"
+			tasks: [{
+				id: "773027E6F1561E87"
+				item: { count: 1, id: "foand:slime_bucket" }
+				type: "item"
+			}]
+			x: -5.5d
+			y: 4.5d
+		}
+		{
+			id: "11F03C03B3449E07"
+			tasks: [{
+				id: "69336CD8F0163BBB"
+				item: { count: 1, id: "minecraft:dried_kelp" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"6FF95FFF311B01F1"
+				"11F03C03B3449E07"
+			]
+			id: "2AD24CBF98555EA9"
+			tasks: [{
+				id: "67A7947AE16A7440"
+				item: { count: 1, id: "foand:iodine_slime_bucket" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2AD24CBF98555EA9"]
+			id: "2E00640AD4D8F82A"
+			tasks: [{
+				id: "71A988C3A0C9D640"
+				item: { count: 1, id: "foand:iodine" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"0D65A3ED9FA425F7"
+				"2E00640AD4D8F82A"
+			]
+			id: "30920AE29E328BD3"
+			tasks: [{
+				id: "6A59E262981AEAA6"
+				item: { count: 1, id: "create:crushed_raw_zinc" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 4.5d
+		}
+		{
+			id: "0D65A3ED9FA425F7"
+			tasks: [{
+				id: "68C3047B1AE86C24"
+				item: { count: 1, id: "minecraft:cactus" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			id: "7421E27DCD15CEC3"
+			tasks: [{
+				id: "6D4447E1F1211D01"
+				item: { count: 1, id: "minecraft:copper_ingot" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["30920AE29E328BD3"]
+			id: "6A4AEADA2C8BA2CB"
+			tasks: [{
+				id: "1AF6838B5404B1A1"
+				item: { count: 1, id: "create:zinc_ingot" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 4.5d
+		}
+		{
+			id: "14213E075B04E95D"
+			tasks: [{
+				dimension: "minecraft:overworld"
+				id: "4C4A46D946D52223"
+				type: "dimension"
+			}]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["14213E075B04E95D"]
+			id: "1F8C157670C54430"
+			tasks: [{
+				id: "4A6005C300D25D01"
+				item: { count: 1, id: "foand:corpse_mass" }
+				type: "item"
+			}]
+			x: -5.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1F8C157670C54430"]
+			id: "057A12DC76BB989B"
+			tasks: [{
+				id: "6CB0A975B480989B"
+				item: { count: 1, id: "foand:soul_juice_bucket" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["057A12DC76BB989B"]
+			id: "1F369FDDA17689DB"
+			tasks: [{
+				id: "400476E9B50D05EE"
+				item: { count: 1, id: "foand:blaze_bucket" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1F369FDDA17689DB"]
+			id: "28162642E4BF9CF5"
+			tasks: [{
+				id: "03B280FBC0555AE4"
+				item: { count: 1, id: "create_dragons_plus:rare_blaze_pacakge" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			can_repeat: false
+			dependencies: ["28162642E4BF9CF5"]
+			id: "20017B01AD62D402"
+			tasks: [{
+				id: "3B504857A072D3B9"
+				item: { count: 1, id: "create:blaze_burner" }
+				type: "item"
+			}]
+			x: 0.5d
 			y: 6.0d
 		}
 	]
