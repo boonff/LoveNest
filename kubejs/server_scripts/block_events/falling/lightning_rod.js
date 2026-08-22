@@ -70,9 +70,9 @@ function anvilDamage(level, pos, state) {
     const AnvilBlock = Java.loadClass('net.minecraft.world.level.block.AnvilBlock')
     const newState = AnvilBlock.damage(state)
     if (newState != null) {
-        level.getBlock(pos).set(newState)
+        level.setBlock(pos, newState, 3) // 原生 setBlock，保留 facing 等状态
     } else {
-        level.getBlock(pos).set('minecraft:air')
+        level.removeBlock(pos, false)
     }
 }
 
@@ -80,10 +80,8 @@ function anvilDamage(level, pos, state) {
 function punish(level, pos) {
     level.destroyBlock(pos.offset(0, -1, 0), false) // 破坏避雷针（不掉落）
 
-    const ExplosionInteraction = Java.loadClass('net.minecraft.world.level.Level$ExplosionInteraction')
     level.createExplosion(pos.x + 0.5, pos.y - 1.0, pos.z + 0.5)
         .strength(2.0)
         .causesFire(true)
-        .explosionMode(ExplosionInteraction.TNT)
         .explode()
 }
