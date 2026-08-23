@@ -17,10 +17,12 @@ BlockEvents.stoppedFalling(event => {
     // 下方必须是岩浆块
     if (level.getBlock(pos.offset(0, -1, 0)).id != 'minecraft:magma_block') return
 
-    // 召唤前先发生一次爆炸（威力 2.0）
+    // 召唤前先发生一次爆炸
+    const ExplosionInteraction = Java.loadClass('net.minecraft.world.level.Level$ExplosionInteraction')
     level.createExplosion(pos.x + 0.5, pos.y, pos.z + 0.5)
-        .strength(2.0)
+        .strength(15)
         .causesFire(false)
+        .explosionMode(ExplosionInteraction.TNT)
         .explode()
 
     // 召唤残血烈焰人（1 血、无掉落、无经验）
