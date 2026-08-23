@@ -81,7 +81,7 @@ function punish(level, pos) {
     level.destroyBlock(pos.offset(0, -1, 0), false) // 破坏避雷针（不掉落）
     const ExplosionInteraction = Java.loadClass('net.minecraft.world.level.Level$ExplosionInteraction')
     level.createExplosion(pos.x + 0.5, pos.y - 1.0, pos.z + 0.5)
-        .strength(2.0)
+        .strength(4)
         .causesFire(true)
         .explosionMode(ExplosionInteraction.TNT)
         .explode()

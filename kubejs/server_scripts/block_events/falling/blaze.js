@@ -20,14 +20,14 @@ BlockEvents.stoppedFalling(event => {
     // 召唤前先发生一次爆炸
     const ExplosionInteraction = Java.loadClass('net.minecraft.world.level.Level$ExplosionInteraction')
     level.createExplosion(pos.x + 0.5, pos.y, pos.z + 0.5)
-        .strength(15)
+        .strength(4)
         .causesFire(false)
         .explosionMode(ExplosionInteraction.TNT)
         .explode()
 
     // 召唤残血烈焰人（1 血、无掉落、无经验）
     const blaze = level.createEntity('minecraft:blaze')
-    blaze.setPosition(pos.x + 0.5, pos.y, pos.z + 0.5) // 用 setPosition 避免 moveTo 重载歧义
+    blaze.setPosition(pos.x + 0.5, pos.y, pos.z + 0.5) 
     blaze.setHealth(1)
     blaze.skipDropExperience() // 不掉经验
     blaze.spawn() // KubeJS 生成实体（addFreshEntity 可能静默失败）
