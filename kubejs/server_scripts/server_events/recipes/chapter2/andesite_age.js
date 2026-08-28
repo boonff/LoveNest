@@ -8,16 +8,18 @@ ServerEvents.recipes(event => {
         ['minecraft:andesite', 'anvilcraft:sugar_block'])
     // 删除搅拌生成安山合金的配方
     event.remove({ output: 'create:andesite_alloy', type: 'create:mixing' })
-    // 安山糖 + 罂粟西瓜汁1000mb -> 安山合金
+    // 安山岩 + 糖块 -> 安山糖块
+    event.recipes.create.compacting('foand:andesite_sugar_block', ['minecraft:andesite', 'anvilcraft:sugar_block'])
+    // 安山糖块 + 罂粟西瓜汁1000mb -> 安山合金块
     event.recipes.create.compacting('create:andesite_alloy_block',
         [Fluid.of('foand:poppy_melon_juice', `1000`), 'foand:andesite_sugar_block'])
-    event.recipes.create.compacting('foand:andesite_sugar_block', ['minecraft:andesite', 'anvilcraft:sugar_block'])
-
+    // 安山岩 + 罂粟西瓜汁1000mb -> 4x 安山合金
+    event.recipes.create.compacting('4x create:andesite_alloy',
+        [Fluid.of('foand:poppy_melon_juice', `1000`), 'minecraft:andesite'])
     /*---------------------搅拌--------------------------*/
-    // 罂 
+    // 罂粟西瓜砂 -> 罂粟西瓜汁1000mb
     event.recipes.create.mixing(Fluid.of('foand:poppy_melon_juice', 1000),
         'foand:poppy_melon_sand')
-    event.recipes.create.mixing('anvilcraft:sugar_block', ['foand:poppy_melon_sand', Fluid.of('minecraft:water', 250)])
 
     /*----------搅拌配方----------*/
     // 加热搅拌 粘液球 
