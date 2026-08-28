@@ -1,5 +1,12 @@
 {
   "variants": {
-    "": { "model": "foand:block/poppy_melon_stem" }
+    "age=0": { "model": "foand:block/poppy_melon_stem" },
+    "age=1": { "model": "foand:block/poppy_melon_stem" },
+    "age=2": { "model": "foand:block/poppy_melon_stem" },
+    "age=3": { "model": "foand:block/poppy_melon_stem" },
+    "age=4": { "model": "foand:block/poppy_melon_stem" },
+    "age=5": { "model": "foand:block/poppy_melon_stem" },
+    "age=6": { "model": "foand:block/poppy_melon_stem" },
+    "age=7": { "model": "foand:block/poppy_melon_stem" }
   }
 }
