@@ -110,29 +110,29 @@ let createRecipes = {
                     results: getOutputs(outputs)
                 }
 
-                let r = {
+                let request = {
                     heated: () => {
                         data.heat_requirement = 'heated'
-                        return r
+                        return request
                     },
 
                     superheated: () => {
                         data.heat_requirement = 'superheated'
-                        return r
+                        return request
                     },
 
                     keepHeldItem: (input) => {
                         data.keep_held_item = input
-                        return r
+                        return request
                     },
 
                     processingTime: (input) => {
                         data.processing_time = input
-                        return r
+                        return request
                     }
                 }
 
-                return r
+                return request
             }
         })
     },
