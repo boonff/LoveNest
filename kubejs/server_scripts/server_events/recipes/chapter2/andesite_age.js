@@ -2,6 +2,22 @@ ServerEvents.recipes(event => {
     global.createRecipes.init(event)
     global.anvilcraftRecipes.init(event)
 
+    /*--------------------辊压------------------------*/
+    //糖块 + 安山岩 -> 安山糖块
+    event.recipes.create.compacting('foand:andesite_sugar_block',
+        ['minecraft:andesite', 'anvilcraft:sugar_block'])
+
+    /*---------------------压缩--------------------------*/
+    // 删除配方
+    event.remove({ output: 'create:andesite_alloy', type: 'create:mixing' })
+    // 安山糖 + 罂粟西瓜汁1000mb -> 安山合金
+    event.recipes.create.compacting('create:andesite_alloy_block',
+        [Fluid.of('foand:poppy_melon_juice', `1000`), 'foand:andesite_sugar_block'])
+
+    /*---------------------搅拌--------------------------*/
+    // 罂粟西瓜沙 -> 罂粟西瓜汁1000mb
+    event.recipes.create.mixing(Fluid.of('foand:poppy_melon_juice', 1000),
+        'foand:poppy_melon_sand')
 
     /*----------搅拌配方----------*/
     // 加热搅拌 粘液球 

@@ -1,5 +1,7 @@
 ServerEvents.recipes(event => {
+    // 初始化全局配方
     global.createRecipes.init(event)
+    global.anvilcraftRecipes.init(event)
 
     /*-------------------------- 工作台 --------------------------*/
     // 云母收集器
@@ -13,7 +15,4 @@ ServerEvents.recipes(event => {
         C: "anvilcraft:nether_dust",
         D: "create:nozzle"
     })
-
-    /* -------------------------- 搅拌 --------------------------- */
-
 })

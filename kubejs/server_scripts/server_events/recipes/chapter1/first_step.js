@@ -3,6 +3,107 @@ ServerEvents.recipes(event => {
     global.createRecipes.init(event)
     global.anvilcraftRecipes.init(event)
 
+    /*--------------------------------工作台 --------------------------------*/
+    //竹板
+    event.shaped('minecraft:bamboo_planks', [
+        'AA',
+        'AA'
+    ], {
+        A: 'minecraft:bamboo'
+    })
+    //竹块
+    event.remove({ output: 'minecraft:bamboo_block' })
+    event.shaped('minecraft:bamboo_block', [
+        'AAA',
+        'A A',
+        'AAA'
+    ], {
+        A: 'minecraft:bamboo'
+    })
+    // 竹子 -> 竹线
+    event.shaped("foand:bamboo_string", ['A'], { A: 'minecraft:bamboo' })
+    // 传送带（竹线制作）
+    event.remove({ output: 'create:belt_connector' })
+    event.shaped('create:belt_connector', [
+        'AAA',
+        'AAA'
+    ], {
+        A: 'foand:bamboo_string'
+    })
+    // 脚手架
+    event.shaped({ item: 'minecraft:scaffolding', count: 6 }, [
+        'ABA',
+        'A A',
+        'A A'
+    ], {
+        A: 'minecraft:bamboo',
+        B: 'foand:bamboo_string'
+    })
+    // 望远镜
+    event.remove({ output: 'minecraft:spyglass' })
+    event.shaped('minecraft:spyglass', [
+        ' A ',
+        ' B ',
+        ' B '
+    ], {
+        A: 'minecraft:glass',
+        B: 'minecraft:copper_ingot'
+    })
+
+    /*------------------ 方块压缩 -------------------*/
+    event.recipes.anvilcraft.block_compress({
+        "inputs": [
+            { "blocks": "anvilcraft:sugar_block" },
+            { "blocks": "minecraft:andesite" }
+        ],
+        "result": { "block": "foand:andesite_sugar_block" }
+    }) //糖块 + 安山岩 -> 安山糖块
+
+    /*------------------ 物品粉碎-------------------*/
+    event.recipes.anvilcraft.item_crush(
+        {
+            "ingredients": [
+                { "items": "foand:andesite_sugar_block" }
+            ],
+            "results": [
+                { "count": 4, "id": "foand:andesite_sugar" }
+            ]
+        }
+    )  // 安山糖块 -> 安山糖x4
+
+    // 物品注入（item + block -> result）
+    event.recipes.anvilcraft.item_inject({
+        "block_ingredient": { "blocks": "minecraft:andesite" },
+        "block_result": { "block": "foand:andesite_sugar_block" },
+        "ingredients": [{ "items": "anvilcraft:sugar_block" }]
+    }) //安山岩 + 糖块 -> 安山糖块
+
+    /*------------------- 物品压缩-------------------*/
+    event.recipes.anvilcraft.item_compress({
+        "ingredients": [
+            { 'items': 'foand:andesite_sugar' },
+            { 'items': 'foand:poppy_melon_juice' },
+        ],
+        "results": [
+            { "count": 1, "id": 'create:andesite_alloy' }
+        ]
+    }) // 安山糖块x2 + 罂粟西瓜汁x2 -> 安山合金
+
+    /*------------------- 膨发----------------------*/
+    event.recipes.anvilcraft.bulging({
+        "fluid": "minecraft:water",
+        "ingredients": [
+            {
+                "items": "minecraft:redstone"
+            }
+        ],
+        "results": [
+            {
+                "id": "minecraft:sugar"
+            }
+        ]
+    })// 红石 + 水 -> 糖
+
     /*-------------------------- 熔炉 --------------------------*/
     // 罂粟 —> 铁粒
     event.smelting('minecraft:iron_nugget',
@@ -147,6 +248,60 @@ ServerEvents.recipes(event => {
             ]
         }
     )
+    /*---------------------- 工作台 --------------------*/
+    // 蟹笼
+    event.shaped('anvilcraft:crab_trap', [
+        'BAB',
+        'A A',
+        'BAB'
+    ], {
+        A: 'foand:bamboo_string',
+        B: 'minecraft:stick'
+    })
+    /*---------------------- 搅拌 ----------------------*/
+    event.recipes.create.mixing([
+        'anvilcraft:crab_trap',
+        { id: 'anvilcraft:crab_claw', chance: 0.2 },
+        { id: 'minecraft:seagrass', chance: 0.3 },
+        { id: 'minecraft:kelp', chance: 0.1 }
+    ], [Fluid.water(1000), 'anvilcraft:crab_trap'])
+
+    /*--------------------- 物品粉碎 ---------------------*/
+    //蟹钳 -> 粉碎铜
+    event.custom({
+        "type": "anvilcraft:item_crush",
+        "ingredients": [
+            {
+                "items": 'anvilcraft:crab_claw'
+            }
+        ],
+        "results": [
+            {
+                "count": 1,
+                "id": 'create:crushed_raw_copper'
+            }
+        ]
+    })
+    event.recipes.create.mixing([
+        'anvilcraft:crab_trap',
+        'anvilcraft:crab_claw'
+    ], [
+        {
+            type: 'fluid_stack',
+            fluid: 'create:potion',
+            amount: 1000,
+            components: {
+                'create:potion_fluid_bottle_type': "regular",
+                'minecraft:potion_contents': { potion: 'minecraft:awkward' }
+            }
+        },
+        'anvilcraft:crab_trap'
+    ])
+    /*-------------------------- 研磨 -------------------------*/
+    event.recipes.create.milling('create:crushed_raw_copper', 'anvilcraft:crab_claw') //蟹钳 -> 粉碎铜矿石
+    /*------------------------- 粉碎 -------------------------*/
+    event.recipes.create.crushing(['create:crushed_raw_copper',
+        { id: 'create:crushed_raw_copper', chance: 0.5 }], 'anvilcraft:crab_claw') //蟹钳 -> 粉碎铜矿石x1-2
     /*---------------------------- create 手持点击 ------------------------*/
     // 铁块+铁锭->铁砧
     event.remove({ output: 'anvil' })
@@ -154,7 +309,6 @@ ServerEvents.recipes(event => {
     event.remove({ output: 'damaged_anvil' })
     event.recipes.create.item_application('minecraft:chipped_anvil',
         ['minecraft:iron_block', 'minecraft:iron_ingot'])
-
     /* -------------------------- create 流体 --------------------------*/
     // 西瓜汁装瓶
     event.recipes.create.filling('foand:poppy_melon_juice',
@@ -162,7 +316,5 @@ ServerEvents.recipes(event => {
     // 倒出西瓜汁
     event.recipes.create.emptying([Fluid.of('foand:poppy_melon_juice', 250), 'minecraft:glass_bottle'],
         'foand:poppy_melon_juice')
-    // 1000mb瓜汁 + 1000mb岩浆 -> 1铁块
-    event.recipes.create.mixing('minecraft:iron_block',
-        [Fluid.of('foand:poppy_melon_juice', 1000), Fluid.lava(1000)])
-}) 
+
+})
