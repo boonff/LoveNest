@@ -110,43 +110,54 @@ let createRecipes = {
                     results: getOutputs(outputs)
                 }
 
-                // 立即提交配方：event.custom() 注册 JSON 配方并返回构建器 r，
-                // 链式方法（.heated() 等）通过 r.merge() 往已注册配方追加字段
-                // （注意：不能只攒 data 不提交，否则配方不会注册且不报错）
-                let r = Object(e.custom(data))
+                // 先注册配方：event.custom() 返回 Java 对象（UnknownKubeRecipe）
+                let r = e.custom(data)
 
-                r['heated'] = () => { r.merge({ heat_requirement: 'heated' }); return r }
-                r['superheated'] = () => { r.merge({ heat_requirement: 'superheated' }); return r }
-                r['keepHeldItem'] = (input) => { r.merge({ keep_held_item: input }); return r }
-                r['processingTime'] = (input) => { r.merge({ processing_time: input }); return r }
+                // 不能往 Java 配方对象上挂 JS 方法——Rhino 2.8 会抛
+                // "Java class ... has no public instance field or method named X"。
+                // 所以返回纯 JS 包装对象，链式方法通过 r.merge() 修改已注册配方。
+                let request = {
+                    heated: () => { r.merge({ heat_requirement: 'heated' }); return request },
+                    superheated: () => { r.merge({ heat_requirement: 'superheated' }); return request },
+                    keepHeldItem: (input) => { r.merge({ keep_held_item: input }); return request },
+                    processingTime: (input) => { r.merge({ processing_time: input }); return request }
+                }
 
-                return r
+                return request
             }
         })
     },
     sequenced_assembly: function (outputs, input, recipes) {
-        let r = Object(this.event.custom({
+        let r = this.event.custom({
             type: "create:sequenced_assembly",
             ingredient: getIngredients(input),
             results: getOutputs(outputs),
             sequence: recipes,
-        }))
-        r['loops'] = (input) => { r.merge({ loops: input }); return r }
-        r['transitionalItem'] = (input) => { r.merge({ transitional_item: getItem(input) }); return r }
-        return r
+        })
+
+        let request = {
+            loops: (input) => { r.merge({ loops: input }); return request },
+            transitionalItem: (input) => { r.merge({ transitional_item: getItem(input) }); return request }
+        }
+
+        return request
     },
     mechanical_crafting(output, pattern, key) {
-        let r = Object(this.event.custom({
+        let r = this.event.custom({
             type: "create:mechanical_crafting",
             category: "misc",
             accept_mirrored: false,
             key: key,
             pattern: pattern,
             result: getItem(output)
-        }))
-        r['showNotification'] = (input) => { r.merge({ show_notification: input }); return r }
-        r['acceptMirrored'] = () => { r.merge({ accept_mirrored: true }); return r }
-        return r
+        })
+
+        let request = {
+            showNotification: (input) => { r.merge({ show_notification: input }); return request },
+            acceptMirrored: () => { r.merge({ accept_mirrored: true }); return request }
+        }
+
+        return request
     }
 }
 
