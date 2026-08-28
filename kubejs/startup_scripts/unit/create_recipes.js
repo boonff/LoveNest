@@ -102,18 +102,36 @@ let createRecipes = {
             'splashing',
             'crushing',
         ]
-
         normal_recipes.forEach(recipe => {
             self[recipe] = (outputs, inputs) => {
-                let r = Object(e.custom({
+                let data = {
                     type: 'create:' + recipe,
                     ingredients: getIngredients(inputs),
                     results: getOutputs(outputs)
-                }))
-                r['heated'] = () => { r.merge({ heat_requirement: "heated" }); return r }
-                r['superheated'] = () => { r.merge({ heat_requirement: "superheated" }); return r }
-                r['keepHeldItem'] = (input) => { r.merge({ keep_held_item: input }); return r }
-                r['processingTime'] = (input) => { r.merge({ processing_time: input }); return r }
+                }
+
+                let r = {
+                    heated: () => {
+                        data.heat_requirement = 'heated'
+                        return r
+                    },
+
+                    superheated: () => {
+                        data.heat_requirement = 'superheated'
+                        return r
+                    },
+
+                    keepHeldItem: (input) => {
+                        data.keep_held_item = input
+                        return r
+                    },
+
+                    processingTime: (input) => {
+                        data.processing_time = input
+                        return r
+                    }
+                }
+
                 return r
             }
         })

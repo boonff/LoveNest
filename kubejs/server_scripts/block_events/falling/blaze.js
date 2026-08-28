@@ -18,16 +18,22 @@ BlockEvents.stoppedFalling(event => {
     if (level.getBlock(pos.offset(0, -1, 0)).id != 'minecraft:magma_block') return
 
     // 召唤前先发生一次爆炸
-    const ExplosionInteraction = Java.loadClass('net.minecraft.world.level.Level$ExplosionInteraction')
-    level.createExplosion(pos.x + 0.5, pos.y, pos.z + 0.5)
-        .strength(4)
-        .causesFire(false)
-        .explosionMode(ExplosionInteraction.TNT)
-        .explode()
+    const ExplosionInteraction =
+        Java.loadClass('net.minecraft.world.level.Level$ExplosionInteraction')
+
+    level.explode(
+        null,
+        pos.x + 0.5,
+        pos.y,
+        pos.z + 0.5,
+        4.0,
+        false,
+        ExplosionInteraction.TNT
+    )
 
     // 召唤残血烈焰人（1 血、无掉落、无经验）
     const blaze = level.createEntity('minecraft:blaze')
-    blaze.setPosition(pos.x + 0.5, pos.y, pos.z + 0.5) 
+    blaze.setPosition(pos.x + 0.5, pos.y, pos.z + 0.5)
     blaze.setHealth(1)
     blaze.skipDropExperience() // 不掉经验
     blaze.spawn() // KubeJS 生成实体（addFreshEntity 可能静默失败）
@@ -40,10 +46,9 @@ BlockEvents.stoppedFalling(event => {
 
 // 是否原版铁砧（普通/开裂/损坏）
 function isAnvil(state) {
-    const Blocks = Java.loadClass('net.minecraft.world.level.block.Blocks')
-    return state.is(Blocks.ANVIL)
-        || state.is(Blocks.CHIPPED_ANVIL)
-        || state.is(Blocks.DAMAGED_ANVIL)
+    return state.id == 'minecraft:anvil'
+        || state.id == 'minecraft:chipped_anvil'
+        || state.id == 'minecraft:damaged_anvil'
 }
 
 // 铁砧降级：普通 → 开裂 → 损坏 → 消失

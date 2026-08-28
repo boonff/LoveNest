@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
         A: 'foand:bamboo_string'
     })
     // 脚手架
-    event.shaped({ item: 'minecraft:scaffolding', count: 6 }, [
+    event.shaped({ id: 'minecraft:scaffolding', count: 6 }, [
         'ABA',
         'A A',
         'A A'

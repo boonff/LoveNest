@@ -6,22 +6,22 @@ ServerEvents.recipes(event => {
     //糖块 + 安山岩 -> 安山糖块
     event.recipes.create.compacting('foand:andesite_sugar_block',
         ['minecraft:andesite', 'anvilcraft:sugar_block'])
-
-    /*---------------------压缩--------------------------*/
-    // 删除配方
+    // 删除搅拌生成安山合金的配方
     event.remove({ output: 'create:andesite_alloy', type: 'create:mixing' })
     // 安山糖 + 罂粟西瓜汁1000mb -> 安山合金
     event.recipes.create.compacting('create:andesite_alloy_block',
         [Fluid.of('foand:poppy_melon_juice', `1000`), 'foand:andesite_sugar_block'])
+    event.recipes.create.compacting('foand:andesite_sugar_block', ['minecraft:andesite', 'anvilcraft:sugar_block'])
 
     /*---------------------搅拌--------------------------*/
-    // 罂粟西瓜沙 -> 罂粟西瓜汁1000mb
+    // 罂 
     event.recipes.create.mixing(Fluid.of('foand:poppy_melon_juice', 1000),
         'foand:poppy_melon_sand')
+    event.recipes.create.mixing('anvilcraft:sugar_block', ['foand:poppy_melon_sand', Fluid.of('minecraft:water', 250)]),
 
-    /*----------搅拌配方----------*/
-    // 加热搅拌 粘液球 
-    event.recipes.create.mixing(Fluid.of('foand:slime', 20), 'minecraft:slime_ball').heated()
+        /*----------搅拌配方----------*/
+        // 加热搅拌 粘液球 
+        event.recipes.create.mixing(Fluid.of('foand:slime', 20), 'minecraft:slime_ball').heated()
     // 干海带 + 粘液流体 = 含碘溶液
     event.recipes.create.mixing(Fluid.of('foand:iodine_slime', 5),
         ['minecraft:dried_kelp', Fluid.of('foand:slime', 5)])

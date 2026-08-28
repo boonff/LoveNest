@@ -7,7 +7,8 @@ BlockEvents.drops(event => {
     if (event.block.id != 'foand:poppy_melon') return
 
     const tool = event.tool
-    if (tool && tool.hasEnchantment('minecraft:silk_touch')) {
+    // KubeJS 7.2（1.21.1）：hasEnchantment(Holder<Enchantment>, level)，第一个参数传附魔 ID 字符串会自动转换，第二个参数是最低等级
+    if (tool && tool.hasEnchantment('minecraft:silk_touch', 1)) {
         event.removeItem('foand:poppy_melon_slice') // 移除虞美人西瓜片
         event.addItem(Item.of('foand:poppy_melon')) // 掉落西瓜本体
     }
