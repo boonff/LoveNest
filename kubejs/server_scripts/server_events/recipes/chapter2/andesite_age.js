@@ -17,11 +17,11 @@ ServerEvents.recipes(event => {
     // 罂 
     event.recipes.create.mixing(Fluid.of('foand:poppy_melon_juice', 1000),
         'foand:poppy_melon_sand')
-    event.recipes.create.mixing('anvilcraft:sugar_block', ['foand:poppy_melon_sand', Fluid.of('minecraft:water', 250)]),
+    event.recipes.create.mixing('anvilcraft:sugar_block', ['foand:poppy_melon_sand', Fluid.of('minecraft:water', 250)])
 
-        /*----------搅拌配方----------*/
-        // 加热搅拌 粘液球 
-        event.recipes.create.mixing(Fluid.of('foand:slime', 20), 'minecraft:slime_ball').heated()
+    /*----------搅拌配方----------*/
+    // 加热搅拌 粘液球 
+    event.recipes.create.mixing(Fluid.of('foand:slime', 20), 'minecraft:slime_ball').heated()
     // 干海带 + 粘液流体 = 含碘溶液
     event.recipes.create.mixing(Fluid.of('foand:iodine_slime', 5),
         ['minecraft:dried_kelp', Fluid.of('foand:slime', 5)])
