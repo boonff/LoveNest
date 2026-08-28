@@ -4,7 +4,7 @@ function getIngredient(input) {
         result = Ingredient.of(input)
     } else if ((typeof input) === "object" && 'id' in input && 'amount' in input) {
         result = { type: 'fluid_stack', fluid: input.id, amount: input.amount }
-    } else if (Array.isArray(input) && _item != []) {
+    } else if (Array.isArray(input) && input.length > 0) {
         result = getIngredient(input[0])
     } else {
         result = input
@@ -18,7 +18,7 @@ function getItem(input) {
         result = Item.of(input)
     } else if ((typeof input) === "object" && 'id' in input && 'amount' in input) {
         result = getFluid(input)
-    } else if (Array.isArray(input) && input != []) {
+    } else if (Array.isArray(input) && input.length > 0) {
         result = getItem(input[0])
     } else {
         result = input
@@ -30,7 +30,7 @@ function getFluid(input) {
     let result
     if (typeof input === "string" || Item.isItem(input)) {
         result = Fluid.of(input, 1000)
-    } else if (Array.isArray(input) && input != []) {
+    } else if (Array.isArray(input) && input.length > 0) {
         result = getFluid(input[0])
     } else
         result = input
@@ -41,7 +41,7 @@ function getBlock(input) {
     let result
     if (typeof input === "string") {
         result = BlockStatePredicate.of(input)
-    } else if (Array.isArray(input) && input != []) {
+    } else if (Array.isArray(input) && input.length > 0) {
         result = getBlock(input[0])
     } else
         result = input
@@ -110,29 +110,17 @@ let createRecipes = {
                     results: getOutputs(outputs)
                 }
 
-                let request = {
-                    heated: () => {
-                        data.heat_requirement = 'heated'
-                        return request
-                    },
+                // 立即提交配方：event.custom() 注册 JSON 配方并返回构建器 r，
+                // 链式方法（.heated() 等）通过 r.merge() 往已注册配方追加字段
+                // （注意：不能只攒 data 不提交，否则配方不会注册且不报错）
+                let r = Object(e.custom(data))
 
-                    superheated: () => {
-                        data.heat_requirement = 'superheated'
-                        return request
-                    },
+                r['heated'] = () => { r.merge({ heat_requirement: 'heated' }); return r }
+                r['superheated'] = () => { r.merge({ heat_requirement: 'superheated' }); return r }
+                r['keepHeldItem'] = (input) => { r.merge({ keep_held_item: input }); return r }
+                r['processingTime'] = (input) => { r.merge({ processing_time: input }); return r }
 
-                    keepHeldItem: (input) => {
-                        data.keep_held_item = input
-                        return request
-                    },
-
-                    processingTime: (input) => {
-                        data.processing_time = input
-                        return request
-                    }
-                }
-
-                return request
+                return r
             }
         })
     },
